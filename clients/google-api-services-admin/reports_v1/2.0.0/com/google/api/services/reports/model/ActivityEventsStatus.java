@@ -44,7 +44,7 @@ public final class ActivityEventsStatus extends com.google.api.client.json.Gener
   private java.lang.String errorMessage;
 
   /**
-   * * Status of the event. Possible values if not empty: - UNKNOWN_EVENT_STATUS - SUCCEEDED -
+   * Status of the event. Possible values if not empty: - UNKNOWN_EVENT_STATUS - SUCCEEDED -
    * SUCCEEDED_WITH_WARNINGS - FAILED - SKIPPED
    * The value may be {@code null}.
    */
@@ -93,7 +93,7 @@ public final class ActivityEventsStatus extends com.google.api.client.json.Gener
   }
 
   /**
-   * * Status of the event. Possible values if not empty: - UNKNOWN_EVENT_STATUS - SUCCEEDED -
+   * Status of the event. Possible values if not empty: - UNKNOWN_EVENT_STATUS - SUCCEEDED -
    * SUCCEEDED_WITH_WARNINGS - FAILED - SKIPPED
    * @return value or {@code null} for none
    */
@@ -102,7 +102,7 @@ public final class ActivityEventsStatus extends com.google.api.client.json.Gener
   }
 
   /**
-   * * Status of the event. Possible values if not empty: - UNKNOWN_EVENT_STATUS - SUCCEEDED -
+   * Status of the event. Possible values if not empty: - UNKNOWN_EVENT_STATUS - SUCCEEDED -
    * SUCCEEDED_WITH_WARNINGS - FAILED - SKIPPED
    * @param eventStatus eventStatus or {@code null} for none
    */
