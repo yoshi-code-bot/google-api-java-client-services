@@ -6094,6 +6094,174 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
   }
 
   /**
+   * An accessor for creating requests from the Permissions collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code AccessContextManager accesscontextmanager = new AccessContextManager(...);}
+   *   {@code AccessContextManager.Permissions.List request = accesscontextmanager.permissions().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Permissions permissions() {
+    return new Permissions();
+  }
+
+  /**
+   * The "permissions" collection of methods.
+   */
+  public class Permissions {
+
+    /**
+     * Lists all supported permissions in VPCSC Granular Controls.
+     *
+     * Create a request for the method "permissions.list".
+     *
+     * This request holds the parameters needed by the accesscontextmanager server.  After setting any
+     * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public List list() throws java.io.IOException {
+      List result = new List();
+      initialize(result);
+      return result;
+    }
+
+    public class List extends AccessContextManagerRequest<com.google.api.services.accesscontextmanager.v1.model.ListSupportedPermissionsResponse> {
+
+      private static final String REST_PATH = "v1/permissions";
+
+      /**
+       * Lists all supported permissions in VPCSC Granular Controls.
+       *
+       * Create a request for the method "permissions.list".
+       *
+       * This request holds the parameters needed by the the accesscontextmanager server.  After setting
+       * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected List() {
+        super(AccessContextManager.this, "GET", REST_PATH, null, com.google.api.services.accesscontextmanager.v1.model.ListSupportedPermissionsResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Optional. This flag specifies the maximum number of services to return per page. Default is
+       * 100.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Optional. This flag specifies the maximum number of services to return per page. Default is 100.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * Optional. This flag specifies the maximum number of services to return per page. Default is
+       * 100.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /** Optional. Token to start on a later page. Default is the first page. */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Optional. Token to start on a later page. Default is the first page.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /** Optional. Token to start on a later page. Default is the first page. */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Services collection.
    *
    * <p>The typical use is:</p>
