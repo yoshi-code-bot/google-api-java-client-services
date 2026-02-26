@@ -103,7 +103,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
    *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
    *        <li>Android: {@code newCompatibleTransport} from
    *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-   *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
+   *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
    *        </li>
    *        </ul>
    * @param jsonFactory JSON factory, which may be:
@@ -312,7 +312,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
         }
       }
       /**
-       * Lists information about the supported locations for this service.
+       * Lists information about the supported locations for this service. This method can be called in
+       * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
+       * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
+       * public locations as well as private or other locations specifically visible to the project.
        *
        * Create a request for the method "locations.list".
        *
@@ -336,7 +339,10 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Lists information about the supported locations for this service.
+         * Lists information about the supported locations for this service. This method can be called in
+         * two ways: * **List all public locations:** Use the path `GET /v1/locations`. * **List project-
+         * visible locations:** Use the path `GET /v1/projects/{project_id}/locations`. This may include
+         * public locations as well as private or other locations specifically visible to the project.
          *
          * Create a request for the method "locations.list".
          *
@@ -17570,6 +17576,156 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
+           * Bulk deletes the FHIR resources from the given FHIR store. This method returns an Operation that
+           * can be used to track the progress of the deletion by calling GetOperation. The success and
+           * secondary_success counters correspond to the deleted current version and historical versions,
+           * respectively.
+           *
+           * Create a request for the method "fhirStores.bulkDelete".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link BulkDelete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the FHIR store to bulk delete resources from, in the format of
+           *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_stor
+           *        e_id}`.
+           * @param content the {@link com.google.api.services.healthcare.v1beta1.model.BulkDeleteResourcesRequest}
+           * @return the request
+           */
+          public BulkDelete bulkDelete(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.BulkDeleteResourcesRequest content) throws java.io.IOException {
+            BulkDelete result = new BulkDelete(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class BulkDelete extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Operation> {
+
+            private static final String REST_PATH = "v1beta1/{+name}:bulkDelete";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+
+            /**
+             * Bulk deletes the FHIR resources from the given FHIR store. This method returns an Operation
+             * that can be used to track the progress of the deletion by calling GetOperation. The success and
+             * secondary_success counters correspond to the deleted current version and historical versions,
+             * respectively.
+             *
+             * Create a request for the method "fhirStores.bulkDelete".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link BulkDelete#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * BulkDelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the FHIR store to bulk delete resources from, in the format of
+           *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_stor
+           *        e_id}`.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.BulkDeleteResourcesRequest}
+             * @since 1.13
+             */
+            protected BulkDelete(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.BulkDeleteResourcesRequest content) {
+              super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public BulkDelete set$Xgafv(java.lang.String $Xgafv) {
+              return (BulkDelete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public BulkDelete setAccessToken(java.lang.String accessToken) {
+              return (BulkDelete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public BulkDelete setAlt(java.lang.String alt) {
+              return (BulkDelete) super.setAlt(alt);
+            }
+
+            @Override
+            public BulkDelete setCallback(java.lang.String callback) {
+              return (BulkDelete) super.setCallback(callback);
+            }
+
+            @Override
+            public BulkDelete setFields(java.lang.String fields) {
+              return (BulkDelete) super.setFields(fields);
+            }
+
+            @Override
+            public BulkDelete setKey(java.lang.String key) {
+              return (BulkDelete) super.setKey(key);
+            }
+
+            @Override
+            public BulkDelete setOauthToken(java.lang.String oauthToken) {
+              return (BulkDelete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public BulkDelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (BulkDelete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public BulkDelete setQuotaUser(java.lang.String quotaUser) {
+              return (BulkDelete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public BulkDelete setUploadType(java.lang.String uploadType) {
+              return (BulkDelete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public BulkDelete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (BulkDelete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the FHIR store to bulk delete resources from, in the format of
+             * `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir
+             * _store_id}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the FHIR store to bulk delete resources from, in the format of
+           `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the FHIR store to bulk delete resources from, in the format of
+             * `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir
+             * _store_id}`.
+             */
+            public BulkDelete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public BulkDelete set(String parameterName, Object value) {
+              return (BulkDelete) super.set(parameterName, value);
+            }
+          }
+          /**
            * Configure the search parameters for the FHIR store and reindex resources in the FHIR store
            * according to the defined search parameters. The search parameters provided in this request will
            * replace any previous search configuration. The target SearchParameter resources need to exist in
@@ -30978,8 +31134,7 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
      *        {@code com.google.api.client.extensions.appengine.http.UrlFetchTransport}</li>
      *        <li>Android: {@code newCompatibleTransport} from
      *        {@code com.google.api.client.extensions.android.http.AndroidHttp}</li>
-     *        <li>Java: {@link com.google.api.client.googleapis.javanet.GoogleNetHttpTransport#newTrustedTransport()}
-     *        </li>
+     *        <li>Java: {@code com.google.api.client.http.javanet.NetHttpTransport}</li>
      *        </ul>
      * @param jsonFactory JSON factory, which may be:
      *        <ul>
