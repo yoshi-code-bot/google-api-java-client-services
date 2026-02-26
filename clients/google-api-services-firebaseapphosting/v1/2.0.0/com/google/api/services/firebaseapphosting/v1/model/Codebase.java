@@ -44,7 +44,9 @@ public final class Codebase extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. If `repository` is provided, the directory relative to the root of the repository to
-   * use as the root for the deployed web app.
+   * use as the root for the deployed web app. Defaults to use the root of the repository if not
+   * provided. If deploying a [monorepo](https://firebase.google.com/docs/app-hosting/monorepos),
+   * this should be the directory that contains the `package.json` or `apphosting.yaml` file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,7 +81,9 @@ public final class Codebase extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. If `repository` is provided, the directory relative to the root of the repository to
-   * use as the root for the deployed web app.
+   * use as the root for the deployed web app. Defaults to use the root of the repository if not
+   * provided. If deploying a [monorepo](https://firebase.google.com/docs/app-hosting/monorepos),
+   * this should be the directory that contains the `package.json` or `apphosting.yaml` file.
    * @return value or {@code null} for none
    */
   public java.lang.String getRootDirectory() {
@@ -88,7 +92,9 @@ public final class Codebase extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. If `repository` is provided, the directory relative to the root of the repository to
-   * use as the root for the deployed web app.
+   * use as the root for the deployed web app. Defaults to use the root of the repository if not
+   * provided. If deploying a [monorepo](https://firebase.google.com/docs/app-hosting/monorepos),
+   * this should be the directory that contains the `package.json` or `apphosting.yaml` file.
    * @param rootDirectory rootDirectory or {@code null} for none
    */
   public Codebase setRootDirectory(java.lang.String rootDirectory) {

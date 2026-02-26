@@ -43,7 +43,7 @@ public final class Config extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Supplied environment variables for a specific build. Provided at Build creation time
    * and immutable afterwards. This field is only applicable for Builds using a build image - (e.g.,
-   * ContainerSource or ArchiveSource with locally_build_source) Attempts to set this for other
+   * ContainerSource or ArchiveSource with locally_built_source) Attempts to set this for other
    * build types will result in an error
    * The value may be {@code null}.
    */
@@ -84,7 +84,7 @@ public final class Config extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Supplied environment variables for a specific build. Provided at Build creation time
    * and immutable afterwards. This field is only applicable for Builds using a build image - (e.g.,
-   * ContainerSource or ArchiveSource with locally_build_source) Attempts to set this for other
+   * ContainerSource or ArchiveSource with locally_built_source) Attempts to set this for other
    * build types will result in an error
    * @return value or {@code null} for none
    */
@@ -95,7 +95,7 @@ public final class Config extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Supplied environment variables for a specific build. Provided at Build creation time
    * and immutable afterwards. This field is only applicable for Builds using a build image - (e.g.,
-   * ContainerSource or ArchiveSource with locally_build_source) Attempts to set this for other
+   * ContainerSource or ArchiveSource with locally_built_source) Attempts to set this for other
    * build types will result in an error
    * @param env env or {@code null} for none
    */

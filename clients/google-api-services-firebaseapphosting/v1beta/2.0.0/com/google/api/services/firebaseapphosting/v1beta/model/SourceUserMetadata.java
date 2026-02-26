@@ -17,7 +17,7 @@
 package com.google.api.services.firebaseapphosting.v1beta.model;
 
 /**
- * Metadata for the user who started the build.
+ * Deprecated: Not used. Metadata for the user who started the build.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase App Hosting API. For a detailed explanation
@@ -31,29 +31,30 @@ package com.google.api.services.firebaseapphosting.v1beta.model;
 public final class SourceUserMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The user-chosen displayname. May be empty.
+   * Output only. Deprecated: Not used. The user-chosen displayname. May be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Output only. The account email linked to the EUC that created the build. May be a service
-   * account or other robot account.
+   * Output only. Deprecated: Not used. The account email linked to the EUC that created the build.
+   * May be a service account or other robot account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String email;
 
   /**
-   * Output only. The URI of a profile photo associated with the user who created the build.
+   * Output only. Deprecated: Not used. The URI of a profile photo associated with the user who
+   * created the build.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String imageUri;
 
   /**
-   * Output only. The user-chosen displayname. May be empty.
+   * Output only. Deprecated: Not used. The user-chosen displayname. May be empty.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -61,7 +62,7 @@ public final class SourceUserMetadata extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. The user-chosen displayname. May be empty.
+   * Output only. Deprecated: Not used. The user-chosen displayname. May be empty.
    * @param displayName displayName or {@code null} for none
    */
   public SourceUserMetadata setDisplayName(java.lang.String displayName) {
@@ -70,8 +71,8 @@ public final class SourceUserMetadata extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. The account email linked to the EUC that created the build. May be a service
-   * account or other robot account.
+   * Output only. Deprecated: Not used. The account email linked to the EUC that created the build.
+   * May be a service account or other robot account.
    * @return value or {@code null} for none
    */
   public java.lang.String getEmail() {
@@ -79,8 +80,8 @@ public final class SourceUserMetadata extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. The account email linked to the EUC that created the build. May be a service
-   * account or other robot account.
+   * Output only. Deprecated: Not used. The account email linked to the EUC that created the build.
+   * May be a service account or other robot account.
    * @param email email or {@code null} for none
    */
   public SourceUserMetadata setEmail(java.lang.String email) {
@@ -89,7 +90,8 @@ public final class SourceUserMetadata extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. The URI of a profile photo associated with the user who created the build.
+   * Output only. Deprecated: Not used. The URI of a profile photo associated with the user who
+   * created the build.
    * @return value or {@code null} for none
    */
   public java.lang.String getImageUri() {
@@ -97,7 +99,8 @@ public final class SourceUserMetadata extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. The URI of a profile photo associated with the user who created the build.
+   * Output only. Deprecated: Not used. The URI of a profile photo associated with the user who
+   * created the build.
    * @param imageUri imageUri or {@code null} for none
    */
   public SourceUserMetadata setImageUri(java.lang.String imageUri) {
