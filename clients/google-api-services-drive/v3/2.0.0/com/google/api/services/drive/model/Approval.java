@@ -37,7 +37,7 @@ public final class Approval extends com.google.api.client.json.GenericJson {
   private java.lang.String approvalId;
 
   /**
-   * Output only. The time time the approval was completed.
+   * Output only. The time the approval was completed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,7 +117,7 @@ public final class Approval extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time time the approval was completed.
+   * Output only. The time the approval was completed.
    * @return value or {@code null} for none
    */
   public String getCompleteTime() {
@@ -125,7 +125,7 @@ public final class Approval extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time time the approval was completed.
+   * Output only. The time the approval was completed.
    * @param completeTime completeTime or {@code null} for none
    */
   public Approval setCompleteTime(String completeTime) {
