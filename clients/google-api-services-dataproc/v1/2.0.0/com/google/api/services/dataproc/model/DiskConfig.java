@@ -30,6 +30,19 @@ package com.google.api.services.dataproc.model;
 public final class DiskConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. A list of attached disk configs for a group of VM instances.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AttachedDiskConfig> attachedDiskConfigs;
+
+  static {
+    // hack to force ProGuard to consider AttachedDiskConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AttachedDiskConfig.class);
+  }
+
+  /**
    * Optional. Indicates how many IOPS to provision for the disk. This sets the number of I/O
    * operations per second that the disk can handle. This field is supported only if boot_disk_type
    * is hyperdisk-balanced.
@@ -84,6 +97,23 @@ public final class DiskConfig extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Integer numLocalSsds;
+
+  /**
+   * Optional. A list of attached disk configs for a group of VM instances.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AttachedDiskConfig> getAttachedDiskConfigs() {
+    return attachedDiskConfigs;
+  }
+
+  /**
+   * Optional. A list of attached disk configs for a group of VM instances.
+   * @param attachedDiskConfigs attachedDiskConfigs or {@code null} for none
+   */
+  public DiskConfig setAttachedDiskConfigs(java.util.List<AttachedDiskConfig> attachedDiskConfigs) {
+    this.attachedDiskConfigs = attachedDiskConfigs;
+    return this;
+  }
 
   /**
    * Optional. Indicates how many IOPS to provision for the disk. This sets the number of I/O
