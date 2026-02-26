@@ -81,7 +81,10 @@ public final class Event extends com.google.api.client.json.GenericJson {
   /**
    * The conference-related information, such as details of a Google Meet conference. To create new
    * conference details use the createRequest field. To persist your changes, remember to set the
-   * conferenceDataVersion request parameter to 1 for all event modification requests.
+   * conferenceDataVersion request parameter to 1 for all event modification requests. Warning:
+   * Reusing Google Meet conference data across different events can cause access issues and expose
+   * meeting details to unintended users. To help ensure meeting privacy, always generate a unique
+   * conference for each event by using the createRequest field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -582,7 +585,10 @@ public final class Event extends com.google.api.client.json.GenericJson {
   /**
    * The conference-related information, such as details of a Google Meet conference. To create new
    * conference details use the createRequest field. To persist your changes, remember to set the
-   * conferenceDataVersion request parameter to 1 for all event modification requests.
+   * conferenceDataVersion request parameter to 1 for all event modification requests. Warning:
+   * Reusing Google Meet conference data across different events can cause access issues and expose
+   * meeting details to unintended users. To help ensure meeting privacy, always generate a unique
+   * conference for each event by using the createRequest field.
    * @return value or {@code null} for none
    */
   public ConferenceData getConferenceData() {
@@ -592,7 +598,10 @@ public final class Event extends com.google.api.client.json.GenericJson {
   /**
    * The conference-related information, such as details of a Google Meet conference. To create new
    * conference details use the createRequest field. To persist your changes, remember to set the
-   * conferenceDataVersion request parameter to 1 for all event modification requests.
+   * conferenceDataVersion request parameter to 1 for all event modification requests. Warning:
+   * Reusing Google Meet conference data across different events can cause access issues and expose
+   * meeting details to unintended users. To help ensure meeting privacy, always generate a unique
+   * conference for each event by using the createRequest field.
    * @param conferenceData conferenceData or {@code null} for none
    */
   public Event setConferenceData(ConferenceData conferenceData) {
