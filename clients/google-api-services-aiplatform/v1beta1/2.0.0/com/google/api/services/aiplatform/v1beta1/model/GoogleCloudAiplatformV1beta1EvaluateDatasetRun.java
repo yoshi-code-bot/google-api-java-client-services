@@ -52,6 +52,14 @@ public final class GoogleCloudAiplatformV1beta1EvaluateDatasetRun extends com.go
   private GoogleCloudAiplatformV1beta1EvaluateDatasetResponse evaluateDatasetResponse;
 
   /**
+   * Output only. The resource name of the evaluation run. Format:
+   * `projects/{project}/locations/{location}/evaluationRuns/{evaluation_run_id}`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String evaluationRun;
+
+  /**
    * Output only. The operation ID of the evaluation run. Format:
    * `projects/{project}/locations/{location}/operations/{operation_id}`.
    * The value may be {@code null}.
@@ -109,6 +117,25 @@ public final class GoogleCloudAiplatformV1beta1EvaluateDatasetRun extends com.go
    */
   public GoogleCloudAiplatformV1beta1EvaluateDatasetRun setEvaluateDatasetResponse(GoogleCloudAiplatformV1beta1EvaluateDatasetResponse evaluateDatasetResponse) {
     this.evaluateDatasetResponse = evaluateDatasetResponse;
+    return this;
+  }
+
+  /**
+   * Output only. The resource name of the evaluation run. Format:
+   * `projects/{project}/locations/{location}/evaluationRuns/{evaluation_run_id}`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEvaluationRun() {
+    return evaluationRun;
+  }
+
+  /**
+   * Output only. The resource name of the evaluation run. Format:
+   * `projects/{project}/locations/{location}/evaluationRuns/{evaluation_run_id}`.
+   * @param evaluationRun evaluationRun or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluateDatasetRun setEvaluationRun(java.lang.String evaluationRun) {
+    this.evaluationRun = evaluationRun;
     return this;
   }
 

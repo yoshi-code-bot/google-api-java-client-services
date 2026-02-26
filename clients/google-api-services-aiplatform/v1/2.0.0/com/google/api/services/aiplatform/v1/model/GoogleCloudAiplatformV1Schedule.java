@@ -122,6 +122,15 @@ public final class GoogleCloudAiplatformV1Schedule extends com.google.api.client
   private GoogleCloudAiplatformV1ScheduleRunResponse lastScheduledRunResponse;
 
   /**
+   * Optional. Specifies the maximum number of active runs that can be executed concurrently for
+   * this Schedule. This limits the number of runs that can be in a non-terminal state at the same
+   * time. Currently, this field is only supported for requests of type CreatePipelineJobRequest.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long maxConcurrentActiveRunCount;
+
+  /**
    * Required. Maximum number of runs that can be started concurrently for this Schedule. This is
    * the limit for starting the scheduled requests and not the execution of the operations/jobs
    * created by the requests (if applicable).
@@ -396,6 +405,27 @@ public final class GoogleCloudAiplatformV1Schedule extends com.google.api.client
    */
   public GoogleCloudAiplatformV1Schedule setLastScheduledRunResponse(GoogleCloudAiplatformV1ScheduleRunResponse lastScheduledRunResponse) {
     this.lastScheduledRunResponse = lastScheduledRunResponse;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the maximum number of active runs that can be executed concurrently for
+   * this Schedule. This limits the number of runs that can be in a non-terminal state at the same
+   * time. Currently, this field is only supported for requests of type CreatePipelineJobRequest.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMaxConcurrentActiveRunCount() {
+    return maxConcurrentActiveRunCount;
+  }
+
+  /**
+   * Optional. Specifies the maximum number of active runs that can be executed concurrently for
+   * this Schedule. This limits the number of runs that can be in a non-terminal state at the same
+   * time. Currently, this field is only supported for requests of type CreatePipelineJobRequest.
+   * @param maxConcurrentActiveRunCount maxConcurrentActiveRunCount or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1Schedule setMaxConcurrentActiveRunCount(java.lang.Long maxConcurrentActiveRunCount) {
+    this.maxConcurrentActiveRunCount = maxConcurrentActiveRunCount;
     return this;
   }
 

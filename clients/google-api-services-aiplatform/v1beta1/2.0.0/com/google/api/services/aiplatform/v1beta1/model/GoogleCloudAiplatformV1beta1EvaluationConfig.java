@@ -37,6 +37,14 @@ public final class GoogleCloudAiplatformV1beta1EvaluationConfig extends com.goog
   private GoogleCloudAiplatformV1beta1AutoraterConfig autoraterConfig;
 
   /**
+   * Optional. Configuration options for inference generation and outputs. If not set, default
+   * generation parameters are used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1GenerationConfig inferenceGenerationConfig;
+
+  /**
    * Required. The metrics used for evaluation.
    * The value may be {@code null}.
    */
@@ -64,6 +72,25 @@ public final class GoogleCloudAiplatformV1beta1EvaluationConfig extends com.goog
    */
   public GoogleCloudAiplatformV1beta1EvaluationConfig setAutoraterConfig(GoogleCloudAiplatformV1beta1AutoraterConfig autoraterConfig) {
     this.autoraterConfig = autoraterConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration options for inference generation and outputs. If not set, default
+   * generation parameters are used.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerationConfig getInferenceGenerationConfig() {
+    return inferenceGenerationConfig;
+  }
+
+  /**
+   * Optional. Configuration options for inference generation and outputs. If not set, default
+   * generation parameters are used.
+   * @param inferenceGenerationConfig inferenceGenerationConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluationConfig setInferenceGenerationConfig(GoogleCloudAiplatformV1beta1GenerationConfig inferenceGenerationConfig) {
+    this.inferenceGenerationConfig = inferenceGenerationConfig;
     return this;
   }
 

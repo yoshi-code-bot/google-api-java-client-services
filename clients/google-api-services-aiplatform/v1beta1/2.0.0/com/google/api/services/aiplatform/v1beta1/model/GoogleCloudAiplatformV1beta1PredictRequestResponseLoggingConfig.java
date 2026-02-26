@@ -56,6 +56,14 @@ public final class GoogleCloudAiplatformV1beta1PredictRequestResponseLoggingConf
   private java.lang.Boolean enabled;
 
   /**
+   * Optional. Percentage of failed requests to be logged, expressed as a fraction in range [0,1].
+   * Only non-transient errors will be logged (currently `500/Internal` errors).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double errorSamplingRate;
+
+  /**
    * Output only. The schema version used in creating the BigQuery table for the request response
    * logging. The versions are "v1" and "v2". The current default version is "v1".
    * The value may be {@code null}.
@@ -128,6 +136,25 @@ public final class GoogleCloudAiplatformV1beta1PredictRequestResponseLoggingConf
    */
   public GoogleCloudAiplatformV1beta1PredictRequestResponseLoggingConfig setEnabled(java.lang.Boolean enabled) {
     this.enabled = enabled;
+    return this;
+  }
+
+  /**
+   * Optional. Percentage of failed requests to be logged, expressed as a fraction in range [0,1].
+   * Only non-transient errors will be logged (currently `500/Internal` errors).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getErrorSamplingRate() {
+    return errorSamplingRate;
+  }
+
+  /**
+   * Optional. Percentage of failed requests to be logged, expressed as a fraction in range [0,1].
+   * Only non-transient errors will be logged (currently `500/Internal` errors).
+   * @param errorSamplingRate errorSamplingRate or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PredictRequestResponseLoggingConfig setErrorSamplingRate(java.lang.Double errorSamplingRate) {
+    this.errorSamplingRate = errorSamplingRate;
     return this;
   }
 

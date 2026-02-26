@@ -37,6 +37,13 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpec
   private GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpecDeveloperConnectSource developerConnectSource;
 
   /**
+   * Optional. Configuration for building an image with custom config file.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpecImageSpec imageSpec;
+
+  /**
    * Source code is provided directly in the request.
    * The value may be {@code null}.
    */
@@ -64,6 +71,23 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpec
    */
   public GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpec setDeveloperConnectSource(GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpecDeveloperConnectSource developerConnectSource) {
     this.developerConnectSource = developerConnectSource;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for building an image with custom config file.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpecImageSpec getImageSpec() {
+    return imageSpec;
+  }
+
+  /**
+   * Optional. Configuration for building an image with custom config file.
+   * @param imageSpec imageSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpec setImageSpec(GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpecImageSpec imageSpec) {
+    this.imageSpec = imageSpec;
     return this;
   }
 
