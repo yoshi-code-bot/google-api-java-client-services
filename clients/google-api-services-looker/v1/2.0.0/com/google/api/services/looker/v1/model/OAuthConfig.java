@@ -47,6 +47,14 @@ public final class OAuthConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String clientSecret;
 
   /**
+   * Optional. Whether to use the shared OAuth client. Instances specifying this field do not need
+   * to provide client_id and client_secret.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean sharedOauthClientEnabled;
+
+  /**
    * Input only. Client ID from an external OAuth application. This is an input-only field, and thus
    * will not be set in any responses.
    * @return value or {@code null} for none
@@ -81,6 +89,25 @@ public final class OAuthConfig extends com.google.api.client.json.GenericJson {
    */
   public OAuthConfig setClientSecret(java.lang.String clientSecret) {
     this.clientSecret = clientSecret;
+    return this;
+  }
+
+  /**
+   * Optional. Whether to use the shared OAuth client. Instances specifying this field do not need
+   * to provide client_id and client_secret.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSharedOauthClientEnabled() {
+    return sharedOauthClientEnabled;
+  }
+
+  /**
+   * Optional. Whether to use the shared OAuth client. Instances specifying this field do not need
+   * to provide client_id and client_secret.
+   * @param sharedOauthClientEnabled sharedOauthClientEnabled or {@code null} for none
+   */
+  public OAuthConfig setSharedOauthClientEnabled(java.lang.Boolean sharedOauthClientEnabled) {
+    this.sharedOauthClientEnabled = sharedOauthClientEnabled;
     return this;
   }
 
