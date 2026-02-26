@@ -31,7 +31,8 @@ package com.google.api.services.firebaseapphosting.v1beta.model;
 public final class ArchiveSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The author contained in the metadata of a version control change.
+   * Optional. Deprecated: Not used. The author contained in the metadata of a version control
+   * change.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +53,10 @@ public final class ArchiveSource extends com.google.api.client.json.GenericJson 
   private java.lang.String externalSignedUri;
 
   /**
-   * Optional. Relative path in the archive.
+   * Optional. The directory relative to the root of the archive to use as the root for the deployed
+   * web app. Defaults to use the root of the repository if not provided. If deploying a
+   * [monorepo](https://firebase.google.com/docs/app-hosting/monorepos), this should be the
+   * directory that contains the `package.json` or `apphosting.yaml` file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +71,8 @@ public final class ArchiveSource extends com.google.api.client.json.GenericJson 
   private java.lang.String userStorageUri;
 
   /**
-   * Optional. The author contained in the metadata of a version control change.
+   * Optional. Deprecated: Not used. The author contained in the metadata of a version control
+   * change.
    * @return value or {@code null} for none
    */
   public SourceUserMetadata getAuthor() {
@@ -75,7 +80,8 @@ public final class ArchiveSource extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The author contained in the metadata of a version control change.
+   * Optional. Deprecated: Not used. The author contained in the metadata of a version control
+   * change.
    * @param author author or {@code null} for none
    */
   public ArchiveSource setAuthor(SourceUserMetadata author) {
@@ -118,7 +124,10 @@ public final class ArchiveSource extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Relative path in the archive.
+   * Optional. The directory relative to the root of the archive to use as the root for the deployed
+   * web app. Defaults to use the root of the repository if not provided. If deploying a
+   * [monorepo](https://firebase.google.com/docs/app-hosting/monorepos), this should be the
+   * directory that contains the `package.json` or `apphosting.yaml` file.
    * @return value or {@code null} for none
    */
   public java.lang.String getRootDirectory() {
@@ -126,7 +135,10 @@ public final class ArchiveSource extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Relative path in the archive.
+   * Optional. The directory relative to the root of the archive to use as the root for the deployed
+   * web app. Defaults to use the root of the repository if not provided. If deploying a
+   * [monorepo](https://firebase.google.com/docs/app-hosting/monorepos), this should be the
+   * directory that contains the `package.json` or `apphosting.yaml` file.
    * @param rootDirectory rootDirectory or {@code null} for none
    */
   public ArchiveSource setRootDirectory(java.lang.String rootDirectory) {

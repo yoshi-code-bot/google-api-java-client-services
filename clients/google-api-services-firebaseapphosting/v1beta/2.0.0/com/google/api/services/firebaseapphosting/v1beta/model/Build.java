@@ -84,16 +84,16 @@ public final class Build extends com.google.api.client.json.GenericJson {
   private java.lang.String environment;
 
   /**
-   * Output only. A status and (human readable) error message for the build, if in a `FAILED` state.
-   * Deprecated: Use `errors` instead.
+   * Output only. Deprecated: Use `errors` instead. A status and (human readable) error message for
+   * the build, if in a `FAILED` state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Status error;
 
   /**
-   * Output only. The source of the error for the build, if in a `FAILED` state. Deprecated: Use
-   * `errors` instead.
+   * Output only. Deprecated: Use `errors` instead. The source of the error for the build, if in a
+   * `FAILED` state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -298,8 +298,8 @@ public final class Build extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A status and (human readable) error message for the build, if in a `FAILED` state.
-   * Deprecated: Use `errors` instead.
+   * Output only. Deprecated: Use `errors` instead. A status and (human readable) error message for
+   * the build, if in a `FAILED` state.
    * @return value or {@code null} for none
    */
   public Status getError() {
@@ -307,8 +307,8 @@ public final class Build extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A status and (human readable) error message for the build, if in a `FAILED` state.
-   * Deprecated: Use `errors` instead.
+   * Output only. Deprecated: Use `errors` instead. A status and (human readable) error message for
+   * the build, if in a `FAILED` state.
    * @param error error or {@code null} for none
    */
   public Build setError(Status error) {
@@ -317,8 +317,8 @@ public final class Build extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The source of the error for the build, if in a `FAILED` state. Deprecated: Use
-   * `errors` instead.
+   * Output only. Deprecated: Use `errors` instead. The source of the error for the build, if in a
+   * `FAILED` state.
    * @return value or {@code null} for none
    */
   public java.lang.String getErrorSource() {
@@ -326,8 +326,8 @@ public final class Build extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The source of the error for the build, if in a `FAILED` state. Deprecated: Use
-   * `errors` instead.
+   * Output only. Deprecated: Use `errors` instead. The source of the error for the build, if in a
+   * `FAILED` state.
    * @param errorSource errorSource or {@code null} for none
    */
   public Build setErrorSource(java.lang.String errorSource) {

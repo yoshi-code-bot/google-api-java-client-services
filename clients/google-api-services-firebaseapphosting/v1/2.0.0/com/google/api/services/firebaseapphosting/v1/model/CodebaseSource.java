@@ -81,6 +81,17 @@ public final class CodebaseSource extends com.google.api.client.json.GenericJson
   private java.lang.String hash;
 
   /**
+   * Output only. The resource name for the Developer Connect
+   * [`gitRepositoryLink`](https://cloud.google.com/developer-
+   * connect/docs/api/reference/rest/v1/projects.locations.connections.gitRepositoryLinks) used for
+   * this build, in the format: `projects/{project}/locations/{location}/connections/{connection}/gi
+   * tRepositoryLinks/{repositoryLink}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String repository;
+
+  /**
    * Output only. A URI linking to the codebase on an hosting provider's website. May not be valid
    * if the commit has been rebased or force-pushed out of existence in the linked repository.
    * The value may be {@code null}.
@@ -206,6 +217,31 @@ public final class CodebaseSource extends com.google.api.client.json.GenericJson
    */
   public CodebaseSource setHash(java.lang.String hash) {
     this.hash = hash;
+    return this;
+  }
+
+  /**
+   * Output only. The resource name for the Developer Connect
+   * [`gitRepositoryLink`](https://cloud.google.com/developer-
+   * connect/docs/api/reference/rest/v1/projects.locations.connections.gitRepositoryLinks) used for
+   * this build, in the format: `projects/{project}/locations/{location}/connections/{connection}/gi
+   * tRepositoryLinks/{repositoryLink}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRepository() {
+    return repository;
+  }
+
+  /**
+   * Output only. The resource name for the Developer Connect
+   * [`gitRepositoryLink`](https://cloud.google.com/developer-
+   * connect/docs/api/reference/rest/v1/projects.locations.connections.gitRepositoryLinks) used for
+   * this build, in the format: `projects/{project}/locations/{location}/connections/{connection}/gi
+   * tRepositoryLinks/{repositoryLink}`
+   * @param repository repository or {@code null} for none
+   */
+  public CodebaseSource setRepository(java.lang.String repository) {
+    this.repository = repository;
     return this;
   }
 

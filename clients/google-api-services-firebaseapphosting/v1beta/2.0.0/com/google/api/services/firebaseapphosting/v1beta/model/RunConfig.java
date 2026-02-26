@@ -17,8 +17,8 @@
 package com.google.api.services.firebaseapphosting.v1beta.model;
 
 /**
- * Additional configuration to apply to the Cloud Run [`service`](https://cloud.google.com/run/docs/
- * reference/rest/v2/projects.locations.services#resource:-service).
+ * Configuration applied to the Cloud Run [`service`](https://cloud.google.com/run/docs/reference/re
+ * st/v2/projects.locations.services#resource:-service).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase App Hosting API. For a detailed explanation
