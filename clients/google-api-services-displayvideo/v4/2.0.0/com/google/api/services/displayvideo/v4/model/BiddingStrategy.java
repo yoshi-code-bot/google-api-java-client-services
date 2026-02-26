@@ -38,8 +38,13 @@ public final class BiddingStrategy extends com.google.api.client.json.GenericJso
   private FixedBidStrategy fixedBid;
 
   /**
-   * * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CPA`, `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CPC`,
-   * and `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_AV_VIEWED` only allow for
+   * A strategy that automatically adjusts the bid to optimize to your performance goal while
+   * spending the full budget. At insertion order level, the markup_type of line items cannot be set
+   * to `PARTNER_REVENUE_MODEL_MARKUP_TYPE_CPM`. In addition, the performance_goal_type value
+   * assigned to an insertion order determines the possible line_item_type values available for line
+   * items under that insertion order: * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CPA`,
+   * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CPC`, and
+   * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_AV_VIEWED` only allow for
    * `LINE_ITEM_TYPE_DISPLAY_DEFAULT` or `LINE_ITEM_TYPE_VIDEO_DEFAULT` line items. *
    * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CIVA` and
    * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_IVO_TEN` only allow for `LINE_ITEM_TYPE_VIDEO_DEFAULT`
@@ -84,8 +89,13 @@ public final class BiddingStrategy extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CPA`, `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CPC`,
-   * and `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_AV_VIEWED` only allow for
+   * A strategy that automatically adjusts the bid to optimize to your performance goal while
+   * spending the full budget. At insertion order level, the markup_type of line items cannot be set
+   * to `PARTNER_REVENUE_MODEL_MARKUP_TYPE_CPM`. In addition, the performance_goal_type value
+   * assigned to an insertion order determines the possible line_item_type values available for line
+   * items under that insertion order: * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CPA`,
+   * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CPC`, and
+   * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_AV_VIEWED` only allow for
    * `LINE_ITEM_TYPE_DISPLAY_DEFAULT` or `LINE_ITEM_TYPE_VIDEO_DEFAULT` line items. *
    * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CIVA` and
    * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_IVO_TEN` only allow for `LINE_ITEM_TYPE_VIDEO_DEFAULT`
@@ -98,8 +108,13 @@ public final class BiddingStrategy extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CPA`, `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CPC`,
-   * and `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_AV_VIEWED` only allow for
+   * A strategy that automatically adjusts the bid to optimize to your performance goal while
+   * spending the full budget. At insertion order level, the markup_type of line items cannot be set
+   * to `PARTNER_REVENUE_MODEL_MARKUP_TYPE_CPM`. In addition, the performance_goal_type value
+   * assigned to an insertion order determines the possible line_item_type values available for line
+   * items under that insertion order: * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CPA`,
+   * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CPC`, and
+   * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_AV_VIEWED` only allow for
    * `LINE_ITEM_TYPE_DISPLAY_DEFAULT` or `LINE_ITEM_TYPE_VIDEO_DEFAULT` line items. *
    * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CIVA` and
    * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_IVO_TEN` only allow for `LINE_ITEM_TYPE_VIDEO_DEFAULT`

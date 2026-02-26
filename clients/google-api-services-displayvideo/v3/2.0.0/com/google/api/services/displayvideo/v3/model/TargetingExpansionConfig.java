@@ -55,7 +55,11 @@ public final class TargetingExpansionConfig extends com.google.api.client.json.G
    * maximize_auto_spend_bid: * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CIVA` *
    * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_IVO_TEN` *
    * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_AV_VIEWED` performance_goal_auto_bid: *
-   * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_VIEWABLE_CPM`
+   * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_VIEWABLE_CPM` This also applies if the line item
+   * inherits one of the above bid strategies from the parent insertion order. Bid strategies set at
+   * the insertion order-level will be inherited by their line items if the `InsertionOrder` budget
+   * field automationType is set to `INSERTION_ORDER_AUTOMATION_TYPE_BUDGET` or
+   * `INSERTION_ORDER_AUTOMATION_TYPE_BID_BUDGET`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,7 +111,11 @@ public final class TargetingExpansionConfig extends com.google.api.client.json.G
    * maximize_auto_spend_bid: * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CIVA` *
    * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_IVO_TEN` *
    * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_AV_VIEWED` performance_goal_auto_bid: *
-   * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_VIEWABLE_CPM`
+   * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_VIEWABLE_CPM` This also applies if the line item
+   * inherits one of the above bid strategies from the parent insertion order. Bid strategies set at
+   * the insertion order-level will be inherited by their line items if the `InsertionOrder` budget
+   * field automationType is set to `INSERTION_ORDER_AUTOMATION_TYPE_BUDGET` or
+   * `INSERTION_ORDER_AUTOMATION_TYPE_BID_BUDGET`.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableOptimizedTargeting() {
@@ -122,7 +130,11 @@ public final class TargetingExpansionConfig extends com.google.api.client.json.G
    * maximize_auto_spend_bid: * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CIVA` *
    * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_IVO_TEN` *
    * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_AV_VIEWED` performance_goal_auto_bid: *
-   * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_VIEWABLE_CPM`
+   * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_VIEWABLE_CPM` This also applies if the line item
+   * inherits one of the above bid strategies from the parent insertion order. Bid strategies set at
+   * the insertion order-level will be inherited by their line items if the `InsertionOrder` budget
+   * field automationType is set to `INSERTION_ORDER_AUTOMATION_TYPE_BUDGET` or
+   * `INSERTION_ORDER_AUTOMATION_TYPE_BID_BUDGET`.
    * @param enableOptimizedTargeting enableOptimizedTargeting or {@code null} for none
    */
   public TargetingExpansionConfig setEnableOptimizedTargeting(java.lang.Boolean enableOptimizedTargeting) {
