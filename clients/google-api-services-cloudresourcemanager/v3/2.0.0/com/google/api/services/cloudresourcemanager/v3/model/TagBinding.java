@@ -17,8 +17,8 @@
 package com.google.api.services.cloudresourcemanager.v3.model;
 
 /**
- * A TagBinding represents a connection between a TagValue and a cloud resource Once a TagBinding is
- * created, the TagValue is applied to all the descendants of the Google Cloud resource.
+ * A TagBinding represents a connection between a TagValue and a cloud resource. When a TagBinding
+ * is created, the TagValue is applied to all the descendants of the Google Cloud resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Resource Manager API. For a detailed
@@ -34,7 +34,9 @@ public final class TagBinding extends com.google.api.client.json.GenericJson {
   /**
    * Output only. The name of the TagBinding. This is a String of the form: `tagBindings/{full-
    * resource-name}/{tag-value-name}` (e.g.
-   * `tagBindings/%2F%2Fcloudresourcemanager.googleapis.com%2Fprojects%2F123/tagValues/456`).
+   * `tagBindings/%2F%2Fcloudresourcemanager.googleapis.com%2Fprojects%2F123/tagValues/456`) or
+   * `tagBindings/{full-resource-name}/{tag-key-name}` (e.g.
+   * `tagBindings/%2F%2Fcloudresourcemanager.googleapis.com%2Fprojects%2F123/tagKeys/123`).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +70,9 @@ public final class TagBinding extends com.google.api.client.json.GenericJson {
   /**
    * Output only. The name of the TagBinding. This is a String of the form: `tagBindings/{full-
    * resource-name}/{tag-value-name}` (e.g.
-   * `tagBindings/%2F%2Fcloudresourcemanager.googleapis.com%2Fprojects%2F123/tagValues/456`).
+   * `tagBindings/%2F%2Fcloudresourcemanager.googleapis.com%2Fprojects%2F123/tagValues/456`) or
+   * `tagBindings/{full-resource-name}/{tag-key-name}` (e.g.
+   * `tagBindings/%2F%2Fcloudresourcemanager.googleapis.com%2Fprojects%2F123/tagKeys/123`).
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -78,7 +82,9 @@ public final class TagBinding extends com.google.api.client.json.GenericJson {
   /**
    * Output only. The name of the TagBinding. This is a String of the form: `tagBindings/{full-
    * resource-name}/{tag-value-name}` (e.g.
-   * `tagBindings/%2F%2Fcloudresourcemanager.googleapis.com%2Fprojects%2F123/tagValues/456`).
+   * `tagBindings/%2F%2Fcloudresourcemanager.googleapis.com%2Fprojects%2F123/tagValues/456`) or
+   * `tagBindings/{full-resource-name}/{tag-key-name}` (e.g.
+   * `tagBindings/%2F%2Fcloudresourcemanager.googleapis.com%2Fprojects%2F123/tagKeys/123`).
    * @param name name or {@code null} for none
    */
   public TagBinding setName(java.lang.String name) {
