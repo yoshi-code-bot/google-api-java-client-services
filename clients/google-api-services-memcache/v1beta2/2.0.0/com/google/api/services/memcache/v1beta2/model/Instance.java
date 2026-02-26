@@ -39,6 +39,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String authorizedNetwork;
 
   /**
+   * Output only. The available maintenance versions that can be applied to the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> availableMaintenanceVersions;
+
+  /**
    * Output only. The time the instance was created.
    * The value may be {@code null}.
    */
@@ -59,6 +66,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
+
+  /**
+   * Output only. The effective maintenance version of the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String effectiveMaintenanceVersion;
 
   /**
    * List of messages that describe the current state of the Memcached instance.
@@ -89,6 +103,14 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private MaintenanceSchedule maintenanceSchedule;
+
+  /**
+   * Optional. Last self service update maintenance version triggered by the customer. If it is
+   * empty, it means that the maintenance version is not set by the user.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String maintenanceVersion;
 
   /**
    * Output only. The full version of memcached server running on this instance. System
@@ -219,6 +241,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. The available maintenance versions that can be applied to the instance.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAvailableMaintenanceVersions() {
+    return availableMaintenanceVersions;
+  }
+
+  /**
+   * Output only. The available maintenance versions that can be applied to the instance.
+   * @param availableMaintenanceVersions availableMaintenanceVersions or {@code null} for none
+   */
+  public Instance setAvailableMaintenanceVersions(java.util.List<java.lang.String> availableMaintenanceVersions) {
+    this.availableMaintenanceVersions = availableMaintenanceVersions;
+    return this;
+  }
+
+  /**
    * Output only. The time the instance was created.
    * @return value or {@code null} for none
    */
@@ -268,6 +307,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Output only. The effective maintenance version of the instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEffectiveMaintenanceVersion() {
+    return effectiveMaintenanceVersion;
+  }
+
+  /**
+   * Output only. The effective maintenance version of the instance.
+   * @param effectiveMaintenanceVersion effectiveMaintenanceVersion or {@code null} for none
+   */
+  public Instance setEffectiveMaintenanceVersion(java.lang.String effectiveMaintenanceVersion) {
+    this.effectiveMaintenanceVersion = effectiveMaintenanceVersion;
     return this;
   }
 
@@ -340,6 +396,25 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setMaintenanceSchedule(MaintenanceSchedule maintenanceSchedule) {
     this.maintenanceSchedule = maintenanceSchedule;
+    return this;
+  }
+
+  /**
+   * Optional. Last self service update maintenance version triggered by the customer. If it is
+   * empty, it means that the maintenance version is not set by the user.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMaintenanceVersion() {
+    return maintenanceVersion;
+  }
+
+  /**
+   * Optional. Last self service update maintenance version triggered by the customer. If it is
+   * empty, it means that the maintenance version is not set by the user.
+   * @param maintenanceVersion maintenanceVersion or {@code null} for none
+   */
+  public Instance setMaintenanceVersion(java.lang.String maintenanceVersion) {
+    this.maintenanceVersion = maintenanceVersion;
     return this;
   }
 
