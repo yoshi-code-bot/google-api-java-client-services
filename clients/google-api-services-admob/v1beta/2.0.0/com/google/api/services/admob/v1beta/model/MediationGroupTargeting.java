@@ -46,7 +46,7 @@ public final class MediationGroupTargeting extends com.google.api.client.json.Ge
   private java.util.List<java.lang.String> excludedRegionCodes;
 
   /**
-   * Ad format targeted by this mediation group. Examples: "banner", "native".
+   * Ad format targeted by this mediation group. Examples: "BANNER", "NATIVE".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,7 +116,7 @@ public final class MediationGroupTargeting extends com.google.api.client.json.Ge
   }
 
   /**
-   * Ad format targeted by this mediation group. Examples: "banner", "native".
+   * Ad format targeted by this mediation group. Examples: "BANNER", "NATIVE".
    * @return value or {@code null} for none
    */
   public java.lang.String getFormat() {
@@ -124,7 +124,7 @@ public final class MediationGroupTargeting extends com.google.api.client.json.Ge
   }
 
   /**
-   * Ad format targeted by this mediation group. Examples: "banner", "native".
+   * Ad format targeted by this mediation group. Examples: "BANNER", "NATIVE".
    * @param format format or {@code null} for none
    */
   public MediationGroupTargeting setFormat(java.lang.String format) {
