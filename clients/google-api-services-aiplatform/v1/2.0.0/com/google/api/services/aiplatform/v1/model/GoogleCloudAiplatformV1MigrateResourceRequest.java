@@ -45,7 +45,8 @@ public final class GoogleCloudAiplatformV1MigrateResourceRequest extends com.goo
   private GoogleCloudAiplatformV1MigrateResourceRequestMigrateAutomlModelConfig migrateAutomlModelConfig;
 
   /**
-   * Config for migrating Dataset in datalabeling.googleapis.com to Vertex AI's Dataset.
+   * Deprecated: Data labeling service is shut down. Config for migrating Dataset in
+   * datalabeling.googleapis.com to Vertex AI's Dataset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +94,8 @@ public final class GoogleCloudAiplatformV1MigrateResourceRequest extends com.goo
   }
 
   /**
-   * Config for migrating Dataset in datalabeling.googleapis.com to Vertex AI's Dataset.
+   * Deprecated: Data labeling service is shut down. Config for migrating Dataset in
+   * datalabeling.googleapis.com to Vertex AI's Dataset.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1MigrateResourceRequestMigrateDataLabelingDatasetConfig getMigrateDataLabelingDatasetConfig() {
@@ -101,7 +103,8 @@ public final class GoogleCloudAiplatformV1MigrateResourceRequest extends com.goo
   }
 
   /**
-   * Config for migrating Dataset in datalabeling.googleapis.com to Vertex AI's Dataset.
+   * Deprecated: Data labeling service is shut down. Config for migrating Dataset in
+   * datalabeling.googleapis.com to Vertex AI's Dataset.
    * @param migrateDataLabelingDatasetConfig migrateDataLabelingDatasetConfig or {@code null} for none
    */
   public GoogleCloudAiplatformV1MigrateResourceRequest setMigrateDataLabelingDatasetConfig(GoogleCloudAiplatformV1MigrateResourceRequestMigrateDataLabelingDatasetConfig migrateDataLabelingDatasetConfig) {
