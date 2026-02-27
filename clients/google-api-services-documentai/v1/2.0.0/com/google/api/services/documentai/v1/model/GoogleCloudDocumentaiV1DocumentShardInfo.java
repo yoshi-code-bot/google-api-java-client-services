@@ -32,6 +32,14 @@ package com.google.api.services.documentai.v1.model;
 public final class GoogleCloudDocumentaiV1DocumentShardInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * The index of the first page in Document.pages in the overall document global pages. Available
+   * for document shards created by the document splitter.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer pageOffset;
+
+  /**
    * Total number of shards.
    * The value may be {@code null}.
    */
@@ -51,6 +59,25 @@ public final class GoogleCloudDocumentaiV1DocumentShardInfo extends com.google.a
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long textOffset;
+
+  /**
+   * The index of the first page in Document.pages in the overall document global pages. Available
+   * for document shards created by the document splitter.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getPageOffset() {
+    return pageOffset;
+  }
+
+  /**
+   * The index of the first page in Document.pages in the overall document global pages. Available
+   * for document shards created by the document splitter.
+   * @param pageOffset pageOffset or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1DocumentShardInfo setPageOffset(java.lang.Integer pageOffset) {
+    this.pageOffset = pageOffset;
+    return this;
+  }
 
   /**
    * Total number of shards.
