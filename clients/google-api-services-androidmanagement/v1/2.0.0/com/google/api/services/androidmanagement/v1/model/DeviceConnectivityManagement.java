@@ -65,6 +65,13 @@ public final class DeviceConnectivityManagement extends com.google.api.client.js
   private PreferentialNetworkServiceSettings preferentialNetworkServiceSettings;
 
   /**
+   * Optional. The global private DNS settings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PrivateDnsSettings privateDnsSettings;
+
+  /**
    * Controls tethering settings. Based on the value set, the user is partially or fully disallowed
    * from using different forms of tethering.
    * The value may be {@code null}.
@@ -179,6 +186,23 @@ public final class DeviceConnectivityManagement extends com.google.api.client.js
    */
   public DeviceConnectivityManagement setPreferentialNetworkServiceSettings(PreferentialNetworkServiceSettings preferentialNetworkServiceSettings) {
     this.preferentialNetworkServiceSettings = preferentialNetworkServiceSettings;
+    return this;
+  }
+
+  /**
+   * Optional. The global private DNS settings.
+   * @return value or {@code null} for none
+   */
+  public PrivateDnsSettings getPrivateDnsSettings() {
+    return privateDnsSettings;
+  }
+
+  /**
+   * Optional. The global private DNS settings.
+   * @param privateDnsSettings privateDnsSettings or {@code null} for none
+   */
+  public DeviceConnectivityManagement setPrivateDnsSettings(PrivateDnsSettings privateDnsSettings) {
+    this.privateDnsSettings = privateDnsSettings;
     return this;
   }
 
