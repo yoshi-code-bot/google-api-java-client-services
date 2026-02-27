@@ -30,6 +30,13 @@ package com.google.api.services.merchantapi.promotions_v1beta.model;
 public final class Attributes extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. This field defines the audience a promotion will be visible to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String audience;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -290,6 +297,15 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   private java.lang.String redemptionRestriction;
 
   /**
+   * Optional. A list of [regions](https://support.google.com/merchants/answer/15406457?hl=en&sjid=8
+   * 815806704218720187-NC#howregionswork) where the promotion is applicable. Must be set if
+   * `audience` is set to `LOCATION`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> regionIdInclusion;
+
+  /**
    * Optional. Whether the promotion applies to [all stores, or only specified
    * stores](https://support.google.com/merchants/answer/13857563?sjid=17642868584668136159-NC).
    * Local Inventory ads promotions throw an error if no store applicability is included. An
@@ -318,6 +334,23 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> storeCodesInclusion;
+
+  /**
+   * Optional. This field defines the audience a promotion will be visible to.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAudience() {
+    return audience;
+  }
+
+  /**
+   * Optional. This field defines the audience a promotion will be visible to.
+   * @param audience audience or {@code null} for none
+   */
+  public Attributes setAudience(java.lang.String audience) {
+    this.audience = audience;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none
@@ -932,6 +965,27 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
    */
   public Attributes setRedemptionRestriction(java.lang.String redemptionRestriction) {
     this.redemptionRestriction = redemptionRestriction;
+    return this;
+  }
+
+  /**
+   * Optional. A list of [regions](https://support.google.com/merchants/answer/15406457?hl=en&sjid=8
+   * 815806704218720187-NC#howregionswork) where the promotion is applicable. Must be set if
+   * `audience` is set to `LOCATION`.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getRegionIdInclusion() {
+    return regionIdInclusion;
+  }
+
+  /**
+   * Optional. A list of [regions](https://support.google.com/merchants/answer/15406457?hl=en&sjid=8
+   * 815806704218720187-NC#howregionswork) where the promotion is applicable. Must be set if
+   * `audience` is set to `LOCATION`.
+   * @param regionIdInclusion regionIdInclusion or {@code null} for none
+   */
+  public Attributes setRegionIdInclusion(java.util.List<java.lang.String> regionIdInclusion) {
+    this.regionIdInclusion = regionIdInclusion;
     return this;
   }
 
