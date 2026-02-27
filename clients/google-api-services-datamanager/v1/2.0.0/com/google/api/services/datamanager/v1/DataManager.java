@@ -836,7 +836,7 @@ public class DataManager extends com.google.api.client.googleapis.services.json.
            * operations: - `AND` - `=` - `!=` Supported fields: - `partner_link_id` -
            * `owning_account.account_type` - `owning_account.account_id` -
            * `partner_account.account_type` - `partner_account.account_id` Example:
-           * `owning_account.account_type = "GOOGLE_ADS" OR partner_account.account_id = 987654321`
+           * `owning_account.account_type = "GOOGLE_ADS" AND partner_account.account_id = 987654321`
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -845,7 +845,7 @@ public class DataManager extends com.google.api.client.googleapis.services.json.
          each condition (for example: `partner_link_id = 123456789`). Supported operations: - `AND` - `=` -
          `!=` Supported fields: - `partner_link_id` - `owning_account.account_type` -
          `owning_account.account_id` - `partner_account.account_type` - `partner_account.account_id`
-         Example: `owning_account.account_type = "GOOGLE_ADS" OR partner_account.account_id = 987654321`
+         Example: `owning_account.account_type = "GOOGLE_ADS" AND partner_account.account_id = 987654321`
            */
           public java.lang.String getFilter() {
             return filter;
@@ -857,7 +857,7 @@ public class DataManager extends com.google.api.client.googleapis.services.json.
            * operations: - `AND` - `=` - `!=` Supported fields: - `partner_link_id` -
            * `owning_account.account_type` - `owning_account.account_id` -
            * `partner_account.account_type` - `partner_account.account_id` Example:
-           * `owning_account.account_type = "GOOGLE_ADS" OR partner_account.account_id = 987654321`
+           * `owning_account.account_type = "GOOGLE_ADS" AND partner_account.account_id = 987654321`
            */
           public Search setFilter(java.lang.String filter) {
             this.filter = filter;

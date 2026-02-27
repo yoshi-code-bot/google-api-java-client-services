@@ -31,8 +31,8 @@ package com.google.api.services.datamanager.v1.model;
 public final class PairIdInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The count of the advertiser's first party data records that have been uploaded to
-   * a clean room provider. This does not signify the size of a PAIR user list.
+   * Optional. The count of the advertiser's first party data records that have been uploaded to a
+   * clean room provider. This does not signify the size of a PAIR user list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -47,7 +47,7 @@ public final class PairIdInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String cleanRoomIdentifier;
 
   /**
-   * Output only. This field denotes the percentage of membership match of this user list with the
+   * Optional. This field denotes the percentage of membership match of this user list with the
    * corresponding publisher's first party data. Must be between 0 and 100 inclusive.
    * The value may be {@code null}.
    */
@@ -65,7 +65,7 @@ public final class PairIdInfo extends com.google.api.client.json.GenericJson {
   private java.lang.Long publisherId;
 
   /**
-   * Optional. Descriptive name of the publisher to be displayed in the UI for a better targeting
+   * Required. Descriptive name of the publisher to be displayed in the UI for a better targeting
    * experience.
    * The value may be {@code null}.
    */
@@ -73,8 +73,8 @@ public final class PairIdInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String publisherName;
 
   /**
-   * Output only. The count of the advertiser's first party data records that have been uploaded to
-   * a clean room provider. This does not signify the size of a PAIR user list.
+   * Optional. The count of the advertiser's first party data records that have been uploaded to a
+   * clean room provider. This does not signify the size of a PAIR user list.
    * @return value or {@code null} for none
    */
   public java.lang.Long getAdvertiserIdentifierCount() {
@@ -82,8 +82,8 @@ public final class PairIdInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The count of the advertiser's first party data records that have been uploaded to
-   * a clean room provider. This does not signify the size of a PAIR user list.
+   * Optional. The count of the advertiser's first party data records that have been uploaded to a
+   * clean room provider. This does not signify the size of a PAIR user list.
    * @param advertiserIdentifierCount advertiserIdentifierCount or {@code null} for none
    */
   public PairIdInfo setAdvertiserIdentifierCount(java.lang.Long advertiserIdentifierCount) {
@@ -111,7 +111,7 @@ public final class PairIdInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. This field denotes the percentage of membership match of this user list with the
+   * Optional. This field denotes the percentage of membership match of this user list with the
    * corresponding publisher's first party data. Must be between 0 and 100 inclusive.
    * @return value or {@code null} for none
    */
@@ -120,7 +120,7 @@ public final class PairIdInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. This field denotes the percentage of membership match of this user list with the
+   * Optional. This field denotes the percentage of membership match of this user list with the
    * corresponding publisher's first party data. Must be between 0 and 100 inclusive.
    * @param matchRatePercentage matchRatePercentage or {@code null} for none
    */
@@ -153,7 +153,7 @@ public final class PairIdInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Descriptive name of the publisher to be displayed in the UI for a better targeting
+   * Required. Descriptive name of the publisher to be displayed in the UI for a better targeting
    * experience.
    * @return value or {@code null} for none
    */
@@ -162,7 +162,7 @@ public final class PairIdInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Descriptive name of the publisher to be displayed in the UI for a better targeting
+   * Required. Descriptive name of the publisher to be displayed in the UI for a better targeting
    * experience.
    * @param publisherName publisherName or {@code null} for none
    */
