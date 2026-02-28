@@ -31,6 +31,17 @@ package com.google.api.services.backupdr.v1.model;
 public final class InitializeServiceRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The location where the BackupPlan will be created. This field is required for multi-
+   * region BackupVaults and is optional for regional BackupVaults. It is useful when creating a
+   * Backup Vault in a multi-region, allowing the BackupPlan to reside in a specific region within
+   * that multi-region. If this field is not provided, the BackupPlan will be created in the same
+   * location as specified in the `name` field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String backupPlanLocation;
+
+  /**
    * Optional. The configuration for initializing a Cloud SQL instance.
    * The value may be {@code null}.
    */
@@ -58,6 +69,31 @@ public final class InitializeServiceRequest extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceType;
+
+  /**
+   * Optional. The location where the BackupPlan will be created. This field is required for multi-
+   * region BackupVaults and is optional for regional BackupVaults. It is useful when creating a
+   * Backup Vault in a multi-region, allowing the BackupPlan to reside in a specific region within
+   * that multi-region. If this field is not provided, the BackupPlan will be created in the same
+   * location as specified in the `name` field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBackupPlanLocation() {
+    return backupPlanLocation;
+  }
+
+  /**
+   * Optional. The location where the BackupPlan will be created. This field is required for multi-
+   * region BackupVaults and is optional for regional BackupVaults. It is useful when creating a
+   * Backup Vault in a multi-region, allowing the BackupPlan to reside in a specific region within
+   * that multi-region. If this field is not provided, the BackupPlan will be created in the same
+   * location as specified in the `name` field.
+   * @param backupPlanLocation backupPlanLocation or {@code null} for none
+   */
+  public InitializeServiceRequest setBackupPlanLocation(java.lang.String backupPlanLocation) {
+    this.backupPlanLocation = backupPlanLocation;
+    return this;
+  }
 
   /**
    * Optional. The configuration for initializing a Cloud SQL instance.
