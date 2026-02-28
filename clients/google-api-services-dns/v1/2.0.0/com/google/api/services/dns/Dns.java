@@ -4943,6 +4943,43 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       }
 
       /**
+       * Specify a filter expression to view records that exactly match the specified domain. Both
+       * the name and type parameters are not supported when you use filter and must be omitted.
+       * Your filter expression must conform to AIP-160 and you must specify a domain in the name
+       * field. Optionally, you can include the type field to filter records by type. You can also
+       * include the has_suffix function to view records that match by domain suffix. Examples: -
+       * name="example.com." - name="example.com." AND type="A" - name=has_suffix("example.com.") -
+       * name=has_suffix("example.com.") AND type="A"
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** Specify a filter expression to view records that exactly match the specified domain. Both the name
+     and type parameters are not supported when you use filter and must be omitted. Your filter
+     expression must conform to AIP-160 and you must specify a domain in the name field. Optionally, you
+     can include the type field to filter records by type. You can also include the has_suffix function
+     to view records that match by domain suffix. Examples: - name="example.com." - name="example.com."
+     AND type="A" - name=has_suffix("example.com.") - name=has_suffix("example.com.") AND type="A"
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /**
+       * Specify a filter expression to view records that exactly match the specified domain. Both
+       * the name and type parameters are not supported when you use filter and must be omitted.
+       * Your filter expression must conform to AIP-160 and you must specify a domain in the name
+       * field. Optionally, you can include the type field to filter records by type. You can also
+       * include the has_suffix function to view records that match by domain suffix. Examples: -
+       * name="example.com." - name="example.com." AND type="A" - name=has_suffix("example.com.") -
+       * name=has_suffix("example.com.") AND type="A"
+       */
+      public List setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
+      /**
        * Optional. Maximum number of results to be returned. If unspecified, the server decides how
        * many results to return.
        */
