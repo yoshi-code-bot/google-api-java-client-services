@@ -17,7 +17,7 @@
 package com.google.api.services.developerconnect.v1.model;
 
 /**
- * Configuration for connections to SSM instance
+ * Configuration for connections to Secure Source Manager instance
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Developer Connect API. For a detailed explanation
@@ -31,14 +31,16 @@ package com.google.api.services.developerconnect.v1.model;
 public final class SecureSourceManagerInstanceConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Immutable. SSM instance resource, formatted as `projects/locations/instances`
+   * Required. Immutable. Secure Source Manager instance resource, formatted as
+   * `projects/locations/instances`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String instance;
 
   /**
-   * Required. Immutable. SSM instance resource, formatted as `projects/locations/instances`
+   * Required. Immutable. Secure Source Manager instance resource, formatted as
+   * `projects/locations/instances`
    * @return value or {@code null} for none
    */
   public java.lang.String getInstance() {
@@ -46,7 +48,8 @@ public final class SecureSourceManagerInstanceConfig extends com.google.api.clie
   }
 
   /**
-   * Required. Immutable. SSM instance resource, formatted as `projects/locations/instances`
+   * Required. Immutable. Secure Source Manager instance resource, formatted as
+   * `projects/locations/instances`
    * @param instance instance or {@code null} for none
    */
   public SecureSourceManagerInstanceConfig setInstance(java.lang.String instance) {
