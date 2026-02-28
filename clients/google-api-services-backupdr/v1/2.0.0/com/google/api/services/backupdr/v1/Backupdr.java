@@ -10923,7 +10923,8 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the backupdr server.  After setting any optional
          * parameters, call the {@link Initialize#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The resource name of the serviceConfig used to initialize the service. Format:
+         * @param name Required. The resource name of the serviceConfig used to initialize the service. The location must
+         *        be the location of the BackupVault. Format:
          *        `projects/{project_id}/locations/{location}/serviceConfig`.
          * @param content the {@link com.google.api.services.backupdr.v1.model.InitializeServiceRequest}
          * @return the request
@@ -10952,7 +10953,8 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
            * Initialize#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The resource name of the serviceConfig used to initialize the service. Format:
+           * @param name Required. The resource name of the serviceConfig used to initialize the service. The location must
+         *        be the location of the BackupVault. Format:
          *        `projects/{project_id}/locations/{location}/serviceConfig`.
            * @param content the {@link com.google.api.services.backupdr.v1.model.InitializeServiceRequest}
            * @since 1.13
@@ -11023,13 +11025,15 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Required. The resource name of the serviceConfig used to initialize the service.
-           * Format: `projects/{project_id}/locations/{location}/serviceConfig`.
+           * Required. The resource name of the serviceConfig used to initialize the service. The
+           * location must be the location of the BackupVault. Format:
+           * `projects/{project_id}/locations/{location}/serviceConfig`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The resource name of the serviceConfig used to initialize the service. Format:
+          /** Required. The resource name of the serviceConfig used to initialize the service. The location must
+         be the location of the BackupVault. Format:
          `projects/{project_id}/locations/{location}/serviceConfig`.
            */
           public java.lang.String getName() {
@@ -11037,8 +11041,9 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Required. The resource name of the serviceConfig used to initialize the service.
-           * Format: `projects/{project_id}/locations/{location}/serviceConfig`.
+           * Required. The resource name of the serviceConfig used to initialize the service. The
+           * location must be the location of the BackupVault. Format:
+           * `projects/{project_id}/locations/{location}/serviceConfig`.
            */
           public Initialize setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
