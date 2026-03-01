@@ -38,6 +38,36 @@ public final class IncrementalResultStats extends com.google.api.client.json.Gen
   private java.lang.String disabledReason;
 
   /**
+   * Output only. Additional human-readable clarification, if available, for DisabledReason.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String disabledReasonDetails;
+
+  /**
+   * Output only. The time at which the first incremental result was written. If the query needed to
+   * restart internally, this only describes the final attempt.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String firstIncrementalRowTime;
+
+  /**
+   * Output only. Number of rows that were in the latest result set before query completion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long incrementalRowCount;
+
+  /**
+   * Output only. The time at which the last incremental result was written. Does not include the
+   * final result written after query completion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String lastIncrementalRowTime;
+
+  /**
    * Output only. The time at which the result table's contents were modified. May be absent if no
    * results have been written or the query has completed.
    * The value may be {@code null}.
@@ -67,6 +97,78 @@ public final class IncrementalResultStats extends com.google.api.client.json.Gen
    */
   public IncrementalResultStats setDisabledReason(java.lang.String disabledReason) {
     this.disabledReason = disabledReason;
+    return this;
+  }
+
+  /**
+   * Output only. Additional human-readable clarification, if available, for DisabledReason.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisabledReasonDetails() {
+    return disabledReasonDetails;
+  }
+
+  /**
+   * Output only. Additional human-readable clarification, if available, for DisabledReason.
+   * @param disabledReasonDetails disabledReasonDetails or {@code null} for none
+   */
+  public IncrementalResultStats setDisabledReasonDetails(java.lang.String disabledReasonDetails) {
+    this.disabledReasonDetails = disabledReasonDetails;
+    return this;
+  }
+
+  /**
+   * Output only. The time at which the first incremental result was written. If the query needed to
+   * restart internally, this only describes the final attempt.
+   * @return value or {@code null} for none
+   */
+  public String getFirstIncrementalRowTime() {
+    return firstIncrementalRowTime;
+  }
+
+  /**
+   * Output only. The time at which the first incremental result was written. If the query needed to
+   * restart internally, this only describes the final attempt.
+   * @param firstIncrementalRowTime firstIncrementalRowTime or {@code null} for none
+   */
+  public IncrementalResultStats setFirstIncrementalRowTime(String firstIncrementalRowTime) {
+    this.firstIncrementalRowTime = firstIncrementalRowTime;
+    return this;
+  }
+
+  /**
+   * Output only. Number of rows that were in the latest result set before query completion.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getIncrementalRowCount() {
+    return incrementalRowCount;
+  }
+
+  /**
+   * Output only. Number of rows that were in the latest result set before query completion.
+   * @param incrementalRowCount incrementalRowCount or {@code null} for none
+   */
+  public IncrementalResultStats setIncrementalRowCount(java.lang.Long incrementalRowCount) {
+    this.incrementalRowCount = incrementalRowCount;
+    return this;
+  }
+
+  /**
+   * Output only. The time at which the last incremental result was written. Does not include the
+   * final result written after query completion.
+   * @return value or {@code null} for none
+   */
+  public String getLastIncrementalRowTime() {
+    return lastIncrementalRowTime;
+  }
+
+  /**
+   * Output only. The time at which the last incremental result was written. Does not include the
+   * final result written after query completion.
+   * @param lastIncrementalRowTime lastIncrementalRowTime or {@code null} for none
+   */
+  public IncrementalResultStats setLastIncrementalRowTime(String lastIncrementalRowTime) {
+    this.lastIncrementalRowTime = lastIncrementalRowTime;
     return this;
   }
 
