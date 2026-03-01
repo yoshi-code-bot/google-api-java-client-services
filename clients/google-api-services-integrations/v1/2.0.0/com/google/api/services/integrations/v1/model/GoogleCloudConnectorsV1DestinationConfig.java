@@ -31,7 +31,7 @@ package com.google.api.services.integrations.v1.model;
 public final class GoogleCloudConnectorsV1DestinationConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The destinations for the key.
+   * Optional. The destinations for the key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,14 +44,14 @@ public final class GoogleCloudConnectorsV1DestinationConfig extends com.google.a
   }
 
   /**
-   * The key is the destination identifier that is supported by the Connector.
+   * Optional. The key is the destination identifier that is supported by the Connector.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String key;
 
   /**
-   * The destinations for the key.
+   * Optional. The destinations for the key.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudConnectorsV1Destination> getDestinations() {
@@ -59,7 +59,7 @@ public final class GoogleCloudConnectorsV1DestinationConfig extends com.google.a
   }
 
   /**
-   * The destinations for the key.
+   * Optional. The destinations for the key.
    * @param destinations destinations or {@code null} for none
    */
   public GoogleCloudConnectorsV1DestinationConfig setDestinations(java.util.List<GoogleCloudConnectorsV1Destination> destinations) {
@@ -68,7 +68,7 @@ public final class GoogleCloudConnectorsV1DestinationConfig extends com.google.a
   }
 
   /**
-   * The key is the destination identifier that is supported by the Connector.
+   * Optional. The key is the destination identifier that is supported by the Connector.
    * @return value or {@code null} for none
    */
   public java.lang.String getKey() {
@@ -76,7 +76,7 @@ public final class GoogleCloudConnectorsV1DestinationConfig extends com.google.a
   }
 
   /**
-   * The key is the destination identifier that is supported by the Connector.
+   * Optional. The key is the destination identifier that is supported by the Connector.
    * @param key key or {@code null} for none
    */
   public GoogleCloudConnectorsV1DestinationConfig setKey(java.lang.String key) {

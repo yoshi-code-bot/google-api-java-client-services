@@ -17,7 +17,7 @@
 package com.google.api.services.integrations.v1.model;
 
 /**
- * Eventing Configuration of a connection next: 19
+ * Eventing Configuration of a connection next: 20
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed
@@ -42,6 +42,13 @@ public final class GoogleCloudConnectorsV1EventingConfig extends com.google.api.
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(GoogleCloudConnectorsV1ConfigVariable.class);
   }
+
+  /**
+   * Optional. List of allowed event types for the connection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> allowedEventTypes;
 
   /**
    * Optional. Auth details for the webhook adapter.
@@ -72,8 +79,8 @@ public final class GoogleCloudConnectorsV1EventingConfig extends com.google.api.
   private java.lang.Boolean enrichmentEnabled;
 
   /**
-   * Optional. Ingress endpoint of the event listener. This is used only when private connectivity
-   * is enabled.
+   * Output only. Ingress endpoint of the event listener. This is used only when private
+   * connectivity is enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -136,6 +143,23 @@ public final class GoogleCloudConnectorsV1EventingConfig extends com.google.api.
    */
   public GoogleCloudConnectorsV1EventingConfig setAdditionalVariables(java.util.List<GoogleCloudConnectorsV1ConfigVariable> additionalVariables) {
     this.additionalVariables = additionalVariables;
+    return this;
+  }
+
+  /**
+   * Optional. List of allowed event types for the connection.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAllowedEventTypes() {
+    return allowedEventTypes;
+  }
+
+  /**
+   * Optional. List of allowed event types for the connection.
+   * @param allowedEventTypes allowedEventTypes or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1EventingConfig setAllowedEventTypes(java.util.List<java.lang.String> allowedEventTypes) {
+    this.allowedEventTypes = allowedEventTypes;
     return this;
   }
 
@@ -208,8 +232,8 @@ public final class GoogleCloudConnectorsV1EventingConfig extends com.google.api.
   }
 
   /**
-   * Optional. Ingress endpoint of the event listener. This is used only when private connectivity
-   * is enabled.
+   * Output only. Ingress endpoint of the event listener. This is used only when private
+   * connectivity is enabled.
    * @return value or {@code null} for none
    */
   public java.lang.String getEventsListenerIngressEndpoint() {
@@ -217,8 +241,8 @@ public final class GoogleCloudConnectorsV1EventingConfig extends com.google.api.
   }
 
   /**
-   * Optional. Ingress endpoint of the event listener. This is used only when private connectivity
-   * is enabled.
+   * Output only. Ingress endpoint of the event listener. This is used only when private
+   * connectivity is enabled.
    * @param eventsListenerIngressEndpoint eventsListenerIngressEndpoint or {@code null} for none
    */
   public GoogleCloudConnectorsV1EventingConfig setEventsListenerIngressEndpoint(java.lang.String eventsListenerIngressEndpoint) {

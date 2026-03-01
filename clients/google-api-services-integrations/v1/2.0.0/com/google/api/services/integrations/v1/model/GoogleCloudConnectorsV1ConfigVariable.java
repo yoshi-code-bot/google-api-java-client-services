@@ -31,21 +31,21 @@ package com.google.api.services.integrations.v1.model;
 public final class GoogleCloudConnectorsV1ConfigVariable extends com.google.api.client.json.GenericJson {
 
   /**
-   * Value is a bool.
+   * Optional. Value is a bool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean boolValue;
 
   /**
-   * Value is a Encryption Key.
+   * Optional. Value is a Encryption Key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudConnectorsV1EncryptionKey encryptionKeyValue;
 
   /**
-   * Value is an integer
+   * Optional. Value is an integer
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -59,21 +59,21 @@ public final class GoogleCloudConnectorsV1ConfigVariable extends com.google.api.
   private java.lang.String key;
 
   /**
-   * Value is a secret.
+   * Optional. Value is a secret.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudConnectorsV1Secret secretValue;
 
   /**
-   * Value is a string.
+   * Optional. Value is a string.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String stringValue;
 
   /**
-   * Value is a bool.
+   * Optional. Value is a bool.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getBoolValue() {
@@ -81,7 +81,7 @@ public final class GoogleCloudConnectorsV1ConfigVariable extends com.google.api.
   }
 
   /**
-   * Value is a bool.
+   * Optional. Value is a bool.
    * @param boolValue boolValue or {@code null} for none
    */
   public GoogleCloudConnectorsV1ConfigVariable setBoolValue(java.lang.Boolean boolValue) {
@@ -90,7 +90,7 @@ public final class GoogleCloudConnectorsV1ConfigVariable extends com.google.api.
   }
 
   /**
-   * Value is a Encryption Key.
+   * Optional. Value is a Encryption Key.
    * @return value or {@code null} for none
    */
   public GoogleCloudConnectorsV1EncryptionKey getEncryptionKeyValue() {
@@ -98,7 +98,7 @@ public final class GoogleCloudConnectorsV1ConfigVariable extends com.google.api.
   }
 
   /**
-   * Value is a Encryption Key.
+   * Optional. Value is a Encryption Key.
    * @param encryptionKeyValue encryptionKeyValue or {@code null} for none
    */
   public GoogleCloudConnectorsV1ConfigVariable setEncryptionKeyValue(GoogleCloudConnectorsV1EncryptionKey encryptionKeyValue) {
@@ -107,7 +107,7 @@ public final class GoogleCloudConnectorsV1ConfigVariable extends com.google.api.
   }
 
   /**
-   * Value is an integer
+   * Optional. Value is an integer
    * @return value or {@code null} for none
    */
   public java.lang.Long getIntValue() {
@@ -115,7 +115,7 @@ public final class GoogleCloudConnectorsV1ConfigVariable extends com.google.api.
   }
 
   /**
-   * Value is an integer
+   * Optional. Value is an integer
    * @param intValue intValue or {@code null} for none
    */
   public GoogleCloudConnectorsV1ConfigVariable setIntValue(java.lang.Long intValue) {
@@ -141,7 +141,7 @@ public final class GoogleCloudConnectorsV1ConfigVariable extends com.google.api.
   }
 
   /**
-   * Value is a secret.
+   * Optional. Value is a secret.
    * @return value or {@code null} for none
    */
   public GoogleCloudConnectorsV1Secret getSecretValue() {
@@ -149,7 +149,7 @@ public final class GoogleCloudConnectorsV1ConfigVariable extends com.google.api.
   }
 
   /**
-   * Value is a secret.
+   * Optional. Value is a secret.
    * @param secretValue secretValue or {@code null} for none
    */
   public GoogleCloudConnectorsV1ConfigVariable setSecretValue(GoogleCloudConnectorsV1Secret secretValue) {
@@ -158,7 +158,7 @@ public final class GoogleCloudConnectorsV1ConfigVariable extends com.google.api.
   }
 
   /**
-   * Value is a string.
+   * Optional. Value is a string.
    * @return value or {@code null} for none
    */
   public java.lang.String getStringValue() {
@@ -166,7 +166,7 @@ public final class GoogleCloudConnectorsV1ConfigVariable extends com.google.api.
   }
 
   /**
-   * Value is a string.
+   * Optional. Value is a string.
    * @param stringValue stringValue or {@code null} for none
    */
   public GoogleCloudConnectorsV1ConfigVariable setStringValue(java.lang.String stringValue) {

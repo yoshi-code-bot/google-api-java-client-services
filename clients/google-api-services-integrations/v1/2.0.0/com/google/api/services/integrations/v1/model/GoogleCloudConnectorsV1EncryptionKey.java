@@ -39,7 +39,7 @@ public final class GoogleCloudConnectorsV1EncryptionKey extends com.google.api.c
   private java.lang.String kmsKeyName;
 
   /**
-   * Type.
+   * Optional. Specifies the type of the encryption key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +65,7 @@ public final class GoogleCloudConnectorsV1EncryptionKey extends com.google.api.c
   }
 
   /**
-   * Type.
+   * Optional. Specifies the type of the encryption key.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -73,7 +73,7 @@ public final class GoogleCloudConnectorsV1EncryptionKey extends com.google.api.c
   }
 
   /**
-   * Type.
+   * Optional. Specifies the type of the encryption key.
    * @param type type or {@code null} for none
    */
   public GoogleCloudConnectorsV1EncryptionKey setType(java.lang.String type) {
