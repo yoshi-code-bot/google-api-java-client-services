@@ -45,6 +45,15 @@ public final class FileLocation extends com.google.api.client.json.GenericJson {
   private LayerDetails layerDetails;
 
   /**
+   * Line number in the file where the package is found. Applies only to source repository scanning.
+   * Note: this field is marked as `optional` in other corresponding protos, but in edition 2023,
+   * the "optional" keyword is redundant.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer lineNumber;
+
+  /**
    * For jars that are contained inside .war files, this filepath can indicate the path to war file
    * combined with the path to jar file.
    * @return value or {@code null} for none
@@ -75,6 +84,27 @@ public final class FileLocation extends com.google.api.client.json.GenericJson {
    */
   public FileLocation setLayerDetails(LayerDetails layerDetails) {
     this.layerDetails = layerDetails;
+    return this;
+  }
+
+  /**
+   * Line number in the file where the package is found. Applies only to source repository scanning.
+   * Note: this field is marked as `optional` in other corresponding protos, but in edition 2023,
+   * the "optional" keyword is redundant.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getLineNumber() {
+    return lineNumber;
+  }
+
+  /**
+   * Line number in the file where the package is found. Applies only to source repository scanning.
+   * Note: this field is marked as `optional` in other corresponding protos, but in edition 2023,
+   * the "optional" keyword is redundant.
+   * @param lineNumber lineNumber or {@code null} for none
+   */
+  public FileLocation setLineNumber(java.lang.Integer lineNumber) {
+    this.lineNumber = lineNumber;
     return this;
   }
 
