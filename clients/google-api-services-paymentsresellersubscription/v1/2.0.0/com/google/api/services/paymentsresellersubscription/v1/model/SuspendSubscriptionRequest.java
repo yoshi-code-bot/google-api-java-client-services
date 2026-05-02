@@ -30,6 +30,36 @@ package com.google.api.services.paymentsresellersubscription.v1.model;
 @SuppressWarnings("javadoc")
 public final class SuspendSubscriptionRequest extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. The mode to suspend the subscription. It's required for partners to specify the
+   * suspend mode, whether suspend immediately and indefinitely, or cancel the subscription after
+   * grace_period_millis or auto_cancel_duration_millis if it's not resumed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String suspendMode;
+
+  /**
+   * Optional. The mode to suspend the subscription. It's required for partners to specify the
+   * suspend mode, whether suspend immediately and indefinitely, or cancel the subscription after
+   * grace_period_millis or auto_cancel_duration_millis if it's not resumed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSuspendMode() {
+    return suspendMode;
+  }
+
+  /**
+   * Optional. The mode to suspend the subscription. It's required for partners to specify the
+   * suspend mode, whether suspend immediately and indefinitely, or cancel the subscription after
+   * grace_period_millis or auto_cancel_duration_millis if it's not resumed.
+   * @param suspendMode suspendMode or {@code null} for none
+   */
+  public SuspendSubscriptionRequest setSuspendMode(java.lang.String suspendMode) {
+    this.suspendMode = suspendMode;
+    return this;
+  }
+
   @Override
   public SuspendSubscriptionRequest set(String fieldName, Object value) {
     return (SuspendSubscriptionRequest) super.set(fieldName, value);
