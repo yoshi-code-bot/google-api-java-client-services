@@ -74,10 +74,9 @@ public final class GoogleCloudRecaptchaenterpriseV1TokenProperties extends com.g
   private java.lang.String iosBundleId;
 
   /**
-   * Output only. Whether the provided user response token is valid. When valid = false, the reason
-   * could be specified in invalid_reason or it could also be due to a user failing to solve a
-   * challenge or a sitekey mismatch (i.e the sitekey used to generate the token was different than
-   * the one specified in the assessment).
+   * Output only. Indicates whether the provided user response token is valid. If `false`, the token
+   * is invalid, either because the user failed the challenge or for a reason provided in the
+   * `invalid_reason` field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -188,10 +187,9 @@ public final class GoogleCloudRecaptchaenterpriseV1TokenProperties extends com.g
   }
 
   /**
-   * Output only. Whether the provided user response token is valid. When valid = false, the reason
-   * could be specified in invalid_reason or it could also be due to a user failing to solve a
-   * challenge or a sitekey mismatch (i.e the sitekey used to generate the token was different than
-   * the one specified in the assessment).
+   * Output only. Indicates whether the provided user response token is valid. If `false`, the token
+   * is invalid, either because the user failed the challenge or for a reason provided in the
+   * `invalid_reason` field.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getValid() {
@@ -199,10 +197,9 @@ public final class GoogleCloudRecaptchaenterpriseV1TokenProperties extends com.g
   }
 
   /**
-   * Output only. Whether the provided user response token is valid. When valid = false, the reason
-   * could be specified in invalid_reason or it could also be due to a user failing to solve a
-   * challenge or a sitekey mismatch (i.e the sitekey used to generate the token was different than
-   * the one specified in the assessment).
+   * Output only. Indicates whether the provided user response token is valid. If `false`, the token
+   * is invalid, either because the user failed the challenge or for a reason provided in the
+   * `invalid_reason` field.
    * @param valid valid or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TokenProperties setValid(java.lang.Boolean valid) {
