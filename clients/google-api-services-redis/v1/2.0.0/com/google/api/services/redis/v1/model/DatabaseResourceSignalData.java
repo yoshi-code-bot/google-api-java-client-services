@@ -54,7 +54,7 @@ public final class DatabaseResourceSignalData extends com.google.api.client.json
   private String lastRefreshTime;
 
   /**
-   * Resource location.
+   * Required. Resource location.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -147,7 +147,7 @@ public final class DatabaseResourceSignalData extends com.google.api.client.json
   }
 
   /**
-   * Resource location.
+   * Required. Resource location.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -155,7 +155,7 @@ public final class DatabaseResourceSignalData extends com.google.api.client.json
   }
 
   /**
-   * Resource location.
+   * Required. Resource location.
    * @param location location or {@code null} for none
    */
   public DatabaseResourceSignalData setLocation(java.lang.String location) {
