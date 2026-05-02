@@ -992,7 +992,7 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
            * This request holds the parameters needed by the osconfig server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Immutable. Identifier. In form of *
+           * @param name Immutable. Identifier. In the following format: *
            *        `organizations/{organization_id}/locations/global/policyOrchestrators/{orchestrator_id}` *
            *        `folders/{folder_id}/locations/global/policyOrchestrators/{orchestrator_id}` *
            *        `projects/{project_id_or_number}/locations/global/policyOrchestrators/{orchestrator_id}`
@@ -1023,7 +1023,7 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Immutable. Identifier. In form of *
+             * @param name Immutable. Identifier. In the following format: *
            *        `organizations/{organization_id}/locations/global/policyOrchestrators/{orchestrator_id}` *
            *        `folders/{folder_id}/locations/global/policyOrchestrators/{orchestrator_id}` *
            *        `projects/{project_id_or_number}/locations/global/policyOrchestrators/{orchestrator_id}`
@@ -1096,15 +1096,15 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * Immutable. Identifier. In form of * `organizations/{organization_id}/locations/global
-             * /policyOrchestrators/{orchestrator_id}` *
+             * Immutable. Identifier. In the following format: * `organizations/{organization_id}/lo
+             * cations/global/policyOrchestrators/{orchestrator_id}` *
              * `folders/{folder_id}/locations/global/policyOrchestrators/{orchestrator_id}` * `proje
              * cts/{project_id_or_number}/locations/global/policyOrchestrators/{orchestrator_id}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Immutable. Identifier. In form of *
+            /** Immutable. Identifier. In the following format: *
            `organizations/{organization_id}/locations/global/policyOrchestrators/{orchestrator_id}` *
            `folders/{folder_id}/locations/global/policyOrchestrators/{orchestrator_id}` *
            `projects/{project_id_or_number}/locations/global/policyOrchestrators/{orchestrator_id}`
@@ -1114,8 +1114,8 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * Immutable. Identifier. In form of * `organizations/{organization_id}/locations/global
-             * /policyOrchestrators/{orchestrator_id}` *
+             * Immutable. Identifier. In the following format: * `organizations/{organization_id}/lo
+             * cations/global/policyOrchestrators/{orchestrator_id}` *
              * `folders/{folder_id}/locations/global/policyOrchestrators/{orchestrator_id}` * `proje
              * cts/{project_id_or_number}/locations/global/policyOrchestrators/{orchestrator_id}`
              */
@@ -2711,7 +2711,7 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
            * This request holds the parameters needed by the osconfig server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Immutable. Identifier. In form of *
+           * @param name Immutable. Identifier. In the following format: *
            *        `organizations/{organization_id}/locations/global/policyOrchestrators/{orchestrator_id}` *
            *        `folders/{folder_id}/locations/global/policyOrchestrators/{orchestrator_id}` *
            *        `projects/{project_id_or_number}/locations/global/policyOrchestrators/{orchestrator_id}`
@@ -2742,7 +2742,7 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Immutable. Identifier. In form of *
+             * @param name Immutable. Identifier. In the following format: *
            *        `organizations/{organization_id}/locations/global/policyOrchestrators/{orchestrator_id}` *
            *        `folders/{folder_id}/locations/global/policyOrchestrators/{orchestrator_id}` *
            *        `projects/{project_id_or_number}/locations/global/policyOrchestrators/{orchestrator_id}`
@@ -2815,15 +2815,15 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * Immutable. Identifier. In form of * `organizations/{organization_id}/locations/global
-             * /policyOrchestrators/{orchestrator_id}` *
+             * Immutable. Identifier. In the following format: * `organizations/{organization_id}/lo
+             * cations/global/policyOrchestrators/{orchestrator_id}` *
              * `folders/{folder_id}/locations/global/policyOrchestrators/{orchestrator_id}` * `proje
              * cts/{project_id_or_number}/locations/global/policyOrchestrators/{orchestrator_id}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Immutable. Identifier. In form of *
+            /** Immutable. Identifier. In the following format: *
            `organizations/{organization_id}/locations/global/policyOrchestrators/{orchestrator_id}` *
            `folders/{folder_id}/locations/global/policyOrchestrators/{orchestrator_id}` *
            `projects/{project_id_or_number}/locations/global/policyOrchestrators/{orchestrator_id}`
@@ -2833,8 +2833,8 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * Immutable. Identifier. In form of * `organizations/{organization_id}/locations/global
-             * /policyOrchestrators/{orchestrator_id}` *
+             * Immutable. Identifier. In the following format: * `organizations/{organization_id}/lo
+             * cations/global/policyOrchestrators/{orchestrator_id}` *
              * `folders/{folder_id}/locations/global/policyOrchestrators/{orchestrator_id}` * `proje
              * cts/{project_id_or_number}/locations/global/policyOrchestrators/{orchestrator_id}`
              */
@@ -4430,7 +4430,7 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
            * This request holds the parameters needed by the osconfig server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Immutable. Identifier. In form of *
+           * @param name Immutable. Identifier. In the following format: *
            *        `organizations/{organization_id}/locations/global/policyOrchestrators/{orchestrator_id}` *
            *        `folders/{folder_id}/locations/global/policyOrchestrators/{orchestrator_id}` *
            *        `projects/{project_id_or_number}/locations/global/policyOrchestrators/{orchestrator_id}`
@@ -4461,7 +4461,7 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Immutable. Identifier. In form of *
+             * @param name Immutable. Identifier. In the following format: *
            *        `organizations/{organization_id}/locations/global/policyOrchestrators/{orchestrator_id}` *
            *        `folders/{folder_id}/locations/global/policyOrchestrators/{orchestrator_id}` *
            *        `projects/{project_id_or_number}/locations/global/policyOrchestrators/{orchestrator_id}`
@@ -4534,15 +4534,15 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * Immutable. Identifier. In form of * `organizations/{organization_id}/locations/global
-             * /policyOrchestrators/{orchestrator_id}` *
+             * Immutable. Identifier. In the following format: * `organizations/{organization_id}/lo
+             * cations/global/policyOrchestrators/{orchestrator_id}` *
              * `folders/{folder_id}/locations/global/policyOrchestrators/{orchestrator_id}` * `proje
              * cts/{project_id_or_number}/locations/global/policyOrchestrators/{orchestrator_id}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Immutable. Identifier. In form of *
+            /** Immutable. Identifier. In the following format: *
            `organizations/{organization_id}/locations/global/policyOrchestrators/{orchestrator_id}` *
            `folders/{folder_id}/locations/global/policyOrchestrators/{orchestrator_id}` *
            `projects/{project_id_or_number}/locations/global/policyOrchestrators/{orchestrator_id}`
@@ -4552,8 +4552,8 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * Immutable. Identifier. In form of * `organizations/{organization_id}/locations/global
-             * /policyOrchestrators/{orchestrator_id}` *
+             * Immutable. Identifier. In the following format: * `organizations/{organization_id}/lo
+             * cations/global/policyOrchestrators/{orchestrator_id}` *
              * `folders/{folder_id}/locations/global/policyOrchestrators/{orchestrator_id}` * `proje
              * cts/{project_id_or_number}/locations/global/policyOrchestrators/{orchestrator_id}`
              */
