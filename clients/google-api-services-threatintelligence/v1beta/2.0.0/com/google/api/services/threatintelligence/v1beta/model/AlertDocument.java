@@ -59,7 +59,7 @@ public final class AlertDocument extends com.google.api.client.json.GenericJson 
   private java.lang.String content;
 
   /**
-   * Output only. The time the document was created.
+   * Output only. The timestamp of the original external publication of the document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -191,7 +191,7 @@ public final class AlertDocument extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The time the document was created.
+   * Output only. The timestamp of the original external publication of the document.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -199,7 +199,7 @@ public final class AlertDocument extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The time the document was created.
+   * Output only. The timestamp of the original external publication of the document.
    * @param createTime createTime or {@code null} for none
    */
   public AlertDocument setCreateTime(String createTime) {
