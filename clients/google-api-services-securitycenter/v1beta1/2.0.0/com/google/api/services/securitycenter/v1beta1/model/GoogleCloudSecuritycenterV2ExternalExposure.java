@@ -31,12 +31,27 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class GoogleCloudSecuritycenterV2ExternalExposure extends com.google.api.client.json.GenericJson {
 
   /**
+   * The full resource name of the load balancer backend bucket, for example,
+   * "//compute.googleapis.com/projects/{project-id}/global/backendBuckets/{name}"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String backendBucket;
+
+  /**
    * The full resource name of load balancer backend service, for example,
    * "//compute.googleapis.com/projects/{project-id}/global/backendServices/{name}".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String backendService;
+
+  /**
+   * The name and version of the exposed web application, for example, "Jenkins 2.184".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String exposedApplication;
 
   /**
    * The resource which is running the exposed service, for example,
@@ -62,12 +77,35 @@ public final class GoogleCloudSecuritycenterV2ExternalExposure extends com.googl
   private java.lang.String forwardingRule;
 
   /**
+   * Hostname of the exposed application, for example, "https://test-app.a.run.app/"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String hostnameUri;
+
+  /**
+   * The http response returned by the web application.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudSecuritycenterV2HttpResponse> httpResponse;
+
+  /**
    * The full resource name of the instance group, for example,
    * "//compute.googleapis.com/projects/{project-id}/global/instanceGroups/{name}".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String instanceGroup;
+
+  /**
+   * The full resource name of load balancer backend service in the internal project having resource
+   * exposed via PSC, for example, "//compute.googleapis.com/projects/{project-
+   * id}/global/backendServices/{name}".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String internalBackendService;
 
   /**
    * The full resource name of the load balancer firewall policy, for example,
@@ -86,6 +124,14 @@ public final class GoogleCloudSecuritycenterV2ExternalExposure extends com.googl
   private java.lang.String networkEndpointGroup;
 
   /**
+   * The full resource name of the network ingress firewall policy, for example,
+   * "//compute.googleapis.com/projects/{project-id}/global/firewallPolicies/{name}".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String networkIngressFirewallPolicy;
+
+  /**
    * Private IP address of the exposed endpoint.
    * The value may be {@code null}.
    */
@@ -98,6 +144,24 @@ public final class GoogleCloudSecuritycenterV2ExternalExposure extends com.googl
    */
   @com.google.api.client.util.Key
   private java.lang.String privatePort;
+
+  /**
+   * The full resource name of the PSC (Private Service Connect) network attachment that network
+   * interface controller is attached to, for example, "//compute.googleapis.com/projects/{project-
+   * id}/regions/{region}/networkAttachments/{name}"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pscNetworkAttachment;
+
+  /**
+   * The full resource name of the PSC (Private Service Connect) service attachment that the load
+   * balancer network endpoint group targets, for example,
+   * "//compute.googleapis.com/projects/{project-id}/regions/{region}/serviceAttachments/{name}"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pscServiceAttachment;
 
   /**
    * Public IP address of the exposed endpoint.
@@ -122,6 +186,25 @@ public final class GoogleCloudSecuritycenterV2ExternalExposure extends com.googl
   private java.lang.String serviceFirewallPolicy;
 
   /**
+   * The full resource name of the load balancer backend bucket, for example,
+   * "//compute.googleapis.com/projects/{project-id}/global/backendBuckets/{name}"
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBackendBucket() {
+    return backendBucket;
+  }
+
+  /**
+   * The full resource name of the load balancer backend bucket, for example,
+   * "//compute.googleapis.com/projects/{project-id}/global/backendBuckets/{name}"
+   * @param backendBucket backendBucket or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2ExternalExposure setBackendBucket(java.lang.String backendBucket) {
+    this.backendBucket = backendBucket;
+    return this;
+  }
+
+  /**
    * The full resource name of load balancer backend service, for example,
    * "//compute.googleapis.com/projects/{project-id}/global/backendServices/{name}".
    * @return value or {@code null} for none
@@ -137,6 +220,23 @@ public final class GoogleCloudSecuritycenterV2ExternalExposure extends com.googl
    */
   public GoogleCloudSecuritycenterV2ExternalExposure setBackendService(java.lang.String backendService) {
     this.backendService = backendService;
+    return this;
+  }
+
+  /**
+   * The name and version of the exposed web application, for example, "Jenkins 2.184".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExposedApplication() {
+    return exposedApplication;
+  }
+
+  /**
+   * The name and version of the exposed web application, for example, "Jenkins 2.184".
+   * @param exposedApplication exposedApplication or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2ExternalExposure setExposedApplication(java.lang.String exposedApplication) {
+    this.exposedApplication = exposedApplication;
     return this;
   }
 
@@ -196,6 +296,40 @@ public final class GoogleCloudSecuritycenterV2ExternalExposure extends com.googl
   }
 
   /**
+   * Hostname of the exposed application, for example, "https://test-app.a.run.app/"
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHostnameUri() {
+    return hostnameUri;
+  }
+
+  /**
+   * Hostname of the exposed application, for example, "https://test-app.a.run.app/"
+   * @param hostnameUri hostnameUri or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2ExternalExposure setHostnameUri(java.lang.String hostnameUri) {
+    this.hostnameUri = hostnameUri;
+    return this;
+  }
+
+  /**
+   * The http response returned by the web application.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudSecuritycenterV2HttpResponse> getHttpResponse() {
+    return httpResponse;
+  }
+
+  /**
+   * The http response returned by the web application.
+   * @param httpResponse httpResponse or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2ExternalExposure setHttpResponse(java.util.List<GoogleCloudSecuritycenterV2HttpResponse> httpResponse) {
+    this.httpResponse = httpResponse;
+    return this;
+  }
+
+  /**
    * The full resource name of the instance group, for example,
    * "//compute.googleapis.com/projects/{project-id}/global/instanceGroups/{name}".
    * @return value or {@code null} for none
@@ -211,6 +345,27 @@ public final class GoogleCloudSecuritycenterV2ExternalExposure extends com.googl
    */
   public GoogleCloudSecuritycenterV2ExternalExposure setInstanceGroup(java.lang.String instanceGroup) {
     this.instanceGroup = instanceGroup;
+    return this;
+  }
+
+  /**
+   * The full resource name of load balancer backend service in the internal project having resource
+   * exposed via PSC, for example, "//compute.googleapis.com/projects/{project-
+   * id}/global/backendServices/{name}".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInternalBackendService() {
+    return internalBackendService;
+  }
+
+  /**
+   * The full resource name of load balancer backend service in the internal project having resource
+   * exposed via PSC, for example, "//compute.googleapis.com/projects/{project-
+   * id}/global/backendServices/{name}".
+   * @param internalBackendService internalBackendService or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2ExternalExposure setInternalBackendService(java.lang.String internalBackendService) {
+    this.internalBackendService = internalBackendService;
     return this;
   }
 
@@ -253,6 +408,25 @@ public final class GoogleCloudSecuritycenterV2ExternalExposure extends com.googl
   }
 
   /**
+   * The full resource name of the network ingress firewall policy, for example,
+   * "//compute.googleapis.com/projects/{project-id}/global/firewallPolicies/{name}".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNetworkIngressFirewallPolicy() {
+    return networkIngressFirewallPolicy;
+  }
+
+  /**
+   * The full resource name of the network ingress firewall policy, for example,
+   * "//compute.googleapis.com/projects/{project-id}/global/firewallPolicies/{name}".
+   * @param networkIngressFirewallPolicy networkIngressFirewallPolicy or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2ExternalExposure setNetworkIngressFirewallPolicy(java.lang.String networkIngressFirewallPolicy) {
+    this.networkIngressFirewallPolicy = networkIngressFirewallPolicy;
+    return this;
+  }
+
+  /**
    * Private IP address of the exposed endpoint.
    * @return value or {@code null} for none
    */
@@ -283,6 +457,48 @@ public final class GoogleCloudSecuritycenterV2ExternalExposure extends com.googl
    */
   public GoogleCloudSecuritycenterV2ExternalExposure setPrivatePort(java.lang.String privatePort) {
     this.privatePort = privatePort;
+    return this;
+  }
+
+  /**
+   * The full resource name of the PSC (Private Service Connect) network attachment that network
+   * interface controller is attached to, for example, "//compute.googleapis.com/projects/{project-
+   * id}/regions/{region}/networkAttachments/{name}"
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPscNetworkAttachment() {
+    return pscNetworkAttachment;
+  }
+
+  /**
+   * The full resource name of the PSC (Private Service Connect) network attachment that network
+   * interface controller is attached to, for example, "//compute.googleapis.com/projects/{project-
+   * id}/regions/{region}/networkAttachments/{name}"
+   * @param pscNetworkAttachment pscNetworkAttachment or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2ExternalExposure setPscNetworkAttachment(java.lang.String pscNetworkAttachment) {
+    this.pscNetworkAttachment = pscNetworkAttachment;
+    return this;
+  }
+
+  /**
+   * The full resource name of the PSC (Private Service Connect) service attachment that the load
+   * balancer network endpoint group targets, for example,
+   * "//compute.googleapis.com/projects/{project-id}/regions/{region}/serviceAttachments/{name}"
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPscServiceAttachment() {
+    return pscServiceAttachment;
+  }
+
+  /**
+   * The full resource name of the PSC (Private Service Connect) service attachment that the load
+   * balancer network endpoint group targets, for example,
+   * "//compute.googleapis.com/projects/{project-id}/regions/{region}/serviceAttachments/{name}"
+   * @param pscServiceAttachment pscServiceAttachment or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2ExternalExposure setPscServiceAttachment(java.lang.String pscServiceAttachment) {
+    this.pscServiceAttachment = pscServiceAttachment;
     return this;
   }
 
