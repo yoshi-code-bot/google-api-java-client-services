@@ -32,7 +32,7 @@ package com.google.api.services.firebasedataconnect.v1.model;
 public final class GraphqlResponseExtensions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Data Connect specific GraphQL extension, a list of paths and properties.
+   * SQL Connect specific GraphQL extension, a list of paths and properties.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class GraphqlResponseExtensions extends com.google.api.client.json.
   }
 
   /**
-   * Data Connect specific GraphQL extension, a list of paths and properties.
+   * SQL Connect specific GraphQL extension, a list of paths and properties.
    * @return value or {@code null} for none
    */
   public java.util.List<DataConnectProperties> getDataConnect() {
@@ -53,7 +53,7 @@ public final class GraphqlResponseExtensions extends com.google.api.client.json.
   }
 
   /**
-   * Data Connect specific GraphQL extension, a list of paths and properties.
+   * SQL Connect specific GraphQL extension, a list of paths and properties.
    * @param dataConnect dataConnect or {@code null} for none
    */
   public GraphqlResponseExtensions setDataConnect(java.util.List<DataConnectProperties> dataConnect) {

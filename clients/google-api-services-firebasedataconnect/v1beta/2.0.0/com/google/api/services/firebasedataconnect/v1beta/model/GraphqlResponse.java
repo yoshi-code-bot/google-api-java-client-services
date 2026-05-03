@@ -17,8 +17,8 @@
 package com.google.api.services.firebasedataconnect.v1beta.model;
 
 /**
- * The GraphQL response from Firebase Data Connect. It strives to match the GraphQL over HTTP spec.
- * Note: Firebase Data Connect always responds with `Content-Type: application/json`.
+ * The GraphQL response from Firebase SQL Connect. It strives to match the GraphQL over HTTP spec.
+ * Note: Firebase SQL Connect always responds with `Content-Type: application/json`.
  * https://github.com/graphql/graphql-over-http/blob/main/spec/GraphQLOverHTTP.md#body
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

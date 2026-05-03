@@ -18,7 +18,7 @@ package com.google.api.services.firebasedataconnect.v1beta.model;
 
 /**
  * GraphqlError conforms to the GraphQL error spec. https://spec.graphql.org/draft/#sec-Errors
- * Firebase Data Connect API surfaces `GraphqlError` in various APIs: - Upon compile error,
+ * Firebase SQL Connect API surfaces `GraphqlError` in various APIs: - Upon compile error,
  * `UpdateSchema` and `UpdateConnector` return Code.Invalid_Argument with a list of `GraphqlError`
  * in error details. - Upon query compile error, `ExecuteGraphql`, `ExecuteGraphqlRead` and
  * `IntrospectGraphql` return Code.OK with a list of `GraphqlError` in response body. - Upon query
