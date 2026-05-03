@@ -73,6 +73,16 @@ public final class ExecutionConfig extends com.google.api.client.json.GenericJso
   private java.lang.String networkUri;
 
   /**
+   * Optional. Associates Resource Manager tags with the workload nodes. There is a max limit of 30
+   * tags. Keys and values can be either in numeric format, such as tagKeys/{tag_key_id} and
+   * tagValues/{tag_value_id}, or in namespaced format, such as
+   * {org_id|project_id}/{tag_key_short_name} and {tag_value_short_name}.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> resourceManagerTags;
+
+  /**
    * Optional. Service account that used to execute workload.
    * The value may be {@code null}.
    */
@@ -212,6 +222,29 @@ public final class ExecutionConfig extends com.google.api.client.json.GenericJso
    */
   public ExecutionConfig setNetworkUri(java.lang.String networkUri) {
     this.networkUri = networkUri;
+    return this;
+  }
+
+  /**
+   * Optional. Associates Resource Manager tags with the workload nodes. There is a max limit of 30
+   * tags. Keys and values can be either in numeric format, such as tagKeys/{tag_key_id} and
+   * tagValues/{tag_value_id}, or in namespaced format, such as
+   * {org_id|project_id}/{tag_key_short_name} and {tag_value_short_name}.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getResourceManagerTags() {
+    return resourceManagerTags;
+  }
+
+  /**
+   * Optional. Associates Resource Manager tags with the workload nodes. There is a max limit of 30
+   * tags. Keys and values can be either in numeric format, such as tagKeys/{tag_key_id} and
+   * tagValues/{tag_value_id}, or in namespaced format, such as
+   * {org_id|project_id}/{tag_key_short_name} and {tag_value_short_name}.
+   * @param resourceManagerTags resourceManagerTags or {@code null} for none
+   */
+  public ExecutionConfig setResourceManagerTags(java.util.Map<String, java.lang.String> resourceManagerTags) {
+    this.resourceManagerTags = resourceManagerTags;
     return this;
   }
 
