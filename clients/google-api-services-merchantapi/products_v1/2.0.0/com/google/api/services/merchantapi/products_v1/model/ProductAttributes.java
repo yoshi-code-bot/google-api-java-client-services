@@ -99,6 +99,13 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   private String availabilityDate;
 
   /**
+   * The [body style](https://support.google.com/google-ads/answer/14157085) of the vehicle.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String bodyStyle;
+
+  /**
    * [Brand](https://support.google.com/merchants/answer/6324351) of the item. For example,
    * "Google".
    * The value may be {@code null}.
@@ -136,6 +143,14 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   private java.util.List<ProductCertification> certifications;
 
   /**
+   * Whether the vehicle is OEM [certified pre-owned](https://support.google.com/google-
+   * ads/answer/14156475).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean certifiedPreOwned;
+
+  /**
    * Extra fields to export to the Cloud Retail program.
    * The value may be {@code null}.
    */
@@ -147,6 +162,13 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(CloudExportAdditionalProperties.class);
   }
+
+  /**
+   * The [co2 emission](https://support.google.com/google-ads/answer/14546146) of the vehicle.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Co2Emissions co2Emissions;
 
   /**
    * [Color](https://support.google.com/merchants/answer/6324487) of the item. For example, "red".
@@ -210,6 +232,14 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   private java.lang.String customLabel4;
 
   /**
+   * The date the vehicle was first registered. Format: `YYYY-MM`. See the [Date first
+   * registered](https://support.google.com/google-ads/answer/14546138) for more information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dateFirstRegistered;
+
+  /**
    * Description of the item.
    * The value may be {@code null}.
    */
@@ -263,12 +293,41 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   private java.lang.Double displayAdsValue;
 
   /**
+   * The [electric range](https://support.google.com/google-ads/answer/15162232) of the vehicle in
+   * miles/kms.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Mileage electricRange;
+
+  /**
+   * The [emission standard](https://support.google.com/google-ads/answer/14869021) of the vehicle.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String emissionsStandard;
+
+  /**
+   * The [energy consumption](https://support.google.com/google-ads/answer/14546149) of the vehicle.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EnergyConsumption energyConsumption;
+
+  /**
    * The [energy efficiency class](https://support.google.com/merchants/answer/7562785) as defined
    * in EU directive 2010/30/EU.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String energyEfficiencyClass;
+
+  /**
+   * The [engine](https://support.google.com/google-ads/answer/14156068) type of the vehicle.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String engine;
 
   /**
    * The list of destinations to exclude for this target (corresponds to unchecked check boxes in
@@ -312,6 +371,21 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(FreeShippingThreshold.class);
   }
+
+  /**
+   * The [fuel consumption](https://support.google.com/google-ads/answer/14543580) of the vehicle.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FuelConsumption fuelConsumption;
+
+  /**
+   * The fuel consumption of the vehicle when the hybrid battery is discharged. See the [Help Center
+   * article](https://support.google.com/google-ads/answer/15162033) for more information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FuelConsumption fuelConsumptionDischargedBattery;
 
   /**
    * Target [gender](https://support.google.com/merchants/answer/6324479) of the item.
@@ -477,6 +551,14 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   private Price maximumRetailPrice;
 
   /**
+   * The number of miles/kms on the vehicle. See the [Mileage](https://support.google.com/google-
+   * ads/answer/14156166) for more information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Mileage mileage;
+
+  /**
    * The [energy efficiency class](https://support.google.com/merchants/answer/7562785) as defined
    * in EU directive 2010/30/EU.
    * The value may be {@code null}.
@@ -514,6 +596,14 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String mobileLinkTemplate;
+
+  /**
+   * The [Model](https://support.google.com/google-ads/answer/14154511) of the vehicle, such as
+   * `LX`, `EX`, and others.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String model;
 
   /**
    * Manufacturer Part Number ([MPN](https://support.google.com/merchants/answer/6324482)) of the
@@ -802,6 +892,14 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   private java.lang.String transitTimeLabel;
 
   /**
+   * The [Trim](https://support.google.com/google-ads/answer/14154176) of the vehicle model, such as
+   * `S`, `SV`, `SL` and others.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String trim;
+
+  /**
    * The preference of the denominator of the unit price.
    * The value may be {@code null}.
    */
@@ -816,6 +914,51 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   private UnitPricingMeasure unitPricingMeasure;
 
   /**
+   * The all-in advertised price for a vehicle, which includes costs for the following – any
+   * accessories attached to the vehicle, environmental levies, extra warranty, fuel, freight, pre-
+   * delivery inspection (PDI), dealer fees for handling licensing, provincial regulatory fees,
+   * miscellaneous dealer charges for security etching and nitrogen tire fill, and factory-to-
+   * customer or dealer-to-customer discounts or incentives. See the [Vehicle all-in
+   * price](https://support.google.com/google-ads/answer/14156981) for more information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Price vehicleAllInPrice;
+
+  /**
+   * The miscellaneous expenses like insurance and registration fees of the vehicle. See the
+   * [Vehicle expenses](https://support.google.com/google-ads/answer/15957154) for more information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Price vehicleExpenses;
+
+  /**
+   * Whether the vehicle is sold with mandatory inspection and maintenance performed before
+   * delivery. See the [Vehicle mandatory inspection included](https://support.google.com/google-
+   * ads/answer/15956630) for more information.`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean vehicleMandatoryInspectionIncluded;
+
+  /**
+   * The MSRP (Manufacturer Suggested Retail Price) for the vehicle in its current configuration.
+   * See the [Vehicle MSRP](https://support.google.com/google-ads/answer/14154171) for more
+   * information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Price vehicleMsrp;
+
+  /**
+   * The [price type](https://support.google.com/google-ads/answer/14592783) of the vehicle.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String vehiclePriceType;
+
+  /**
    * Optional. A list of video URLs for the item. Use this attribute to provide more visuals for
    * your product beyond your image attributes. See the [Help Center
    * article](https://support.google.com/merchants/answer/15216925) for more information.
@@ -825,12 +968,34 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   private java.util.List<java.lang.String> videoLinks;
 
   /**
+   * The [Vehicle Identification Number (VIN)](https://support.google.com/google-
+   * ads/answer/14154510) of the vehicle.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String vin;
+
+  /**
    * URL of the 3D image of the item. See the [Help Center
    * article](https://support.google.com/merchants/answer/13674896) for more information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String virtualModelLink;
+
+  /**
+   * The [warranty](https://support.google.com/google-ads/answer/15957626) of the vehicle.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Warranty warranty;
+
+  /**
+   * The [Year](https://support.google.com/google-ads/answer/14152816) of the vehicle model.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long year;
 
   /**
    * Additional URLs of images of the item.
@@ -998,6 +1163,23 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * The [body style](https://support.google.com/google-ads/answer/14157085) of the vehicle.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBodyStyle() {
+    return bodyStyle;
+  }
+
+  /**
+   * The [body style](https://support.google.com/google-ads/answer/14157085) of the vehicle.
+   * @param bodyStyle bodyStyle or {@code null} for none
+   */
+  public ProductAttributes setBodyStyle(java.lang.String bodyStyle) {
+    this.bodyStyle = bodyStyle;
+    return this;
+  }
+
+  /**
    * [Brand](https://support.google.com/merchants/answer/6324351) of the item. For example,
    * "Google".
    * @return value or {@code null} for none
@@ -1072,6 +1254,25 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * Whether the vehicle is OEM [certified pre-owned](https://support.google.com/google-
+   * ads/answer/14156475).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getCertifiedPreOwned() {
+    return certifiedPreOwned;
+  }
+
+  /**
+   * Whether the vehicle is OEM [certified pre-owned](https://support.google.com/google-
+   * ads/answer/14156475).
+   * @param certifiedPreOwned certifiedPreOwned or {@code null} for none
+   */
+  public ProductAttributes setCertifiedPreOwned(java.lang.Boolean certifiedPreOwned) {
+    this.certifiedPreOwned = certifiedPreOwned;
+    return this;
+  }
+
+  /**
    * Extra fields to export to the Cloud Retail program.
    * @return value or {@code null} for none
    */
@@ -1085,6 +1286,23 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
    */
   public ProductAttributes setCloudExportAdditionalProperties(java.util.List<CloudExportAdditionalProperties> cloudExportAdditionalProperties) {
     this.cloudExportAdditionalProperties = cloudExportAdditionalProperties;
+    return this;
+  }
+
+  /**
+   * The [co2 emission](https://support.google.com/google-ads/answer/14546146) of the vehicle.
+   * @return value or {@code null} for none
+   */
+  public Co2Emissions getCo2Emissions() {
+    return co2Emissions;
+  }
+
+  /**
+   * The [co2 emission](https://support.google.com/google-ads/answer/14546146) of the vehicle.
+   * @param co2Emissions co2Emissions or {@code null} for none
+   */
+  public ProductAttributes setCo2Emissions(Co2Emissions co2Emissions) {
+    this.co2Emissions = co2Emissions;
     return this;
   }
 
@@ -1235,6 +1453,25 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * The date the vehicle was first registered. Format: `YYYY-MM`. See the [Date first
+   * registered](https://support.google.com/google-ads/answer/14546138) for more information.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDateFirstRegistered() {
+    return dateFirstRegistered;
+  }
+
+  /**
+   * The date the vehicle was first registered. Format: `YYYY-MM`. See the [Date first
+   * registered](https://support.google.com/google-ads/answer/14546138) for more information.
+   * @param dateFirstRegistered dateFirstRegistered or {@code null} for none
+   */
+  public ProductAttributes setDateFirstRegistered(java.lang.String dateFirstRegistered) {
+    this.dateFirstRegistered = dateFirstRegistered;
+    return this;
+  }
+
+  /**
    * Description of the item.
    * @return value or {@code null} for none
    */
@@ -1362,6 +1599,59 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * The [electric range](https://support.google.com/google-ads/answer/15162232) of the vehicle in
+   * miles/kms.
+   * @return value or {@code null} for none
+   */
+  public Mileage getElectricRange() {
+    return electricRange;
+  }
+
+  /**
+   * The [electric range](https://support.google.com/google-ads/answer/15162232) of the vehicle in
+   * miles/kms.
+   * @param electricRange electricRange or {@code null} for none
+   */
+  public ProductAttributes setElectricRange(Mileage electricRange) {
+    this.electricRange = electricRange;
+    return this;
+  }
+
+  /**
+   * The [emission standard](https://support.google.com/google-ads/answer/14869021) of the vehicle.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEmissionsStandard() {
+    return emissionsStandard;
+  }
+
+  /**
+   * The [emission standard](https://support.google.com/google-ads/answer/14869021) of the vehicle.
+   * @param emissionsStandard emissionsStandard or {@code null} for none
+   */
+  public ProductAttributes setEmissionsStandard(java.lang.String emissionsStandard) {
+    this.emissionsStandard = emissionsStandard;
+    return this;
+  }
+
+  /**
+   * The [energy consumption](https://support.google.com/google-ads/answer/14546149) of the vehicle.
+   * @return value or {@code null} for none
+   */
+  public EnergyConsumption getEnergyConsumption() {
+    return energyConsumption;
+  }
+
+  /**
+   * The [energy consumption](https://support.google.com/google-ads/answer/14546149) of the vehicle.
+   * @param energyConsumption energyConsumption or {@code null} for none
+   */
+  public ProductAttributes setEnergyConsumption(EnergyConsumption energyConsumption) {
+    this.energyConsumption = energyConsumption;
+    return this;
+  }
+
+  /**
    * The [energy efficiency class](https://support.google.com/merchants/answer/7562785) as defined
    * in EU directive 2010/30/EU.
    * @return value or {@code null} for none
@@ -1377,6 +1667,23 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
    */
   public ProductAttributes setEnergyEfficiencyClass(java.lang.String energyEfficiencyClass) {
     this.energyEfficiencyClass = energyEfficiencyClass;
+    return this;
+  }
+
+  /**
+   * The [engine](https://support.google.com/google-ads/answer/14156068) type of the vehicle.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEngine() {
+    return engine;
+  }
+
+  /**
+   * The [engine](https://support.google.com/google-ads/answer/14156068) type of the vehicle.
+   * @param engine engine or {@code null} for none
+   */
+  public ProductAttributes setEngine(java.lang.String engine) {
+    this.engine = engine;
     return this;
   }
 
@@ -1463,6 +1770,42 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
    */
   public ProductAttributes setFreeShippingThreshold(java.util.List<FreeShippingThreshold> freeShippingThreshold) {
     this.freeShippingThreshold = freeShippingThreshold;
+    return this;
+  }
+
+  /**
+   * The [fuel consumption](https://support.google.com/google-ads/answer/14543580) of the vehicle.
+   * @return value or {@code null} for none
+   */
+  public FuelConsumption getFuelConsumption() {
+    return fuelConsumption;
+  }
+
+  /**
+   * The [fuel consumption](https://support.google.com/google-ads/answer/14543580) of the vehicle.
+   * @param fuelConsumption fuelConsumption or {@code null} for none
+   */
+  public ProductAttributes setFuelConsumption(FuelConsumption fuelConsumption) {
+    this.fuelConsumption = fuelConsumption;
+    return this;
+  }
+
+  /**
+   * The fuel consumption of the vehicle when the hybrid battery is discharged. See the [Help Center
+   * article](https://support.google.com/google-ads/answer/15162033) for more information.
+   * @return value or {@code null} for none
+   */
+  public FuelConsumption getFuelConsumptionDischargedBattery() {
+    return fuelConsumptionDischargedBattery;
+  }
+
+  /**
+   * The fuel consumption of the vehicle when the hybrid battery is discharged. See the [Help Center
+   * article](https://support.google.com/google-ads/answer/15162033) for more information.
+   * @param fuelConsumptionDischargedBattery fuelConsumptionDischargedBattery or {@code null} for none
+   */
+  public ProductAttributes setFuelConsumptionDischargedBattery(FuelConsumption fuelConsumptionDischargedBattery) {
+    this.fuelConsumptionDischargedBattery = fuelConsumptionDischargedBattery;
     return this;
   }
 
@@ -1826,6 +2169,25 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * The number of miles/kms on the vehicle. See the [Mileage](https://support.google.com/google-
+   * ads/answer/14156166) for more information.
+   * @return value or {@code null} for none
+   */
+  public Mileage getMileage() {
+    return mileage;
+  }
+
+  /**
+   * The number of miles/kms on the vehicle. See the [Mileage](https://support.google.com/google-
+   * ads/answer/14156166) for more information.
+   * @param mileage mileage or {@code null} for none
+   */
+  public ProductAttributes setMileage(Mileage mileage) {
+    this.mileage = mileage;
+    return this;
+  }
+
+  /**
    * The [energy efficiency class](https://support.google.com/merchants/answer/7562785) as defined
    * in EU directive 2010/30/EU.
    * @return value or {@code null} for none
@@ -1915,6 +2277,25 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
    */
   public ProductAttributes setMobileLinkTemplate(java.lang.String mobileLinkTemplate) {
     this.mobileLinkTemplate = mobileLinkTemplate;
+    return this;
+  }
+
+  /**
+   * The [Model](https://support.google.com/google-ads/answer/14154511) of the vehicle, such as
+   * `LX`, `EX`, and others.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getModel() {
+    return model;
+  }
+
+  /**
+   * The [Model](https://support.google.com/google-ads/answer/14154511) of the vehicle, such as
+   * `LX`, `EX`, and others.
+   * @param model model or {@code null} for none
+   */
+  public ProductAttributes setModel(java.lang.String model) {
+    this.model = model;
     return this;
   }
 
@@ -2602,6 +2983,25 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * The [Trim](https://support.google.com/google-ads/answer/14154176) of the vehicle model, such as
+   * `S`, `SV`, `SL` and others.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTrim() {
+    return trim;
+  }
+
+  /**
+   * The [Trim](https://support.google.com/google-ads/answer/14154176) of the vehicle model, such as
+   * `S`, `SV`, `SL` and others.
+   * @param trim trim or {@code null} for none
+   */
+  public ProductAttributes setTrim(java.lang.String trim) {
+    this.trim = trim;
+    return this;
+  }
+
+  /**
    * The preference of the denominator of the unit price.
    * @return value or {@code null} for none
    */
@@ -2636,6 +3036,111 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * The all-in advertised price for a vehicle, which includes costs for the following – any
+   * accessories attached to the vehicle, environmental levies, extra warranty, fuel, freight, pre-
+   * delivery inspection (PDI), dealer fees for handling licensing, provincial regulatory fees,
+   * miscellaneous dealer charges for security etching and nitrogen tire fill, and factory-to-
+   * customer or dealer-to-customer discounts or incentives. See the [Vehicle all-in
+   * price](https://support.google.com/google-ads/answer/14156981) for more information.
+   * @return value or {@code null} for none
+   */
+  public Price getVehicleAllInPrice() {
+    return vehicleAllInPrice;
+  }
+
+  /**
+   * The all-in advertised price for a vehicle, which includes costs for the following – any
+   * accessories attached to the vehicle, environmental levies, extra warranty, fuel, freight, pre-
+   * delivery inspection (PDI), dealer fees for handling licensing, provincial regulatory fees,
+   * miscellaneous dealer charges for security etching and nitrogen tire fill, and factory-to-
+   * customer or dealer-to-customer discounts or incentives. See the [Vehicle all-in
+   * price](https://support.google.com/google-ads/answer/14156981) for more information.
+   * @param vehicleAllInPrice vehicleAllInPrice or {@code null} for none
+   */
+  public ProductAttributes setVehicleAllInPrice(Price vehicleAllInPrice) {
+    this.vehicleAllInPrice = vehicleAllInPrice;
+    return this;
+  }
+
+  /**
+   * The miscellaneous expenses like insurance and registration fees of the vehicle. See the
+   * [Vehicle expenses](https://support.google.com/google-ads/answer/15957154) for more information.
+   * @return value or {@code null} for none
+   */
+  public Price getVehicleExpenses() {
+    return vehicleExpenses;
+  }
+
+  /**
+   * The miscellaneous expenses like insurance and registration fees of the vehicle. See the
+   * [Vehicle expenses](https://support.google.com/google-ads/answer/15957154) for more information.
+   * @param vehicleExpenses vehicleExpenses or {@code null} for none
+   */
+  public ProductAttributes setVehicleExpenses(Price vehicleExpenses) {
+    this.vehicleExpenses = vehicleExpenses;
+    return this;
+  }
+
+  /**
+   * Whether the vehicle is sold with mandatory inspection and maintenance performed before
+   * delivery. See the [Vehicle mandatory inspection included](https://support.google.com/google-
+   * ads/answer/15956630) for more information.`
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getVehicleMandatoryInspectionIncluded() {
+    return vehicleMandatoryInspectionIncluded;
+  }
+
+  /**
+   * Whether the vehicle is sold with mandatory inspection and maintenance performed before
+   * delivery. See the [Vehicle mandatory inspection included](https://support.google.com/google-
+   * ads/answer/15956630) for more information.`
+   * @param vehicleMandatoryInspectionIncluded vehicleMandatoryInspectionIncluded or {@code null} for none
+   */
+  public ProductAttributes setVehicleMandatoryInspectionIncluded(java.lang.Boolean vehicleMandatoryInspectionIncluded) {
+    this.vehicleMandatoryInspectionIncluded = vehicleMandatoryInspectionIncluded;
+    return this;
+  }
+
+  /**
+   * The MSRP (Manufacturer Suggested Retail Price) for the vehicle in its current configuration.
+   * See the [Vehicle MSRP](https://support.google.com/google-ads/answer/14154171) for more
+   * information.
+   * @return value or {@code null} for none
+   */
+  public Price getVehicleMsrp() {
+    return vehicleMsrp;
+  }
+
+  /**
+   * The MSRP (Manufacturer Suggested Retail Price) for the vehicle in its current configuration.
+   * See the [Vehicle MSRP](https://support.google.com/google-ads/answer/14154171) for more
+   * information.
+   * @param vehicleMsrp vehicleMsrp or {@code null} for none
+   */
+  public ProductAttributes setVehicleMsrp(Price vehicleMsrp) {
+    this.vehicleMsrp = vehicleMsrp;
+    return this;
+  }
+
+  /**
+   * The [price type](https://support.google.com/google-ads/answer/14592783) of the vehicle.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVehiclePriceType() {
+    return vehiclePriceType;
+  }
+
+  /**
+   * The [price type](https://support.google.com/google-ads/answer/14592783) of the vehicle.
+   * @param vehiclePriceType vehiclePriceType or {@code null} for none
+   */
+  public ProductAttributes setVehiclePriceType(java.lang.String vehiclePriceType) {
+    this.vehiclePriceType = vehiclePriceType;
+    return this;
+  }
+
+  /**
    * Optional. A list of video URLs for the item. Use this attribute to provide more visuals for
    * your product beyond your image attributes. See the [Help Center
    * article](https://support.google.com/merchants/answer/15216925) for more information.
@@ -2657,6 +3162,25 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * The [Vehicle Identification Number (VIN)](https://support.google.com/google-
+   * ads/answer/14154510) of the vehicle.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVin() {
+    return vin;
+  }
+
+  /**
+   * The [Vehicle Identification Number (VIN)](https://support.google.com/google-
+   * ads/answer/14154510) of the vehicle.
+   * @param vin vin or {@code null} for none
+   */
+  public ProductAttributes setVin(java.lang.String vin) {
+    this.vin = vin;
+    return this;
+  }
+
+  /**
    * URL of the 3D image of the item. See the [Help Center
    * article](https://support.google.com/merchants/answer/13674896) for more information.
    * @return value or {@code null} for none
@@ -2672,6 +3196,40 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
    */
   public ProductAttributes setVirtualModelLink(java.lang.String virtualModelLink) {
     this.virtualModelLink = virtualModelLink;
+    return this;
+  }
+
+  /**
+   * The [warranty](https://support.google.com/google-ads/answer/15957626) of the vehicle.
+   * @return value or {@code null} for none
+   */
+  public Warranty getWarranty() {
+    return warranty;
+  }
+
+  /**
+   * The [warranty](https://support.google.com/google-ads/answer/15957626) of the vehicle.
+   * @param warranty warranty or {@code null} for none
+   */
+  public ProductAttributes setWarranty(Warranty warranty) {
+    this.warranty = warranty;
+    return this;
+  }
+
+  /**
+   * The [Year](https://support.google.com/google-ads/answer/14152816) of the vehicle model.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getYear() {
+    return year;
+  }
+
+  /**
+   * The [Year](https://support.google.com/google-ads/answer/14152816) of the vehicle model.
+   * @param year year or {@code null} for none
+   */
+  public ProductAttributes setYear(java.lang.Long year) {
+    this.year = year;
     return this;
   }
 
