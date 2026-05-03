@@ -17,7 +17,7 @@
 package com.google.api.services.firebasedataconnect.v1beta.model;
 
 /**
- * The GraphQL request to Firebase Data Connect. It strives to match the GraphQL over HTTP spec.
+ * The GraphQL request to Firebase SQL Connect. It strives to match the GraphQL over HTTP spec.
  * https://github.com/graphql/graphql-over-http/blob/main/spec/GraphQLOverHTTP.md#post
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

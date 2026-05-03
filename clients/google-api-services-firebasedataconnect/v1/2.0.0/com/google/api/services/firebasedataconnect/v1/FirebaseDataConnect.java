@@ -20,7 +20,7 @@ package com.google.api.services.firebasedataconnect.v1;
  * Service definition for FirebaseDataConnect (v1).
  *
  * <p>
- * Firebase Data Connect is a relational database service for mobile and web apps that lets you build and scale using a fully-managed PostgreSQL database powered by Cloud SQL. The REST API lets developers manage the connections to their database, change the schema of their database, and query the database.
+ * Firebase SQL Connect is a relational database service for mobile and web apps that lets you build and scale using a fully-managed PostgreSQL database powered by Cloud SQL. The REST API lets developers manage the connections to their database, change the schema of their database, and query the database.
  * </p>
  *
  * <p>
@@ -314,7 +314,7 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
       }
       /**
        * Lists information about the supported locations for this service. This method lists locations
-       * based on the resource scope provided in the [ListLocationsRequest.name] field: * **Global
+       * based on the resource scope provided in the ListLocationsRequest.name field: * **Global
        * locations**: If `name` is empty, the method lists the public locations available to all projects.
        * * **Project-specific locations**: If `name` follows the format `projects/{project}`, the method
        * lists locations visible to that specific project. This includes public, private, or other
@@ -345,7 +345,7 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
 
         /**
          * Lists information about the supported locations for this service. This method lists locations
-         * based on the resource scope provided in the [ListLocationsRequest.name] field: * **Global
+         * based on the resource scope provided in the ListLocationsRequest.name field: * **Global
          * locations**: If `name` is empty, the method lists the public locations available to all
          * projects. * **Project-specific locations**: If `name` follows the format `projects/{project}`,
          * the method lists locations visible to that specific project. This includes public, private, or
@@ -462,22 +462,22 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Do not use this field unless explicitly documented otherwise. This is primarily
+         * for internal usage.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> extraLocationTypes;
 
-        /** Optional. Do not use this field. It is unsupported and is ignored unless explicitly documented
-       otherwise. This is primarily for internal usage.
+        /** Optional. Do not use this field unless explicitly documented otherwise. This is primarily for
+       internal usage.
          */
         public java.util.List<java.lang.String> getExtraLocationTypes() {
           return extraLocationTypes;
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Do not use this field unless explicitly documented otherwise. This is primarily
+         * for internal usage.
          */
         public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
           this.extraLocationTypes = extraLocationTypes;
@@ -1731,7 +1731,7 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
           }
         }
         /**
-         * Execute any GraphQL query and mutation against the Firebase Data Connect's generated GraphQL
+         * Execute any GraphQL query or mutation against the Firebase SQL Connect's generated GraphQL
          * schema. Grants full read and write access to the connected data sources. Note: Use introspection
          * query to explore the generated GraphQL schema.
          *
@@ -1741,7 +1741,7 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
          * optional parameters, call the {@link ExecuteGraphql#execute()} method to invoke the remote
          * operation.
          *
-         * @param name Required. The relative resource name of Firebase Data Connect service, in the format: ```
+         * @param name Required. The relative resource name of Firebase SQL Connect service, in the format: ```
          *        projects/{project}/locations/{location}/services/{service} ```
          * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.GraphqlRequest}
          * @return the request
@@ -1760,7 +1760,7 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+$");
 
           /**
-           * Execute any GraphQL query and mutation against the Firebase Data Connect's generated GraphQL
+           * Execute any GraphQL query or mutation against the Firebase SQL Connect's generated GraphQL
            * schema. Grants full read and write access to the connected data sources. Note: Use
            * introspection query to explore the generated GraphQL schema.
            *
@@ -1772,7 +1772,7 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
            * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
            * the constructor. </p>
            *
-           * @param name Required. The relative resource name of Firebase Data Connect service, in the format: ```
+           * @param name Required. The relative resource name of Firebase SQL Connect service, in the format: ```
          *        projects/{project}/locations/{location}/services/{service} ```
            * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.GraphqlRequest}
            * @since 1.13
@@ -1843,13 +1843,13 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * Required. The relative resource name of Firebase Data Connect service, in the format:
+           * Required. The relative resource name of Firebase SQL Connect service, in the format:
            * ``` projects/{project}/locations/{location}/services/{service} ```
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The relative resource name of Firebase Data Connect service, in the format: ```
+          /** Required. The relative resource name of Firebase SQL Connect service, in the format: ```
          projects/{project}/locations/{location}/services/{service} ```
            */
           public java.lang.String getName() {
@@ -1857,7 +1857,7 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * Required. The relative resource name of Firebase Data Connect service, in the format:
+           * Required. The relative resource name of Firebase SQL Connect service, in the format:
            * ``` projects/{project}/locations/{location}/services/{service} ```
            */
           public ExecuteGraphql setName(java.lang.String name) {
@@ -1876,7 +1876,7 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
           }
         }
         /**
-         * Execute any GraphQL query against the Firebase Data Connect's generated GraphQL schema. Grants
+         * Execute any GraphQL query against the Firebase SQL Connect's generated GraphQL schema. Grants
          * full read to the connected data sources. `ExecuteGraphqlRead` is identical to `ExecuteGraphql`
          * except it only accepts read-only query.
          *
@@ -1886,7 +1886,7 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
          * optional parameters, call the {@link ExecuteGraphqlRead#execute()} method to invoke the remote
          * operation.
          *
-         * @param name Required. The relative resource name of Firebase Data Connect service, in the format: ```
+         * @param name Required. The relative resource name of Firebase SQL Connect service, in the format: ```
          *        projects/{project}/locations/{location}/services/{service} ```
          * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.GraphqlRequest}
          * @return the request
@@ -1905,7 +1905,7 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+$");
 
           /**
-           * Execute any GraphQL query against the Firebase Data Connect's generated GraphQL schema. Grants
+           * Execute any GraphQL query against the Firebase SQL Connect's generated GraphQL schema. Grants
            * full read to the connected data sources. `ExecuteGraphqlRead` is identical to `ExecuteGraphql`
            * except it only accepts read-only query.
            *
@@ -1917,7 +1917,7 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
            * vices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
            * after invoking the constructor. </p>
            *
-           * @param name Required. The relative resource name of Firebase Data Connect service, in the format: ```
+           * @param name Required. The relative resource name of Firebase SQL Connect service, in the format: ```
          *        projects/{project}/locations/{location}/services/{service} ```
            * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.GraphqlRequest}
            * @since 1.13
@@ -1988,13 +1988,13 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * Required. The relative resource name of Firebase Data Connect service, in the format:
+           * Required. The relative resource name of Firebase SQL Connect service, in the format:
            * ``` projects/{project}/locations/{location}/services/{service} ```
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The relative resource name of Firebase Data Connect service, in the format: ```
+          /** Required. The relative resource name of Firebase SQL Connect service, in the format: ```
          projects/{project}/locations/{location}/services/{service} ```
            */
           public java.lang.String getName() {
@@ -2002,7 +2002,7 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * Required. The relative resource name of Firebase Data Connect service, in the format:
+           * Required. The relative resource name of Firebase SQL Connect service, in the format:
            * ``` projects/{project}/locations/{location}/services/{service} ```
            */
           public ExecuteGraphqlRead setName(java.lang.String name) {
@@ -2169,7 +2169,7 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
           }
         }
         /**
-         * Execute introspection query against the Firebase Data Connect's generated GraphQL schema. GraphQL
+         * Execute introspection query against the Firebase SQL Connect's generated GraphQL schema. GraphQL
          * introspection query provides metadata such as what tables the schema have, what queries and
          * mutations can be performed on the schema, and so on. Read more at
          * https://graphql.org/learn/introspection. IntrospectGraphql can read schema metadata but cannot
@@ -2181,7 +2181,7 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
          * optional parameters, call the {@link IntrospectGraphql#execute()} method to invoke the remote
          * operation.
          *
-         * @param name Required. The relative resource name of Firebase Data Connect service, in the format: ```
+         * @param name Required. The relative resource name of Firebase SQL Connect service, in the format: ```
          *        projects/{project}/locations/{location}/services/{service} ```
          * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.GraphqlRequest}
          * @return the request
@@ -2200,7 +2200,7 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+$");
 
           /**
-           * Execute introspection query against the Firebase Data Connect's generated GraphQL schema.
+           * Execute introspection query against the Firebase SQL Connect's generated GraphQL schema.
            * GraphQL introspection query provides metadata such as what tables the schema have, what queries
            * and mutations can be performed on the schema, and so on. Read more at
            * https://graphql.org/learn/introspection. IntrospectGraphql can read schema metadata but cannot
@@ -2214,7 +2214,7 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
            * ices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param name Required. The relative resource name of Firebase Data Connect service, in the format: ```
+           * @param name Required. The relative resource name of Firebase SQL Connect service, in the format: ```
          *        projects/{project}/locations/{location}/services/{service} ```
            * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.GraphqlRequest}
            * @since 1.13
@@ -2285,13 +2285,13 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * Required. The relative resource name of Firebase Data Connect service, in the format:
+           * Required. The relative resource name of Firebase SQL Connect service, in the format:
            * ``` projects/{project}/locations/{location}/services/{service} ```
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The relative resource name of Firebase Data Connect service, in the format: ```
+          /** Required. The relative resource name of Firebase SQL Connect service, in the format: ```
          projects/{project}/locations/{location}/services/{service} ```
            */
           public java.lang.String getName() {
@@ -2299,7 +2299,7 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * Required. The relative resource name of Firebase Data Connect service, in the format:
+           * Required. The relative resource name of Firebase SQL Connect service, in the format:
            * ``` projects/{project}/locations/{location}/services/{service} ```
            */
           public IntrospectGraphql setName(java.lang.String name) {
@@ -2545,10 +2545,10 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the firebasedataconnect server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Identifier. The relative resource name of the Firebase Data Connect service, in the format: ```
+         * @param name Identifier. The relative resource name of the Firebase SQL Connect service, in the format: ```
          *        projects/{project}/locations/{location}/services/{service} ``` Note that the service ID is
-         *        specific to Firebase Data Connect and does not correspond to any of the instance IDs of
-         *        the underlying data source connections.
+         *        specific to Firebase SQL Connect and does not correspond to any of the instance IDs of the
+         *        underlying data source connections.
          * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.Service}
          * @return the request
          */
@@ -2576,10 +2576,10 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Identifier. The relative resource name of the Firebase Data Connect service, in the format: ```
+           * @param name Identifier. The relative resource name of the Firebase SQL Connect service, in the format: ```
          *        projects/{project}/locations/{location}/services/{service} ``` Note that the service ID is
-         *        specific to Firebase Data Connect and does not correspond to any of the instance IDs of
-         *        the underlying data source connections.
+         *        specific to Firebase SQL Connect and does not correspond to any of the instance IDs of the
+         *        underlying data source connections.
            * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.Service}
            * @since 1.13
            */
@@ -2649,17 +2649,17 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * Identifier. The relative resource name of the Firebase Data Connect service, in the
+           * Identifier. The relative resource name of the Firebase SQL Connect service, in the
            * format: ``` projects/{project}/locations/{location}/services/{service} ``` Note that
-           * the service ID is specific to Firebase Data Connect and does not correspond to any of
+           * the service ID is specific to Firebase SQL Connect and does not correspond to any of
            * the instance IDs of the underlying data source connections.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Identifier. The relative resource name of the Firebase Data Connect service, in the format: ```
+          /** Identifier. The relative resource name of the Firebase SQL Connect service, in the format: ```
          projects/{project}/locations/{location}/services/{service} ``` Note that the service ID is specific
-         to Firebase Data Connect and does not correspond to any of the instance IDs of the underlying data
+         to Firebase SQL Connect and does not correspond to any of the instance IDs of the underlying data
          source connections.
            */
           public java.lang.String getName() {
@@ -2667,9 +2667,9 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * Identifier. The relative resource name of the Firebase Data Connect service, in the
+           * Identifier. The relative resource name of the Firebase SQL Connect service, in the
            * format: ``` projects/{project}/locations/{location}/services/{service} ``` Note that
-           * the service ID is specific to Firebase Data Connect and does not correspond to any of
+           * the service ID is specific to Firebase SQL Connect and does not correspond to any of
            * the instance IDs of the underlying data source connections.
            */
           public Patch setName(java.lang.String name) {
@@ -3756,7 +3756,7 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
             }
           }
           /**
-           * Impersonate a mutation defined on a Firebase Data Connect connector. It grants the admin SDK
+           * Impersonate a mutation defined on a Firebase SQL Connect connector. It grants the admin SDK
            * access to mutations defined in the given connector. The caller can choose to impersonate a
            * particular Firebase Auth user, or skip @auth completely.
            *
@@ -3785,7 +3785,7 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+/connectors/[^/]+$");
 
             /**
-             * Impersonate a mutation defined on a Firebase Data Connect connector. It grants the admin SDK
+             * Impersonate a mutation defined on a Firebase SQL Connect connector. It grants the admin SDK
              * access to mutations defined in the given connector. The caller can choose to impersonate a
              * particular Firebase Auth user, or skip @auth completely.
              *
@@ -3903,7 +3903,7 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
             }
           }
           /**
-           * Impersonate a query defined on a Firebase Data Connect connector. It grants the admin SDK access
+           * Impersonate a query defined on a Firebase SQL Connect connector. It grants the admin SDK access
            * to queries defined in the given connector. The caller can choose to impersonate a particular
            * Firebase Auth user, or skip @auth completely.
            *
@@ -3932,9 +3932,9 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+/connectors/[^/]+$");
 
             /**
-             * Impersonate a query defined on a Firebase Data Connect connector. It grants the admin SDK
-             * access to queries defined in the given connector. The caller can choose to impersonate a
-             * particular Firebase Auth user, or skip @auth completely.
+             * Impersonate a query defined on a Firebase SQL Connect connector. It grants the admin SDK access
+             * to queries defined in the given connector. The caller can choose to impersonate a particular
+             * Firebase Auth user, or skip @auth completely.
              *
              * Create a request for the method "connectors.impersonateQuery".
              *

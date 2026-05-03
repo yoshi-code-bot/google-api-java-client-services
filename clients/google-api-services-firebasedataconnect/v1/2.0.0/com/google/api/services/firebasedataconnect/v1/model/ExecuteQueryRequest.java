@@ -17,7 +17,7 @@
 package com.google.api.services.firebasedataconnect.v1.model;
 
 /**
- * The ExecuteQuery request to Firebase Data Connect.
+ * The ExecuteQuery request to Firebase SQL Connect.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase Data Connect API. For a detailed explanation

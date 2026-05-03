@@ -17,7 +17,7 @@
 package com.google.api.services.firebasedataconnect.v1.model;
 
 /**
- * Data Connect specific properties for a path under response.data.
+ * SQL Connect specific properties for a path under response.data.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase Data Connect API. For a detailed explanation

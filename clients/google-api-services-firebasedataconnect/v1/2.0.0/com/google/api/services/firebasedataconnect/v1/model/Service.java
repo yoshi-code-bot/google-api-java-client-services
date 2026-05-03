@@ -17,7 +17,7 @@
 package com.google.api.services.firebasedataconnect.v1.model;
 
 /**
- * A Firebase Data Connect service.
+ * A Firebase SQL Connect service.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase Data Connect API. For a detailed explanation
@@ -68,9 +68,9 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Identifier. The relative resource name of the Firebase Data Connect service, in the format: ```
+   * Identifier. The relative resource name of the Firebase SQL Connect service, in the format: ```
    * projects/{project}/locations/{location}/services/{service} ``` Note that the service ID is
-   * specific to Firebase Data Connect and does not correspond to any of the instance IDs of the
+   * specific to Firebase SQL Connect and does not correspond to any of the instance IDs of the
    * underlying data source connections.
    * The value may be {@code null}.
    */
@@ -188,9 +188,9 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier. The relative resource name of the Firebase Data Connect service, in the format: ```
+   * Identifier. The relative resource name of the Firebase SQL Connect service, in the format: ```
    * projects/{project}/locations/{location}/services/{service} ``` Note that the service ID is
-   * specific to Firebase Data Connect and does not correspond to any of the instance IDs of the
+   * specific to Firebase SQL Connect and does not correspond to any of the instance IDs of the
    * underlying data source connections.
    * @return value or {@code null} for none
    */
@@ -199,9 +199,9 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier. The relative resource name of the Firebase Data Connect service, in the format: ```
+   * Identifier. The relative resource name of the Firebase SQL Connect service, in the format: ```
    * projects/{project}/locations/{location}/services/{service} ``` Note that the service ID is
-   * specific to Firebase Data Connect and does not correspond to any of the instance IDs of the
+   * specific to Firebase SQL Connect and does not correspond to any of the instance IDs of the
    * underlying data source connections.
    * @param name name or {@code null} for none
    */

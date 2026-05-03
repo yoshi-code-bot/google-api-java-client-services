@@ -45,9 +45,9 @@ public final class PostgreSql extends com.google.api.client.json.GenericJson {
   private java.lang.String database;
 
   /**
-   * Output only. Ephemeral is true if this data connect service is served from temporary in-memory
-   * emulation of Postgres. While Cloud SQL is being provisioned, the data connect service provides
-   * the ephemeral service to help developers get started. Once the Cloud SQL is provisioned, Data
+   * Output only. Ephemeral is true if this SQL Connect service is served from temporary in-memory
+   * emulation of Postgres. While Cloud SQL is being provisioned, the SQL Connect service provides
+   * the ephemeral service to help developers get started. Once the Cloud SQL is provisioned, SQL
    * Connect service will transfer its data on a best-effort basis to the Cloud SQL instance.
    * WARNING: Ephemeral data sources will expire after 24 hour. The data will be lost if they aren't
    * transferred to the Cloud SQL instance. WARNING: When `ephemeral=true`, mutations to the
@@ -122,9 +122,9 @@ public final class PostgreSql extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Ephemeral is true if this data connect service is served from temporary in-memory
-   * emulation of Postgres. While Cloud SQL is being provisioned, the data connect service provides
-   * the ephemeral service to help developers get started. Once the Cloud SQL is provisioned, Data
+   * Output only. Ephemeral is true if this SQL Connect service is served from temporary in-memory
+   * emulation of Postgres. While Cloud SQL is being provisioned, the SQL Connect service provides
+   * the ephemeral service to help developers get started. Once the Cloud SQL is provisioned, SQL
    * Connect service will transfer its data on a best-effort basis to the Cloud SQL instance.
    * WARNING: Ephemeral data sources will expire after 24 hour. The data will be lost if they aren't
    * transferred to the Cloud SQL instance. WARNING: When `ephemeral=true`, mutations to the
@@ -137,9 +137,9 @@ public final class PostgreSql extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Ephemeral is true if this data connect service is served from temporary in-memory
-   * emulation of Postgres. While Cloud SQL is being provisioned, the data connect service provides
-   * the ephemeral service to help developers get started. Once the Cloud SQL is provisioned, Data
+   * Output only. Ephemeral is true if this SQL Connect service is served from temporary in-memory
+   * emulation of Postgres. While Cloud SQL is being provisioned, the SQL Connect service provides
+   * the ephemeral service to help developers get started. Once the Cloud SQL is provisioned, SQL
    * Connect service will transfer its data on a best-effort basis to the Cloud SQL instance.
    * WARNING: Ephemeral data sources will expire after 24 hour. The data will be lost if they aren't
    * transferred to the Cloud SQL instance. WARNING: When `ephemeral=true`, mutations to the

@@ -17,7 +17,7 @@
 package com.google.api.services.firebasedataconnect.v1beta.model;
 
 /**
- * A data source that backs Firebase Data Connect services.
+ * A data source that backs Firebase SQL Connect services.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase Data Connect API. For a detailed explanation
