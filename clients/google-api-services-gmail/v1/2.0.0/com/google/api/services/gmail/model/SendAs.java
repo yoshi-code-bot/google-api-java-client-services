@@ -19,7 +19,7 @@ package com.google.api.services.gmail.model;
 /**
  * Settings associated with a send-as alias, which can be either the primary login address
  * associated with the account or a custom "from" address. Send-as aliases correspond to the "Send
- * Mail As" feature in the web interface.
+ * Mail As" feature in the web interface. The send-as alias must be a valid email address.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Gmail API. For a detailed explanation see:
