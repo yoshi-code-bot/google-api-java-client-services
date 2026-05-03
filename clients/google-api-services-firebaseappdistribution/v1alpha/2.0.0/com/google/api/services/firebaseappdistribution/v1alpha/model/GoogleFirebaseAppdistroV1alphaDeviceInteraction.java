@@ -90,6 +90,22 @@ public final class GoogleFirebaseAppdistroV1alphaDeviceInteraction extends com.g
   private AndroidxCrawlerOutputPoint tap;
 
   /**
+   * Output only. The target folded state of the device in a set folded state action. The valid
+   * string values are device-dependent, and can be found using `adb shell cmd device_state print-
+   * states`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String targetFoldedState;
+
+  /**
+   * Output only. The target orientation of the device in a set orientation action.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String targetOrientation;
+
+  /**
    * Output only. A text input action, that types some text into whatever field is currently
    * focused, if any. Unlike `enter_text` this action requires that the field be brought into focus
    * first, for example by emitting a tap action before this one.
@@ -244,6 +260,44 @@ public final class GoogleFirebaseAppdistroV1alphaDeviceInteraction extends com.g
    */
   public GoogleFirebaseAppdistroV1alphaDeviceInteraction setTap(AndroidxCrawlerOutputPoint tap) {
     this.tap = tap;
+    return this;
+  }
+
+  /**
+   * Output only. The target folded state of the device in a set folded state action. The valid
+   * string values are device-dependent, and can be found using `adb shell cmd device_state print-
+   * states`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTargetFoldedState() {
+    return targetFoldedState;
+  }
+
+  /**
+   * Output only. The target folded state of the device in a set folded state action. The valid
+   * string values are device-dependent, and can be found using `adb shell cmd device_state print-
+   * states`.
+   * @param targetFoldedState targetFoldedState or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1alphaDeviceInteraction setTargetFoldedState(java.lang.String targetFoldedState) {
+    this.targetFoldedState = targetFoldedState;
+    return this;
+  }
+
+  /**
+   * Output only. The target orientation of the device in a set orientation action.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTargetOrientation() {
+    return targetOrientation;
+  }
+
+  /**
+   * Output only. The target orientation of the device in a set orientation action.
+   * @param targetOrientation targetOrientation or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1alphaDeviceInteraction setTargetOrientation(java.lang.String targetOrientation) {
+    this.targetOrientation = targetOrientation;
     return this;
   }
 
