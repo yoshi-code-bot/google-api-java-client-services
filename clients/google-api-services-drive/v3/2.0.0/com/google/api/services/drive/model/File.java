@@ -230,7 +230,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * Output only. An overview of the labels on the file.
+   * Label information on the file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -413,8 +413,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   private User sharingUser;
 
   /**
-   * Shortcut file details. Only populated for shortcut files, which have the mimeType field set to
-   * `application/vnd.google-apps.shortcut`. Can only be set on `files.create` requests.
+   * Information about a shortcut file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1013,7 +1012,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. An overview of the labels on the file.
+   * Label information on the file.
    * @return value or {@code null} for none
    */
   public LabelInfo getLabelInfo() {
@@ -1021,7 +1020,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. An overview of the labels on the file.
+   * Label information on the file.
    * @param labelInfo labelInfo or {@code null} for none
    */
   public File setLabelInfo(LabelInfo labelInfo) {
@@ -1448,8 +1447,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Shortcut file details. Only populated for shortcut files, which have the mimeType field set to
-   * `application/vnd.google-apps.shortcut`. Can only be set on `files.create` requests.
+   * Information about a shortcut file.
    * @return value or {@code null} for none
    */
   public ShortcutDetails getShortcutDetails() {
@@ -1457,8 +1455,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Shortcut file details. Only populated for shortcut files, which have the mimeType field set to
-   * `application/vnd.google-apps.shortcut`. Can only be set on `files.create` requests.
+   * Information about a shortcut file.
    * @param shortcutDetails shortcutDetails or {@code null} for none
    */
   public File setShortcutDetails(ShortcutDetails shortcutDetails) {
@@ -2120,6 +2117,13 @@ public final class File extends com.google.api.client.json.GenericJson {
      */
     @com.google.api.client.util.Key
     private java.lang.Boolean canShare;
+
+    /**
+     * Whether the current user can start an approval on the file.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean canStartApproval;
 
     /**
      * Output only. Whether the current user can move this file to trash.
@@ -2899,6 +2903,23 @@ public final class File extends com.google.api.client.json.GenericJson {
      */
     public Capabilities setCanShare(java.lang.Boolean canShare) {
       this.canShare = canShare;
+      return this;
+    }
+
+    /**
+     * Whether the current user can start an approval on the file.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getCanStartApproval() {
+      return canStartApproval;
+    }
+
+    /**
+     * Whether the current user can start an approval on the file.
+     * @param canStartApproval canStartApproval or {@code null} for none
+     */
+    public Capabilities setCanStartApproval(java.lang.Boolean canStartApproval) {
+      this.canStartApproval = canStartApproval;
       return this;
     }
 
@@ -3753,7 +3774,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. An overview of the labels on the file.
+   * Label information on the file.
    */
   public static final class LabelInfo extends com.google.api.client.json.GenericJson {
 
@@ -3862,8 +3883,7 @@ public final class File extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Shortcut file details. Only populated for shortcut files, which have the mimeType field set to
-   * `application/vnd.google-apps.shortcut`. Can only be set on `files.create` requests.
+   * Information about a shortcut file.
    */
   public static final class ShortcutDetails extends com.google.api.client.json.GenericJson {
 

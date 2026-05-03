@@ -17,7 +17,7 @@
 package com.google.api.services.drive.model;
 
 /**
- * Deprecated: use the drive collection instead.
+ * Deprecated: use the drive collection instead. Next ID: 33
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Drive API. For a detailed explanation see:
@@ -30,9 +30,7 @@ package com.google.api.services.drive.model;
 public final class TeamDrive extends com.google.api.client.json.GenericJson {
 
   /**
-   * An image file and cropping parameters from which a background image for this Team Drive is set.
-   * This is a write only field; it can only be set on `drive.teamdrives.update` requests that don't
-   * set `themeId`. When specified, all fields of the `backgroundImageFile` must be set.
+   * The background image file for a Team Drive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,9 +113,7 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
   private java.lang.String themeId;
 
   /**
-   * An image file and cropping parameters from which a background image for this Team Drive is set.
-   * This is a write only field; it can only be set on `drive.teamdrives.update` requests that don't
-   * set `themeId`. When specified, all fields of the `backgroundImageFile` must be set.
+   * The background image file for a Team Drive.
    * @return value or {@code null} for none
    */
   public BackgroundImageFile getBackgroundImageFile() {
@@ -125,9 +121,7 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An image file and cropping parameters from which a background image for this Team Drive is set.
-   * This is a write only field; it can only be set on `drive.teamdrives.update` requests that don't
-   * set `themeId`. When specified, all fields of the `backgroundImageFile` must be set.
+   * The background image file for a Team Drive.
    * @param backgroundImageFile backgroundImageFile or {@code null} for none
    */
   public TeamDrive setBackgroundImageFile(BackgroundImageFile backgroundImageFile) {
@@ -328,9 +322,7 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An image file and cropping parameters from which a background image for this Team Drive is set.
-   * This is a write only field; it can only be set on `drive.teamdrives.update` requests that don't
-   * set `themeId`. When specified, all fields of the `backgroundImageFile` must be set.
+   * The background image file for a Team Drive.
    */
   public static final class BackgroundImageFile extends com.google.api.client.json.GenericJson {
 
@@ -497,8 +489,8 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
     private java.lang.Boolean canChangeDomainUsersOnlyRestriction;
 
     /**
-     * Whether the current user can change organizer-applied download restrictions of this shared
-     * drive.
+     * Output only. Whether the current user can change organizer-applied download restrictions of
+     * this shared drive.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -687,8 +679,8 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can change organizer-applied download restrictions of this shared
-     * drive.
+     * Output only. Whether the current user can change organizer-applied download restrictions of
+     * this shared drive.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanChangeDownloadRestriction() {
@@ -696,8 +688,8 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Whether the current user can change organizer-applied download restrictions of this shared
-     * drive.
+     * Output only. Whether the current user can change organizer-applied download restrictions of
+     * this shared drive.
      * @param canChangeDownloadRestriction canChangeDownloadRestriction or {@code null} for none
      */
     public Capabilities setCanChangeDownloadRestriction(java.lang.Boolean canChangeDownloadRestriction) {

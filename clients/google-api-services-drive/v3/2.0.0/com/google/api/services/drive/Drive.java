@@ -761,15 +761,589 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
   public class Approvals {
 
     /**
-     * Gets an Approval by ID.
+     * Approves an approval. For more information, see [Manage
+     * approvals](https://developers.google.com/workspace/drive/api/guides/approvals). This is used to
+     * update the ReviewerResponse of the requesting user with a Response of `APPROVED`. If this is the
+     * last required reviewer response, this also completes the approval and sets the approval Status to
+     * `APPROVED`.
+     *
+     * Create a request for the method "approvals.approve".
+     *
+     * This request holds the parameters needed by the drive server.  After setting any optional
+     * parameters, call the {@link Approve#execute()} method to invoke the remote operation.
+     *
+     * @param fileId Required. The ID of the file that the approval is on.
+     * @param approvalId Required. The ID of the approval to approve.
+     * @param content the {@link com.google.api.services.drive.model.ApproveApprovalRequest}
+     * @return the request
+     */
+    public Approve approve(java.lang.String fileId, java.lang.String approvalId, com.google.api.services.drive.model.ApproveApprovalRequest content) throws java.io.IOException {
+      Approve result = new Approve(fileId, approvalId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Approve extends DriveRequest<com.google.api.services.drive.model.Approval> {
+
+      private static final String REST_PATH = "files/{fileId}/approvals/{approvalId}:approve";
+
+      /**
+       * Approves an approval. For more information, see [Manage
+       * approvals](https://developers.google.com/workspace/drive/api/guides/approvals). This is used to
+       * update the ReviewerResponse of the requesting user with a Response of `APPROVED`. If this is
+       * the last required reviewer response, this also completes the approval and sets the approval
+       * Status to `APPROVED`.
+       *
+       * Create a request for the method "approvals.approve".
+       *
+       * This request holds the parameters needed by the the drive server.  After setting any optional
+       * parameters, call the {@link Approve#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * Approve#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param fileId Required. The ID of the file that the approval is on.
+       * @param approvalId Required. The ID of the approval to approve.
+       * @param content the {@link com.google.api.services.drive.model.ApproveApprovalRequest}
+       * @since 1.13
+       */
+      protected Approve(java.lang.String fileId, java.lang.String approvalId, com.google.api.services.drive.model.ApproveApprovalRequest content) {
+        super(Drive.this, "POST", REST_PATH, content, com.google.api.services.drive.model.Approval.class);
+        this.fileId = com.google.api.client.util.Preconditions.checkNotNull(fileId, "Required parameter fileId must be specified.");
+        this.approvalId = com.google.api.client.util.Preconditions.checkNotNull(approvalId, "Required parameter approvalId must be specified.");
+      }
+
+      @Override
+      public Approve set$Xgafv(java.lang.String $Xgafv) {
+        return (Approve) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Approve setAccessToken(java.lang.String accessToken) {
+        return (Approve) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Approve setAlt(java.lang.String alt) {
+        return (Approve) super.setAlt(alt);
+      }
+
+      @Override
+      public Approve setCallback(java.lang.String callback) {
+        return (Approve) super.setCallback(callback);
+      }
+
+      @Override
+      public Approve setFields(java.lang.String fields) {
+        return (Approve) super.setFields(fields);
+      }
+
+      @Override
+      public Approve setKey(java.lang.String key) {
+        return (Approve) super.setKey(key);
+      }
+
+      @Override
+      public Approve setOauthToken(java.lang.String oauthToken) {
+        return (Approve) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Approve setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Approve) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Approve setQuotaUser(java.lang.String quotaUser) {
+        return (Approve) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Approve setUploadType(java.lang.String uploadType) {
+        return (Approve) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Approve setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Approve) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the file that the approval is on. */
+      @com.google.api.client.util.Key
+      private java.lang.String fileId;
+
+      /** Required. The ID of the file that the approval is on.
+       */
+      public java.lang.String getFileId() {
+        return fileId;
+      }
+
+      /** Required. The ID of the file that the approval is on. */
+      public Approve setFileId(java.lang.String fileId) {
+        this.fileId = fileId;
+        return this;
+      }
+
+      /** Required. The ID of the approval to approve. */
+      @com.google.api.client.util.Key
+      private java.lang.String approvalId;
+
+      /** Required. The ID of the approval to approve.
+       */
+      public java.lang.String getApprovalId() {
+        return approvalId;
+      }
+
+      /** Required. The ID of the approval to approve. */
+      public Approve setApprovalId(java.lang.String approvalId) {
+        this.approvalId = approvalId;
+        return this;
+      }
+
+      @Override
+      public Approve set(String parameterName, Object value) {
+        return (Approve) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Cancels an approval. For more information, see [Manage
+     * approvals](https://developers.google.com/workspace/drive/api/guides/approvals). Updates the
+     * approval Status to `CANCELLED`. This can be called by any user with the `writer` permission on
+     * the file while the approval Status is `IN_PROGRESS`.
+     *
+     * Create a request for the method "approvals.cancel".
+     *
+     * This request holds the parameters needed by the drive server.  After setting any optional
+     * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+     *
+     * @param fileId Required. The ID of the file that the approval is on.
+     * @param approvalId Required. The ID of the approval to cancel.
+     * @param content the {@link com.google.api.services.drive.model.CancelApprovalRequest}
+     * @return the request
+     */
+    public Cancel cancel(java.lang.String fileId, java.lang.String approvalId, com.google.api.services.drive.model.CancelApprovalRequest content) throws java.io.IOException {
+      Cancel result = new Cancel(fileId, approvalId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Cancel extends DriveRequest<com.google.api.services.drive.model.Approval> {
+
+      private static final String REST_PATH = "files/{fileId}/approvals/{approvalId}:cancel";
+
+      /**
+       * Cancels an approval. For more information, see [Manage
+       * approvals](https://developers.google.com/workspace/drive/api/guides/approvals). Updates the
+       * approval Status to `CANCELLED`. This can be called by any user with the `writer` permission on
+       * the file while the approval Status is `IN_PROGRESS`.
+       *
+       * Create a request for the method "approvals.cancel".
+       *
+       * This request holds the parameters needed by the the drive server.  After setting any optional
+       * parameters, call the {@link Cancel#execute()} method to invoke the remote operation. <p> {@link
+       * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param fileId Required. The ID of the file that the approval is on.
+       * @param approvalId Required. The ID of the approval to cancel.
+       * @param content the {@link com.google.api.services.drive.model.CancelApprovalRequest}
+       * @since 1.13
+       */
+      protected Cancel(java.lang.String fileId, java.lang.String approvalId, com.google.api.services.drive.model.CancelApprovalRequest content) {
+        super(Drive.this, "POST", REST_PATH, content, com.google.api.services.drive.model.Approval.class);
+        this.fileId = com.google.api.client.util.Preconditions.checkNotNull(fileId, "Required parameter fileId must be specified.");
+        this.approvalId = com.google.api.client.util.Preconditions.checkNotNull(approvalId, "Required parameter approvalId must be specified.");
+      }
+
+      @Override
+      public Cancel set$Xgafv(java.lang.String $Xgafv) {
+        return (Cancel) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Cancel setAccessToken(java.lang.String accessToken) {
+        return (Cancel) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Cancel setAlt(java.lang.String alt) {
+        return (Cancel) super.setAlt(alt);
+      }
+
+      @Override
+      public Cancel setCallback(java.lang.String callback) {
+        return (Cancel) super.setCallback(callback);
+      }
+
+      @Override
+      public Cancel setFields(java.lang.String fields) {
+        return (Cancel) super.setFields(fields);
+      }
+
+      @Override
+      public Cancel setKey(java.lang.String key) {
+        return (Cancel) super.setKey(key);
+      }
+
+      @Override
+      public Cancel setOauthToken(java.lang.String oauthToken) {
+        return (Cancel) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Cancel) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Cancel setQuotaUser(java.lang.String quotaUser) {
+        return (Cancel) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Cancel setUploadType(java.lang.String uploadType) {
+        return (Cancel) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Cancel) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the file that the approval is on. */
+      @com.google.api.client.util.Key
+      private java.lang.String fileId;
+
+      /** Required. The ID of the file that the approval is on.
+       */
+      public java.lang.String getFileId() {
+        return fileId;
+      }
+
+      /** Required. The ID of the file that the approval is on. */
+      public Cancel setFileId(java.lang.String fileId) {
+        this.fileId = fileId;
+        return this;
+      }
+
+      /** Required. The ID of the approval to cancel. */
+      @com.google.api.client.util.Key
+      private java.lang.String approvalId;
+
+      /** Required. The ID of the approval to cancel.
+       */
+      public java.lang.String getApprovalId() {
+        return approvalId;
+      }
+
+      /** Required. The ID of the approval to cancel. */
+      public Cancel setApprovalId(java.lang.String approvalId) {
+        this.approvalId = approvalId;
+        return this;
+      }
+
+      @Override
+      public Cancel set(String parameterName, Object value) {
+        return (Cancel) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Comments on an approval. For more information, see [Manage
+     * approvals](https://developers.google.com/workspace/drive/api/guides/approvals). This sends a
+     * notification to both the initiator and the reviewers. Additionally, a message is also added to
+     * the approval activity log.
+     *
+     * Create a request for the method "approvals.comment".
+     *
+     * This request holds the parameters needed by the drive server.  After setting any optional
+     * parameters, call the {@link Comment#execute()} method to invoke the remote operation.
+     *
+     * @param fileId Required. The ID of the file that the approval is on.
+     * @param approvalId Required. The ID of the approval to comment on.
+     * @param content the {@link com.google.api.services.drive.model.CommentApprovalRequest}
+     * @return the request
+     */
+    public Comment comment(java.lang.String fileId, java.lang.String approvalId, com.google.api.services.drive.model.CommentApprovalRequest content) throws java.io.IOException {
+      Comment result = new Comment(fileId, approvalId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Comment extends DriveRequest<com.google.api.services.drive.model.Approval> {
+
+      private static final String REST_PATH = "files/{fileId}/approvals/{approvalId}:comment";
+
+      /**
+       * Comments on an approval. For more information, see [Manage
+       * approvals](https://developers.google.com/workspace/drive/api/guides/approvals). This sends a
+       * notification to both the initiator and the reviewers. Additionally, a message is also added to
+       * the approval activity log.
+       *
+       * Create a request for the method "approvals.comment".
+       *
+       * This request holds the parameters needed by the the drive server.  After setting any optional
+       * parameters, call the {@link Comment#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * Comment#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param fileId Required. The ID of the file that the approval is on.
+       * @param approvalId Required. The ID of the approval to comment on.
+       * @param content the {@link com.google.api.services.drive.model.CommentApprovalRequest}
+       * @since 1.13
+       */
+      protected Comment(java.lang.String fileId, java.lang.String approvalId, com.google.api.services.drive.model.CommentApprovalRequest content) {
+        super(Drive.this, "POST", REST_PATH, content, com.google.api.services.drive.model.Approval.class);
+        this.fileId = com.google.api.client.util.Preconditions.checkNotNull(fileId, "Required parameter fileId must be specified.");
+        this.approvalId = com.google.api.client.util.Preconditions.checkNotNull(approvalId, "Required parameter approvalId must be specified.");
+      }
+
+      @Override
+      public Comment set$Xgafv(java.lang.String $Xgafv) {
+        return (Comment) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Comment setAccessToken(java.lang.String accessToken) {
+        return (Comment) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Comment setAlt(java.lang.String alt) {
+        return (Comment) super.setAlt(alt);
+      }
+
+      @Override
+      public Comment setCallback(java.lang.String callback) {
+        return (Comment) super.setCallback(callback);
+      }
+
+      @Override
+      public Comment setFields(java.lang.String fields) {
+        return (Comment) super.setFields(fields);
+      }
+
+      @Override
+      public Comment setKey(java.lang.String key) {
+        return (Comment) super.setKey(key);
+      }
+
+      @Override
+      public Comment setOauthToken(java.lang.String oauthToken) {
+        return (Comment) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Comment setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Comment) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Comment setQuotaUser(java.lang.String quotaUser) {
+        return (Comment) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Comment setUploadType(java.lang.String uploadType) {
+        return (Comment) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Comment setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Comment) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the file that the approval is on. */
+      @com.google.api.client.util.Key
+      private java.lang.String fileId;
+
+      /** Required. The ID of the file that the approval is on.
+       */
+      public java.lang.String getFileId() {
+        return fileId;
+      }
+
+      /** Required. The ID of the file that the approval is on. */
+      public Comment setFileId(java.lang.String fileId) {
+        this.fileId = fileId;
+        return this;
+      }
+
+      /** Required. The ID of the approval to comment on. */
+      @com.google.api.client.util.Key
+      private java.lang.String approvalId;
+
+      /** Required. The ID of the approval to comment on.
+       */
+      public java.lang.String getApprovalId() {
+        return approvalId;
+      }
+
+      /** Required. The ID of the approval to comment on. */
+      public Comment setApprovalId(java.lang.String approvalId) {
+        this.approvalId = approvalId;
+        return this;
+      }
+
+      @Override
+      public Comment set(String parameterName, Object value) {
+        return (Comment) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Declines an approval. For more information, see [Manage
+     * approvals](https://developers.google.com/workspace/drive/api/guides/approvals). This is used to
+     * update the ReviewerResponse of the requesting user with a Response of `DECLINED`. This also
+     * completes the approval and sets the approval Status to `DECLINED`.
+     *
+     * Create a request for the method "approvals.decline".
+     *
+     * This request holds the parameters needed by the drive server.  After setting any optional
+     * parameters, call the {@link Decline#execute()} method to invoke the remote operation.
+     *
+     * @param fileId Required. The ID of the file that the approval is on.
+     * @param approvalId Required. The ID of the approval to decline.
+     * @param content the {@link com.google.api.services.drive.model.DeclineApprovalRequest}
+     * @return the request
+     */
+    public Decline decline(java.lang.String fileId, java.lang.String approvalId, com.google.api.services.drive.model.DeclineApprovalRequest content) throws java.io.IOException {
+      Decline result = new Decline(fileId, approvalId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Decline extends DriveRequest<com.google.api.services.drive.model.Approval> {
+
+      private static final String REST_PATH = "files/{fileId}/approvals/{approvalId}:decline";
+
+      /**
+       * Declines an approval. For more information, see [Manage
+       * approvals](https://developers.google.com/workspace/drive/api/guides/approvals). This is used to
+       * update the ReviewerResponse of the requesting user with a Response of `DECLINED`. This also
+       * completes the approval and sets the approval Status to `DECLINED`.
+       *
+       * Create a request for the method "approvals.decline".
+       *
+       * This request holds the parameters needed by the the drive server.  After setting any optional
+       * parameters, call the {@link Decline#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * Decline#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param fileId Required. The ID of the file that the approval is on.
+       * @param approvalId Required. The ID of the approval to decline.
+       * @param content the {@link com.google.api.services.drive.model.DeclineApprovalRequest}
+       * @since 1.13
+       */
+      protected Decline(java.lang.String fileId, java.lang.String approvalId, com.google.api.services.drive.model.DeclineApprovalRequest content) {
+        super(Drive.this, "POST", REST_PATH, content, com.google.api.services.drive.model.Approval.class);
+        this.fileId = com.google.api.client.util.Preconditions.checkNotNull(fileId, "Required parameter fileId must be specified.");
+        this.approvalId = com.google.api.client.util.Preconditions.checkNotNull(approvalId, "Required parameter approvalId must be specified.");
+      }
+
+      @Override
+      public Decline set$Xgafv(java.lang.String $Xgafv) {
+        return (Decline) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Decline setAccessToken(java.lang.String accessToken) {
+        return (Decline) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Decline setAlt(java.lang.String alt) {
+        return (Decline) super.setAlt(alt);
+      }
+
+      @Override
+      public Decline setCallback(java.lang.String callback) {
+        return (Decline) super.setCallback(callback);
+      }
+
+      @Override
+      public Decline setFields(java.lang.String fields) {
+        return (Decline) super.setFields(fields);
+      }
+
+      @Override
+      public Decline setKey(java.lang.String key) {
+        return (Decline) super.setKey(key);
+      }
+
+      @Override
+      public Decline setOauthToken(java.lang.String oauthToken) {
+        return (Decline) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Decline setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Decline) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Decline setQuotaUser(java.lang.String quotaUser) {
+        return (Decline) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Decline setUploadType(java.lang.String uploadType) {
+        return (Decline) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Decline setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Decline) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the file that the approval is on. */
+      @com.google.api.client.util.Key
+      private java.lang.String fileId;
+
+      /** Required. The ID of the file that the approval is on.
+       */
+      public java.lang.String getFileId() {
+        return fileId;
+      }
+
+      /** Required. The ID of the file that the approval is on. */
+      public Decline setFileId(java.lang.String fileId) {
+        this.fileId = fileId;
+        return this;
+      }
+
+      /** Required. The ID of the approval to decline. */
+      @com.google.api.client.util.Key
+      private java.lang.String approvalId;
+
+      /** Required. The ID of the approval to decline.
+       */
+      public java.lang.String getApprovalId() {
+        return approvalId;
+      }
+
+      /** Required. The ID of the approval to decline. */
+      public Decline setApprovalId(java.lang.String approvalId) {
+        this.approvalId = approvalId;
+        return this;
+      }
+
+      @Override
+      public Decline set(String parameterName, Object value) {
+        return (Decline) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Gets an approval by ID. For more information, see [Manage
+     * approvals](https://developers.google.com/workspace/drive/api/guides/approvals).
      *
      * Create a request for the method "approvals.get".
      *
      * This request holds the parameters needed by the drive server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param fileId Required. The ID of the file the Approval is on.
-     * @param approvalId Required. The ID of the Approval.
+     * @param fileId Required. The ID of the file that the approval is on.
+     * @param approvalId Required. The ID of the approval.
      * @return the request
      */
     public Get get(java.lang.String fileId, java.lang.String approvalId) throws java.io.IOException {
@@ -783,7 +1357,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/approvals/{approvalId}";
 
       /**
-       * Gets an Approval by ID.
+       * Gets an approval by ID. For more information, see [Manage
+       * approvals](https://developers.google.com/workspace/drive/api/guides/approvals).
        *
        * Create a request for the method "approvals.get".
        *
@@ -792,8 +1367,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param fileId Required. The ID of the file the Approval is on.
-       * @param approvalId Required. The ID of the Approval.
+       * @param fileId Required. The ID of the file that the approval is on.
+       * @param approvalId Required. The ID of the approval.
        * @since 1.13
        */
       protected Get(java.lang.String fileId, java.lang.String approvalId) {
@@ -867,33 +1442,33 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. The ID of the file the Approval is on. */
+      /** Required. The ID of the file that the approval is on. */
       @com.google.api.client.util.Key
       private java.lang.String fileId;
 
-      /** Required. The ID of the file the Approval is on.
+      /** Required. The ID of the file that the approval is on.
        */
       public java.lang.String getFileId() {
         return fileId;
       }
 
-      /** Required. The ID of the file the Approval is on. */
+      /** Required. The ID of the file that the approval is on. */
       public Get setFileId(java.lang.String fileId) {
         this.fileId = fileId;
         return this;
       }
 
-      /** Required. The ID of the Approval. */
+      /** Required. The ID of the approval. */
       @com.google.api.client.util.Key
       private java.lang.String approvalId;
 
-      /** Required. The ID of the Approval.
+      /** Required. The ID of the approval.
        */
       public java.lang.String getApprovalId() {
         return approvalId;
       }
 
-      /** Required. The ID of the Approval. */
+      /** Required. The ID of the approval. */
       public Get setApprovalId(java.lang.String approvalId) {
         this.approvalId = approvalId;
         return this;
@@ -905,14 +1480,15 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Lists the Approvals on a file.
+     * Lists the approvals on a file. For more information, see [Manage
+     * approvals](https://developers.google.com/workspace/drive/api/guides/approvals).
      *
      * Create a request for the method "approvals.list".
      *
      * This request holds the parameters needed by the drive server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param fileId Required. The ID of the file the Approval is on.
+     * @param fileId Required. The ID of the file that the approval is on.
      * @return the request
      */
     public List list(java.lang.String fileId) throws java.io.IOException {
@@ -926,7 +1502,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/approvals";
 
       /**
-       * Lists the Approvals on a file.
+       * Lists the approvals on a file. For more information, see [Manage
+       * approvals](https://developers.google.com/workspace/drive/api/guides/approvals).
        *
        * Create a request for the method "approvals.list".
        *
@@ -935,7 +1512,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param fileId Required. The ID of the file the Approval is on.
+       * @param fileId Required. The ID of the file that the approval is on.
        * @since 1.13
        */
       protected List(java.lang.String fileId) {
@@ -1008,37 +1585,37 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. The ID of the file the Approval is on. */
+      /** Required. The ID of the file that the approval is on. */
       @com.google.api.client.util.Key
       private java.lang.String fileId;
 
-      /** Required. The ID of the file the Approval is on.
+      /** Required. The ID of the file that the approval is on.
        */
       public java.lang.String getFileId() {
         return fileId;
       }
 
-      /** Required. The ID of the file the Approval is on. */
+      /** Required. The ID of the file that the approval is on. */
       public List setFileId(java.lang.String fileId) {
         this.fileId = fileId;
         return this;
       }
 
       /**
-       * The maximum number of Approvals to return. When not set, at most 100 Approvals will be
+       * The maximum number of approvals to return. When not set, at most 100 approvals are
        * returned.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** The maximum number of Approvals to return. When not set, at most 100 Approvals will be returned.
+      /** The maximum number of approvals to return. When not set, at most 100 approvals are returned.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
       /**
-       * The maximum number of Approvals to return. When not set, at most 100 Approvals will be
+       * The maximum number of approvals to return. When not set, at most 100 approvals are
        * returned.
        */
       public List setPageSize(java.lang.Integer pageSize) {
@@ -1048,13 +1625,13 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * The token for continuing a previous list request on the next page. This should be set to
-       * the value of nextPageToken from a previous response.
+       * the value of `nextPageToken` from a previous response.
        */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
       /** The token for continuing a previous list request on the next page. This should be set to the value
-     of nextPageToken from a previous response.
+     of `nextPageToken` from a previous response.
        */
       public java.lang.String getPageToken() {
         return pageToken;
@@ -1062,7 +1639,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * The token for continuing a previous list request on the next page. This should be set to
-       * the value of nextPageToken from a previous response.
+       * the value of `nextPageToken` from a previous response.
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
@@ -1072,6 +1649,272 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       @Override
       public List set(String parameterName, Object value) {
         return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Reassigns the reviewers on an approval. For more information, see [Manage
+     * approvals](https://developers.google.com/workspace/drive/api/guides/approvals). Adds or replaces
+     * reviewers in the ReviewerResponse of the approval. This can be called by any user with the
+     * `writer` permission on the file while the approval Status is `IN_PROGRESS` and the Response for
+     * the reviewer being reassigned is `NO_RESPONSE`. A user with the `reader` permission can only
+     * reassign an approval that's assigned to themselves. Removing a reviewer isn't allowed.
+     *
+     * Create a request for the method "approvals.reassign".
+     *
+     * This request holds the parameters needed by the drive server.  After setting any optional
+     * parameters, call the {@link Reassign#execute()} method to invoke the remote operation.
+     *
+     * @param fileId Required. The ID of the file that the approval is on.
+     * @param approvalId Required. The ID of the approval to reassign.
+     * @param content the {@link com.google.api.services.drive.model.ReassignApprovalRequest}
+     * @return the request
+     */
+    public Reassign reassign(java.lang.String fileId, java.lang.String approvalId, com.google.api.services.drive.model.ReassignApprovalRequest content) throws java.io.IOException {
+      Reassign result = new Reassign(fileId, approvalId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Reassign extends DriveRequest<com.google.api.services.drive.model.Approval> {
+
+      private static final String REST_PATH = "files/{fileId}/approvals/{approvalId}:reassign";
+
+      /**
+       * Reassigns the reviewers on an approval. For more information, see [Manage
+       * approvals](https://developers.google.com/workspace/drive/api/guides/approvals). Adds or
+       * replaces reviewers in the ReviewerResponse of the approval. This can be called by any user with
+       * the `writer` permission on the file while the approval Status is `IN_PROGRESS` and the Response
+       * for the reviewer being reassigned is `NO_RESPONSE`. A user with the `reader` permission can
+       * only reassign an approval that's assigned to themselves. Removing a reviewer isn't allowed.
+       *
+       * Create a request for the method "approvals.reassign".
+       *
+       * This request holds the parameters needed by the the drive server.  After setting any optional
+       * parameters, call the {@link Reassign#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * Reassign#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param fileId Required. The ID of the file that the approval is on.
+       * @param approvalId Required. The ID of the approval to reassign.
+       * @param content the {@link com.google.api.services.drive.model.ReassignApprovalRequest}
+       * @since 1.13
+       */
+      protected Reassign(java.lang.String fileId, java.lang.String approvalId, com.google.api.services.drive.model.ReassignApprovalRequest content) {
+        super(Drive.this, "POST", REST_PATH, content, com.google.api.services.drive.model.Approval.class);
+        this.fileId = com.google.api.client.util.Preconditions.checkNotNull(fileId, "Required parameter fileId must be specified.");
+        this.approvalId = com.google.api.client.util.Preconditions.checkNotNull(approvalId, "Required parameter approvalId must be specified.");
+      }
+
+      @Override
+      public Reassign set$Xgafv(java.lang.String $Xgafv) {
+        return (Reassign) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Reassign setAccessToken(java.lang.String accessToken) {
+        return (Reassign) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Reassign setAlt(java.lang.String alt) {
+        return (Reassign) super.setAlt(alt);
+      }
+
+      @Override
+      public Reassign setCallback(java.lang.String callback) {
+        return (Reassign) super.setCallback(callback);
+      }
+
+      @Override
+      public Reassign setFields(java.lang.String fields) {
+        return (Reassign) super.setFields(fields);
+      }
+
+      @Override
+      public Reassign setKey(java.lang.String key) {
+        return (Reassign) super.setKey(key);
+      }
+
+      @Override
+      public Reassign setOauthToken(java.lang.String oauthToken) {
+        return (Reassign) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Reassign setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Reassign) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Reassign setQuotaUser(java.lang.String quotaUser) {
+        return (Reassign) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Reassign setUploadType(java.lang.String uploadType) {
+        return (Reassign) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Reassign setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Reassign) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the file that the approval is on. */
+      @com.google.api.client.util.Key
+      private java.lang.String fileId;
+
+      /** Required. The ID of the file that the approval is on.
+       */
+      public java.lang.String getFileId() {
+        return fileId;
+      }
+
+      /** Required. The ID of the file that the approval is on. */
+      public Reassign setFileId(java.lang.String fileId) {
+        this.fileId = fileId;
+        return this;
+      }
+
+      /** Required. The ID of the approval to reassign. */
+      @com.google.api.client.util.Key
+      private java.lang.String approvalId;
+
+      /** Required. The ID of the approval to reassign.
+       */
+      public java.lang.String getApprovalId() {
+        return approvalId;
+      }
+
+      /** Required. The ID of the approval to reassign. */
+      public Reassign setApprovalId(java.lang.String approvalId) {
+        this.approvalId = approvalId;
+        return this;
+      }
+
+      @Override
+      public Reassign set(String parameterName, Object value) {
+        return (Reassign) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Starts an approval on a file. For more information, see [Manage
+     * approvals](https://developers.google.com/workspace/drive/api/guides/approvals).
+     *
+     * Create a request for the method "approvals.start".
+     *
+     * This request holds the parameters needed by the drive server.  After setting any optional
+     * parameters, call the {@link Start#execute()} method to invoke the remote operation.
+     *
+     * @param fileId Required. The ID of the file that the approval is created on.
+     * @param content the {@link com.google.api.services.drive.model.StartApprovalRequest}
+     * @return the request
+     */
+    public Start start(java.lang.String fileId, com.google.api.services.drive.model.StartApprovalRequest content) throws java.io.IOException {
+      Start result = new Start(fileId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Start extends DriveRequest<com.google.api.services.drive.model.Approval> {
+
+      private static final String REST_PATH = "files/{fileId}/approvals:start";
+
+      /**
+       * Starts an approval on a file. For more information, see [Manage
+       * approvals](https://developers.google.com/workspace/drive/api/guides/approvals).
+       *
+       * Create a request for the method "approvals.start".
+       *
+       * This request holds the parameters needed by the the drive server.  After setting any optional
+       * parameters, call the {@link Start#execute()} method to invoke the remote operation. <p> {@link
+       * Start#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param fileId Required. The ID of the file that the approval is created on.
+       * @param content the {@link com.google.api.services.drive.model.StartApprovalRequest}
+       * @since 1.13
+       */
+      protected Start(java.lang.String fileId, com.google.api.services.drive.model.StartApprovalRequest content) {
+        super(Drive.this, "POST", REST_PATH, content, com.google.api.services.drive.model.Approval.class);
+        this.fileId = com.google.api.client.util.Preconditions.checkNotNull(fileId, "Required parameter fileId must be specified.");
+      }
+
+      @Override
+      public Start set$Xgafv(java.lang.String $Xgafv) {
+        return (Start) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Start setAccessToken(java.lang.String accessToken) {
+        return (Start) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Start setAlt(java.lang.String alt) {
+        return (Start) super.setAlt(alt);
+      }
+
+      @Override
+      public Start setCallback(java.lang.String callback) {
+        return (Start) super.setCallback(callback);
+      }
+
+      @Override
+      public Start setFields(java.lang.String fields) {
+        return (Start) super.setFields(fields);
+      }
+
+      @Override
+      public Start setKey(java.lang.String key) {
+        return (Start) super.setKey(key);
+      }
+
+      @Override
+      public Start setOauthToken(java.lang.String oauthToken) {
+        return (Start) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Start setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Start) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Start setQuotaUser(java.lang.String quotaUser) {
+        return (Start) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Start setUploadType(java.lang.String uploadType) {
+        return (Start) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Start setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Start) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the file that the approval is created on. */
+      @com.google.api.client.util.Key
+      private java.lang.String fileId;
+
+      /** Required. The ID of the file that the approval is created on.
+       */
+      public java.lang.String getFileId() {
+        return fileId;
+      }
+
+      /** Required. The ID of the file that the approval is created on. */
+      public Start setFileId(java.lang.String fileId) {
+        this.fileId = fileId;
+        return this;
+      }
+
+      @Override
+      public Start set(String parameterName, Object value) {
+        return (Start) super.set(parameterName, value);
       }
     }
 
@@ -7824,34 +8667,34 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * A comma-separated list of sort keys. Valid keys are: * `createdTime`: When the file was
        * created. Avoid using this key for queries on large item collections as it might result in
        * timeouts or other issues. For time-related sorting on large item collections, use
-       * `modifiedTime` instead. * `folder`: The folder ID. This field is sorted using alphabetical
-       * ordering. * `modifiedByMeTime`: The last time the file was modified by the user. *
-       * `modifiedTime`: The last time the file was modified by anyone. * `name`: The name of the
-       * file. This field is sorted using alphabetical ordering, so 1, 12, 2, 22. * `name_natural`:
-       * The name of the file. This field is sorted using natural sort ordering, so 1, 2, 12, 22. *
-       * `quotaBytesUsed`: The number of storage quota bytes used by the file. * `recency`: The most
-       * recent timestamp from the file's date-time fields. * `sharedWithMeTime`: When the file was
-       * shared with the user, if applicable. * `starred`: Whether the user has starred the file. *
-       * `viewedByMeTime`: The last time the file was viewed by the user. Each key sorts ascending
-       * by default, but can be reversed with the `desc` modifier. Example usage:
-       * `?orderBy=folder,modifiedTime desc,name`.
+       * `modifiedTime desc` instead. * `folder`: The folder ID. This field is sorted using
+       * alphabetical ordering. * `modifiedByMeTime`: The last time the file was modified by the
+       * user. * `modifiedTime`: The last time the file was modified by anyone. * `name`: The name
+       * of the file. This field is sorted using alphabetical ordering, so 1, 12, 2, 22. *
+       * `name_natural`: The name of the file. This field is sorted using natural sort ordering, so
+       * 1, 2, 12, 22. * `quotaBytesUsed`: The number of storage quota bytes used by the file. *
+       * `recency`: The most recent timestamp from the file's date-time fields. *
+       * `sharedWithMeTime`: When the file was shared with the user, if applicable. * `starred`:
+       * Whether the user has starred the file. * `viewedByMeTime`: The last time the file was
+       * viewed by the user. Each key sorts ascending by default, but can be reversed with the
+       * `desc` modifier. Example usage: `?orderBy=folder,modifiedTime desc,name`.
        */
       @com.google.api.client.util.Key
       private java.lang.String orderBy;
 
       /** A comma-separated list of sort keys. Valid keys are: * `createdTime`: When the file was created.
      Avoid using this key for queries on large item collections as it might result in timeouts or other
-     issues. For time-related sorting on large item collections, use `modifiedTime` instead. * `folder`:
-     The folder ID. This field is sorted using alphabetical ordering. * `modifiedByMeTime`: The last
-     time the file was modified by the user. * `modifiedTime`: The last time the file was modified by
-     anyone. * `name`: The name of the file. This field is sorted using alphabetical ordering, so 1, 12,
-     2, 22. * `name_natural`: The name of the file. This field is sorted using natural sort ordering, so
-     1, 2, 12, 22. * `quotaBytesUsed`: The number of storage quota bytes used by the file. * `recency`:
-     The most recent timestamp from the file's date-time fields. * `sharedWithMeTime`: When the file was
-     shared with the user, if applicable. * `starred`: Whether the user has starred the file. *
-     `viewedByMeTime`: The last time the file was viewed by the user. Each key sorts ascending by
-     default, but can be reversed with the `desc` modifier. Example usage: `?orderBy=folder,modifiedTime
-     desc,name`.
+     issues. For time-related sorting on large item collections, use `modifiedTime desc` instead. *
+     `folder`: The folder ID. This field is sorted using alphabetical ordering. * `modifiedByMeTime`:
+     The last time the file was modified by the user. * `modifiedTime`: The last time the file was
+     modified by anyone. * `name`: The name of the file. This field is sorted using alphabetical
+     ordering, so 1, 12, 2, 22. * `name_natural`: The name of the file. This field is sorted using
+     natural sort ordering, so 1, 2, 12, 22. * `quotaBytesUsed`: The number of storage quota bytes used
+     by the file. * `recency`: The most recent timestamp from the file's date-time fields. *
+     `sharedWithMeTime`: When the file was shared with the user, if applicable. * `starred`: Whether the
+     user has starred the file. * `viewedByMeTime`: The last time the file was viewed by the user. Each
+     key sorts ascending by default, but can be reversed with the `desc` modifier. Example usage:
+     `?orderBy=folder,modifiedTime desc,name`.
        */
       public java.lang.String getOrderBy() {
         return orderBy;
@@ -7861,17 +8704,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * A comma-separated list of sort keys. Valid keys are: * `createdTime`: When the file was
        * created. Avoid using this key for queries on large item collections as it might result in
        * timeouts or other issues. For time-related sorting on large item collections, use
-       * `modifiedTime` instead. * `folder`: The folder ID. This field is sorted using alphabetical
-       * ordering. * `modifiedByMeTime`: The last time the file was modified by the user. *
-       * `modifiedTime`: The last time the file was modified by anyone. * `name`: The name of the
-       * file. This field is sorted using alphabetical ordering, so 1, 12, 2, 22. * `name_natural`:
-       * The name of the file. This field is sorted using natural sort ordering, so 1, 2, 12, 22. *
-       * `quotaBytesUsed`: The number of storage quota bytes used by the file. * `recency`: The most
-       * recent timestamp from the file's date-time fields. * `sharedWithMeTime`: When the file was
-       * shared with the user, if applicable. * `starred`: Whether the user has starred the file. *
-       * `viewedByMeTime`: The last time the file was viewed by the user. Each key sorts ascending
-       * by default, but can be reversed with the `desc` modifier. Example usage:
-       * `?orderBy=folder,modifiedTime desc,name`.
+       * `modifiedTime desc` instead. * `folder`: The folder ID. This field is sorted using
+       * alphabetical ordering. * `modifiedByMeTime`: The last time the file was modified by the
+       * user. * `modifiedTime`: The last time the file was modified by anyone. * `name`: The name
+       * of the file. This field is sorted using alphabetical ordering, so 1, 12, 2, 22. *
+       * `name_natural`: The name of the file. This field is sorted using natural sort ordering, so
+       * 1, 2, 12, 22. * `quotaBytesUsed`: The number of storage quota bytes used by the file. *
+       * `recency`: The most recent timestamp from the file's date-time fields. *
+       * `sharedWithMeTime`: When the file was shared with the user, if applicable. * `starred`:
+       * Whether the user has starred the file. * `viewedByMeTime`: The last time the file was
+       * viewed by the user. Each key sorts ascending by default, but can be reversed with the
+       * `desc` modifier. Example usage: `?orderBy=folder,modifiedTime desc,name`.
        */
       public List setOrderBy(java.lang.String orderBy) {
         this.orderBy = orderBy;
@@ -7879,22 +8722,28 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * The maximum number of files to return per page. Partial or empty result pages are possible
-       * even before the end of the files list has been reached.
+       * The maximum number of files to return per page. Pages may be partial or empty even before
+       * reaching the end of the file list. If unspecified, at most 100 files are returned for
+       * shared drives, and the entire list of files for non-shared drives. The maximum value is
+       * 100; values above 100 are changed to 100.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** The maximum number of files to return per page. Partial or empty result pages are possible even
-     before the end of the files list has been reached. [default: 100] [minimum: 1] [maximum: 1000]
+      /** The maximum number of files to return per page. Pages may be partial or empty even before reaching
+     the end of the file list. If unspecified, at most 100 files are returned for shared drives, and the
+     entire list of files for non-shared drives. The maximum value is 100; values above 100 are changed
+     to 100. [default: 100] [minimum: 1] [maximum: 1000]
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
       /**
-       * The maximum number of files to return per page. Partial or empty result pages are possible
-       * even before the end of the files list has been reached.
+       * The maximum number of files to return per page. Pages may be partial or empty even before
+       * reaching the end of the file list. If unspecified, at most 100 files are returned for
+       * shared drives, and the entire list of files for non-shared drives. The maximum value is
+       * 100; values above 100 are changed to 100.
        */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;

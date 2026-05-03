@@ -17,7 +17,7 @@
 package com.google.api.services.drive.model;
 
 /**
- * The response of an Approvals list request.
+ * The response of an approvals list request.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Drive API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.drive.model;
 public final class ApprovalList extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of Approvals. If nextPageToken is populated, then this list may be incomplete and an
+   * The list of approvals. If `nextPageToken` is populated, then this list may be incomplete and an
    * additional page of results should be fetched.
    * The value may be {@code null}.
    */
@@ -51,8 +51,8 @@ public final class ApprovalList extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * The page token for the next page of Approvals. This will be absent if the end of the Approvals
-   * list has been reached. If the token is rejected for any reason, it should be discarded, and
+   * The page token for the next page of approvals. This is absent if the end of the approvals list
+   * has been reached. If the token is rejected for any reason, it should be discarded, and
    * pagination should be restarted from the first page of results.
    * The value may be {@code null}.
    */
@@ -60,7 +60,7 @@ public final class ApprovalList extends com.google.api.client.json.GenericJson {
   private java.lang.String nextPageToken;
 
   /**
-   * The list of Approvals. If nextPageToken is populated, then this list may be incomplete and an
+   * The list of approvals. If `nextPageToken` is populated, then this list may be incomplete and an
    * additional page of results should be fetched.
    * @return value or {@code null} for none
    */
@@ -69,7 +69,7 @@ public final class ApprovalList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of Approvals. If nextPageToken is populated, then this list may be incomplete and an
+   * The list of approvals. If `nextPageToken` is populated, then this list may be incomplete and an
    * additional page of results should be fetched.
    * @param items items or {@code null} for none
    */
@@ -96,8 +96,8 @@ public final class ApprovalList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The page token for the next page of Approvals. This will be absent if the end of the Approvals
-   * list has been reached. If the token is rejected for any reason, it should be discarded, and
+   * The page token for the next page of approvals. This is absent if the end of the approvals list
+   * has been reached. If the token is rejected for any reason, it should be discarded, and
    * pagination should be restarted from the first page of results.
    * @return value or {@code null} for none
    */
@@ -106,8 +106,8 @@ public final class ApprovalList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The page token for the next page of Approvals. This will be absent if the end of the Approvals
-   * list has been reached. If the token is rejected for any reason, it should be discarded, and
+   * The page token for the next page of approvals. This is absent if the end of the approvals list
+   * has been reached. If the token is rejected for any reason, it should be discarded, and
    * pagination should be restarted from the first page of results.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
