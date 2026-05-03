@@ -37,6 +37,13 @@ public final class BackfillJob extends com.google.api.client.json.GenericJson {
   private java.util.List<Error> errors;
 
   /**
+   * Output only. The filter for performing a partial backfill.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EventFilter eventFilter;
+
+  /**
    * Output only. Backfill job's end time.
    * The value may be {@code null}.
    */
@@ -78,6 +85,23 @@ public final class BackfillJob extends com.google.api.client.json.GenericJson {
    */
   public BackfillJob setErrors(java.util.List<Error> errors) {
     this.errors = errors;
+    return this;
+  }
+
+  /**
+   * Output only. The filter for performing a partial backfill.
+   * @return value or {@code null} for none
+   */
+  public EventFilter getEventFilter() {
+    return eventFilter;
+  }
+
+  /**
+   * Output only. The filter for performing a partial backfill.
+   * @param eventFilter eventFilter or {@code null} for none
+   */
+  public BackfillJob setEventFilter(EventFilter eventFilter) {
+    this.eventFilter = eventFilter;
     return this;
   }
 

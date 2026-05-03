@@ -31,8 +31,7 @@ public final class StartBackfillJobRequest extends com.google.api.client.json.Ge
 
   /**
    * Optional. Optional event filter. If not set, or empty, the backfill will be performed on the
-   * entire object. This is currently used for partial backfill and only supported for SQL Server
-   * sources.
+   * entire object. This is currently used for partial backfill and only supported for SQL sources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,8 +39,7 @@ public final class StartBackfillJobRequest extends com.google.api.client.json.Ge
 
   /**
    * Optional. Optional event filter. If not set, or empty, the backfill will be performed on the
-   * entire object. This is currently used for partial backfill and only supported for SQL Server
-   * sources.
+   * entire object. This is currently used for partial backfill and only supported for SQL sources.
    * @return value or {@code null} for none
    */
   public EventFilter getEventFilter() {
@@ -50,8 +48,7 @@ public final class StartBackfillJobRequest extends com.google.api.client.json.Ge
 
   /**
    * Optional. Optional event filter. If not set, or empty, the backfill will be performed on the
-   * entire object. This is currently used for partial backfill and only supported for SQL Server
-   * sources.
+   * entire object. This is currently used for partial backfill and only supported for SQL sources.
    * @param eventFilter eventFilter or {@code null} for none
    */
   public StartBackfillJobRequest setEventFilter(EventFilter eventFilter) {
