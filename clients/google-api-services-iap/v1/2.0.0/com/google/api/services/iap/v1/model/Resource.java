@@ -68,7 +68,8 @@ public final class Resource extends com.google.api.client.json.GenericJson {
    * "global". - For regional/multi-regional resources: use name of the GCP region(s) where the
    * resource exists (e.g., ["us-east1", "us-west1"]). For multi-regional resources specify the name
    * of each GCP region in the resource's multi-region. NOTE: Only GCP cloud region names are
-   * supported - go/cloud-region-names.
+   * supported - go/cloud-region-names. - Constraints: - Individual location strings must be less
+   * than 1000 bytes. - The cumulative size of all locations must be less than 16KB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -203,7 +204,8 @@ public final class Resource extends com.google.api.client.json.GenericJson {
    * "global". - For regional/multi-regional resources: use name of the GCP region(s) where the
    * resource exists (e.g., ["us-east1", "us-west1"]). For multi-regional resources specify the name
    * of each GCP region in the resource's multi-region. NOTE: Only GCP cloud region names are
-   * supported - go/cloud-region-names.
+   * supported - go/cloud-region-names. - Constraints: - Individual location strings must be less
+   * than 1000 bytes. - The cumulative size of all locations must be less than 16KB.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLocations() {
@@ -218,7 +220,8 @@ public final class Resource extends com.google.api.client.json.GenericJson {
    * "global". - For regional/multi-regional resources: use name of the GCP region(s) where the
    * resource exists (e.g., ["us-east1", "us-west1"]). For multi-regional resources specify the name
    * of each GCP region in the resource's multi-region. NOTE: Only GCP cloud region names are
-   * supported - go/cloud-region-names.
+   * supported - go/cloud-region-names. - Constraints: - Individual location strings must be less
+   * than 1000 bytes. - The cumulative size of all locations must be less than 16KB.
    * @param locations locations or {@code null} for none
    */
   public Resource setLocations(java.util.List<java.lang.String> locations) {
