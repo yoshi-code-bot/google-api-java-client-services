@@ -289,7 +289,9 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Stop receiving push notifications for the given user mailbox.
+     * Turn off push notification delivery for the given user mailbox. For more information, see
+     * [Configure push notifications in Gmail
+     * API](https://developers.google.com/workspace/gmail/api/guides/push).
      *
      * Create a request for the method "users.stop".
      *
@@ -311,7 +313,9 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "gmail/v1/users/{userId}/stop";
 
       /**
-       * Stop receiving push notifications for the given user mailbox.
+       * Turn off push notification delivery for the given user mailbox. For more information, see
+       * [Configure push notifications in Gmail
+       * API](https://developers.google.com/workspace/gmail/api/guides/push).
        *
        * Create a request for the method "users.stop".
        *
@@ -413,7 +417,9 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Set up or update a push notification watch on the given user mailbox.
+     * Set up or update a push notification watch on the given user mailbox. For more information, see
+     * [Configure push notifications in Gmail
+     * API](https://developers.google.com/workspace/gmail/api/guides/push).
      *
      * Create a request for the method "users.watch".
      *
@@ -436,7 +442,9 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "gmail/v1/users/{userId}/watch";
 
       /**
-       * Set up or update a push notification watch on the given user mailbox.
+       * Set up or update a push notification watch on the given user mailbox. For more information, see
+       * [Configure push notifications in Gmail
+       * API](https://developers.google.com/workspace/gmail/api/guides/push).
        *
        * Create a request for the method "users.watch".
        *
@@ -560,7 +568,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
     public class Drafts {
 
       /**
-       * Creates a new draft with the `DRAFT` label.
+       * Creates a draft with the `DRAFT` label. For more information, see [Create and send draft
+       * emails](https://developers.google.com/workspace/gmail/api/guides/drafts).
        *
        * Create a request for the method "drafts.create".
        *
@@ -579,7 +588,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Creates a new draft with the `DRAFT` label.
+       * Creates a draft with the `DRAFT` label. For more information, see [Create and send draft
+       * emails](https://developers.google.com/workspace/gmail/api/guides/drafts).
        *
        * Create a request for the method "drafts.create".
        *
@@ -608,7 +618,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "gmail/v1/users/{userId}/drafts";
 
         /**
-         * Creates a new draft with the `DRAFT` label.
+         * Creates a draft with the `DRAFT` label. For more information, see [Create and send draft
+         * emails](https://developers.google.com/workspace/gmail/api/guides/drafts).
          *
          * Create a request for the method "drafts.create".
          *
@@ -628,7 +639,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * Creates a new draft with the `DRAFT` label.
+         * Creates a draft with the `DRAFT` label. For more information, see [Create and send draft
+         * emails](https://developers.google.com/workspace/gmail/api/guides/drafts).
          *
          * Create a request for the method "drafts.create".
          *
@@ -738,7 +750,9 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * Immediately and permanently deletes the specified draft. Does not simply trash it.
+       * Immediately and permanently deletes the specified draft. Does not simply trash it. For more
+       * information, see [Create and send draft
+       * emails](https://developers.google.com/workspace/gmail/api/guides/drafts).
        *
        * Create a request for the method "drafts.delete".
        *
@@ -761,7 +775,9 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "gmail/v1/users/{userId}/drafts/{id}";
 
         /**
-         * Immediately and permanently deletes the specified draft. Does not simply trash it.
+         * Immediately and permanently deletes the specified draft. Does not simply trash it. For more
+         * information, see [Create and send draft
+         * emails](https://developers.google.com/workspace/gmail/api/guides/drafts).
          *
          * Create a request for the method "drafts.delete".
          *
@@ -881,7 +897,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * Gets the specified draft.
+       * Gets the specified draft. For more information, see [Create and send draft
+       * emails](https://developers.google.com/workspace/gmail/api/guides/drafts).
        *
        * Create a request for the method "drafts.get".
        *
@@ -904,7 +921,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "gmail/v1/users/{userId}/drafts/{id}";
 
         /**
-         * Gets the specified draft.
+         * Gets the specified draft. For more information, see [Create and send draft
+         * emails](https://developers.google.com/workspace/gmail/api/guides/drafts).
          *
          * Create a request for the method "drafts.get".
          *
@@ -1050,7 +1068,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * Lists the drafts in the user's mailbox.
+       * Lists the drafts in the user's mailbox. For more information, see [Create and send draft
+       * emails](https://developers.google.com/workspace/gmail/api/guides/drafts).
        *
        * Create a request for the method "drafts.list".
        *
@@ -1072,7 +1091,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "gmail/v1/users/{userId}/drafts";
 
         /**
-         * Lists the drafts in the user's mailbox.
+         * Lists the drafts in the user's mailbox. For more information, see [Create and send draft
+         * emails](https://developers.google.com/workspace/gmail/api/guides/drafts).
          *
          * Create a request for the method "drafts.list".
          *
@@ -1291,7 +1311,9 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * Sends the specified, existing draft to the recipients in the `To`, `Cc`, and `Bcc` headers.
+       * Sends the specified, existing draft to the recipients in the `To`, `Cc`, and `Bcc` headers. For
+       * more information, see [Create and send draft
+       * emails](https://developers.google.com/workspace/gmail/api/guides/drafts).
        *
        * Create a request for the method "drafts.send".
        *
@@ -1310,7 +1332,9 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Sends the specified, existing draft to the recipients in the `To`, `Cc`, and `Bcc` headers.
+       * Sends the specified, existing draft to the recipients in the `To`, `Cc`, and `Bcc` headers. For
+       * more information, see [Create and send draft
+       * emails](https://developers.google.com/workspace/gmail/api/guides/drafts).
        *
        * Create a request for the method "drafts.send".
        *
@@ -1339,7 +1363,9 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "gmail/v1/users/{userId}/drafts/send";
 
         /**
-         * Sends the specified, existing draft to the recipients in the `To`, `Cc`, and `Bcc` headers.
+         * Sends the specified, existing draft to the recipients in the `To`, `Cc`, and `Bcc` headers. For
+         * more information, see [Create and send draft
+         * emails](https://developers.google.com/workspace/gmail/api/guides/drafts).
          *
          * Create a request for the method "drafts.send".
          *
@@ -1359,7 +1385,9 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * Sends the specified, existing draft to the recipients in the `To`, `Cc`, and `Bcc` headers.
+         * Sends the specified, existing draft to the recipients in the `To`, `Cc`, and `Bcc` headers. For
+         * more information, see [Create and send draft
+         * emails](https://developers.google.com/workspace/gmail/api/guides/drafts).
          *
          * Create a request for the method "drafts.send".
          *
@@ -1469,7 +1497,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * Replaces a draft's content.
+       * Replaces a draft's content. For more information, see [Create and send draft
+       * emails](https://developers.google.com/workspace/gmail/api/guides/drafts).
        *
        * Create a request for the method "drafts.update".
        *
@@ -1489,7 +1518,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Replaces a draft's content.
+       * Replaces a draft's content. For more information, see [Create and send draft
+       * emails](https://developers.google.com/workspace/gmail/api/guides/drafts).
        *
        * Create a request for the method "drafts.update".
        *
@@ -1518,7 +1548,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "gmail/v1/users/{userId}/drafts/{id}";
 
         /**
-         * Replaces a draft's content.
+         * Replaces a draft's content. For more information, see [Create and send draft
+         * emails](https://developers.google.com/workspace/gmail/api/guides/drafts).
          *
          * Create a request for the method "drafts.update".
          *
@@ -1540,7 +1571,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * Replaces a draft's content.
+         * Replaces a draft's content. For more information, see [Create and send draft
+         * emails](https://developers.google.com/workspace/gmail/api/guides/drafts).
          *
          * Create a request for the method "drafts.update".
          *
@@ -1690,7 +1722,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Lists the history of all changes to the given mailbox. History results are returned in
-       * chronological order (increasing `historyId`).
+       * chronological order (increasing `historyId`). For more information, see [Synchronize clients with
+       * Gmail](https://developers.google.com/workspace/gmail/api/guides/sync).
        *
        * Create a request for the method "history.list".
        *
@@ -1713,7 +1746,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
         /**
          * Lists the history of all changes to the given mailbox. History results are returned in
-         * chronological order (increasing `historyId`).
+         * chronological order (increasing `historyId`). For more information, see [Synchronize clients
+         * with Gmail](https://developers.google.com/workspace/gmail/api/guides/sync).
          *
          * Create a request for the method "history.list".
          *
@@ -1961,7 +1995,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
     public class Labels {
 
       /**
-       * Creates a new label.
+       * Creates a label. For more information, see [Manage
+       * labels](https://developers.google.com/workspace/gmail/api/guides/labels).
        *
        * Create a request for the method "labels.create".
        *
@@ -1984,7 +2019,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "gmail/v1/users/{userId}/labels";
 
         /**
-         * Creates a new label.
+         * Creates a label. For more information, see [Manage
+         * labels](https://developers.google.com/workspace/gmail/api/guides/labels).
          *
          * Create a request for the method "labels.create".
          *
@@ -2094,7 +2130,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
       }
       /**
        * Immediately and permanently deletes the specified label and removes it from any messages and
-       * threads that it is applied to.
+       * threads that it's applied to. For more information, see [Manage
+       * labels](https://developers.google.com/workspace/gmail/api/guides/labels).
        *
        * Create a request for the method "labels.delete".
        *
@@ -2118,7 +2155,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
         /**
          * Immediately and permanently deletes the specified label and removes it from any messages and
-         * threads that it is applied to.
+         * threads that it's applied to. For more information, see [Manage
+         * labels](https://developers.google.com/workspace/gmail/api/guides/labels).
          *
          * Create a request for the method "labels.delete".
          *
@@ -2238,7 +2276,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * Gets the specified label.
+       * Gets the specified label. For more information, see [Manage
+       * labels](https://developers.google.com/workspace/gmail/api/guides/labels).
        *
        * Create a request for the method "labels.get".
        *
@@ -2261,7 +2300,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "gmail/v1/users/{userId}/labels/{id}";
 
         /**
-         * Gets the specified label.
+         * Gets the specified label. For more information, see [Manage
+         * labels](https://developers.google.com/workspace/gmail/api/guides/labels).
          *
          * Create a request for the method "labels.get".
          *
@@ -2391,7 +2431,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * Lists all labels in the user's mailbox.
+       * Lists all labels in the user's mailbox. For more information, see [Manage
+       * labels](https://developers.google.com/workspace/gmail/api/guides/labels).
        *
        * Create a request for the method "labels.list".
        *
@@ -2413,7 +2454,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "gmail/v1/users/{userId}/labels";
 
         /**
-         * Lists all labels in the user's mailbox.
+         * Lists all labels in the user's mailbox. For more information, see [Manage
+         * labels](https://developers.google.com/workspace/gmail/api/guides/labels).
          *
          * Create a request for the method "labels.list".
          *
@@ -2525,7 +2567,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * Patch the specified label.
+       * Patch the specified label. For more information, see [Manage
+       * labels](https://developers.google.com/workspace/gmail/api/guides/labels).
        *
        * Create a request for the method "labels.patch".
        *
@@ -2549,7 +2592,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "gmail/v1/users/{userId}/labels/{id}";
 
         /**
-         * Patch the specified label.
+         * Patch the specified label. For more information, see [Manage
+         * labels](https://developers.google.com/workspace/gmail/api/guides/labels).
          *
          * Create a request for the method "labels.patch".
          *
@@ -2670,7 +2714,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * Updates the specified label.
+       * Updates the specified label. For more information, see [Manage
+       * labels](https://developers.google.com/workspace/gmail/api/guides/labels).
        *
        * Create a request for the method "labels.update".
        *
@@ -2694,7 +2739,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "gmail/v1/users/{userId}/labels/{id}";
 
         /**
-         * Updates the specified label.
+         * Updates the specified label. For more information, see [Manage
+         * labels](https://developers.google.com/workspace/gmail/api/guides/labels).
          *
          * Create a request for the method "labels.update".
          *
@@ -3448,7 +3494,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
        * Imports a message into only this user's mailbox, with standard email delivery scanning and
        * classification similar to receiving via SMTP. This method doesn't perform SPF checks, so it might
        * not work for some spam messages, such as those attempting to perform domain spoofing. This method
-       * does not send a message. Note that the maximum size of the message is 150MB.
+       * does not send a message. Note that the maximum size of the message is 150 MB.
        *
        * Create a request for the method "messages.import".
        *
@@ -3470,7 +3516,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
        * Imports a message into only this user's mailbox, with standard email delivery scanning and
        * classification similar to receiving via SMTP. This method doesn't perform SPF checks, so it might
        * not work for some spam messages, such as those attempting to perform domain spoofing. This method
-       * does not send a message. Note that the maximum size of the message is 150MB.
+       * does not send a message. Note that the maximum size of the message is 150 MB.
        *
        * Create a request for the method "messages.import".
        *
@@ -3502,7 +3548,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * Imports a message into only this user's mailbox, with standard email delivery scanning and
          * classification similar to receiving via SMTP. This method doesn't perform SPF checks, so it
          * might not work for some spam messages, such as those attempting to perform domain spoofing.
-         * This method does not send a message. Note that the maximum size of the message is 150MB.
+         * This method does not send a message. Note that the maximum size of the message is 150 MB.
          *
          * Create a request for the method "messages.import".
          *
@@ -3526,7 +3572,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * Imports a message into only this user's mailbox, with standard email delivery scanning and
          * classification similar to receiving via SMTP. This method doesn't perform SPF checks, so it
          * might not work for some spam messages, such as those attempting to perform domain spoofing.
-         * This method does not send a message. Note that the maximum size of the message is 150MB.
+         * This method does not send a message. Note that the maximum size of the message is 150 MB.
          *
          * Create a request for the method "messages.import".
          *
@@ -3806,7 +3852,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
       }
       /**
        * Directly inserts a message into only this user's mailbox similar to `IMAP APPEND`, bypassing most
-       * scanning and classification. Does not send a message.
+       * scanning and classification. Does not send a message. For more information, see [Create and send
+       * email messages](https://developers.google.com/workspace/gmail/api/guides/sending).
        *
        * Create a request for the method "messages.insert".
        *
@@ -3826,7 +3873,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Directly inserts a message into only this user's mailbox similar to `IMAP APPEND`, bypassing most
-       * scanning and classification. Does not send a message.
+       * scanning and classification. Does not send a message. For more information, see [Create and send
+       * email messages](https://developers.google.com/workspace/gmail/api/guides/sending).
        *
        * Create a request for the method "messages.insert".
        *
@@ -3856,7 +3904,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
         /**
          * Directly inserts a message into only this user's mailbox similar to `IMAP APPEND`, bypassing
-         * most scanning and classification. Does not send a message.
+         * most scanning and classification. Does not send a message. For more information, see [Create
+         * and send email messages](https://developers.google.com/workspace/gmail/api/guides/sending).
          *
          * Create a request for the method "messages.insert".
          *
@@ -3879,7 +3928,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
         /**
          * Directly inserts a message into only this user's mailbox similar to `IMAP APPEND`, bypassing
-         * most scanning and classification. Does not send a message.
+         * most scanning and classification. Does not send a message. For more information, see [Create
+         * and send email messages](https://developers.google.com/workspace/gmail/api/guides/sending).
          *
          * Create a request for the method "messages.insert".
          *
@@ -4056,7 +4106,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * Lists the messages in the user's mailbox. For example usage, see [List Gmail
+       * Lists the messages in the user's mailbox. For more information, see [List Gmail
        * messages](https://developers.google.com/workspace/gmail/api/guides/list-messages).
        *
        * Create a request for the method "messages.list".
@@ -4079,7 +4129,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "gmail/v1/users/{userId}/messages";
 
         /**
-         * Lists the messages in the user's mailbox. For example usage, see [List Gmail
+         * Lists the messages in the user's mailbox. For more information, see [List Gmail
          * messages](https://developers.google.com/workspace/gmail/api/guides/list-messages).
          *
          * Create a request for the method "messages.list".
@@ -4474,8 +4524,9 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * Sends the specified message to the recipients in the `To`, `Cc`, and `Bcc` headers. For example
-       * usage, see [Sending email](https://developers.google.com/workspace/gmail/api/guides/sending).
+       * Sends the specified message to the recipients in the `To`, `Cc`, and `Bcc` headers. For more
+       * information, see [Create and send email
+       * messages](https://developers.google.com/workspace/gmail/api/guides/sending).
        *
        * Create a request for the method "messages.send".
        *
@@ -4494,8 +4545,9 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Sends the specified message to the recipients in the `To`, `Cc`, and `Bcc` headers. For example
-       * usage, see [Sending email](https://developers.google.com/workspace/gmail/api/guides/sending).
+       * Sends the specified message to the recipients in the `To`, `Cc`, and `Bcc` headers. For more
+       * information, see [Create and send email
+       * messages](https://developers.google.com/workspace/gmail/api/guides/sending).
        *
        * Create a request for the method "messages.send".
        *
@@ -4524,8 +4576,9 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "gmail/v1/users/{userId}/messages/send";
 
         /**
-         * Sends the specified message to the recipients in the `To`, `Cc`, and `Bcc` headers. For example
-         * usage, see [Sending email](https://developers.google.com/workspace/gmail/api/guides/sending).
+         * Sends the specified message to the recipients in the `To`, `Cc`, and `Bcc` headers. For more
+         * information, see [Create and send email
+         * messages](https://developers.google.com/workspace/gmail/api/guides/sending).
          *
          * Create a request for the method "messages.send".
          *
@@ -4547,8 +4600,9 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
 
         /**
-         * Sends the specified message to the recipients in the `To`, `Cc`, and `Bcc` headers. For example
-         * usage, see [Sending email](https://developers.google.com/workspace/gmail/api/guides/sending).
+         * Sends the specified message to the recipients in the `To`, `Cc`, and `Bcc` headers. For more
+         * information, see [Create and send email
+         * messages](https://developers.google.com/workspace/gmail/api/guides/sending).
          *
          * Create a request for the method "messages.send".
          *
@@ -5161,7 +5215,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
     public class Settings {
 
       /**
-       * Gets the auto-forwarding setting for the specified account.
+       * Gets the auto-forwarding setting for the specified account. For more information, see [Manage
+       * email forwarding](https://developers.google.com/workspace/gmail/api/guides/forwarding_settings).
        *
        * Create a request for the method "settings.getAutoForwarding".
        *
@@ -5183,7 +5238,9 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "gmail/v1/users/{userId}/settings/autoForwarding";
 
         /**
-         * Gets the auto-forwarding setting for the specified account.
+         * Gets the auto-forwarding setting for the specified account. For more information, see [Manage
+         * email
+         * forwarding](https://developers.google.com/workspace/gmail/api/guides/forwarding_settings).
          *
          * Create a request for the method "settings.getAutoForwarding".
          *
@@ -5296,7 +5353,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * Gets IMAP settings.
+       * Gets IMAP settings. For more information, see [Configure POP and IMAP settings with the Gmail
+       * API](https://developers.google.com/workspace/gmail/api/guides/pop_imap_settings).
        *
        * Create a request for the method "settings.getImap".
        *
@@ -5318,7 +5376,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "gmail/v1/users/{userId}/settings/imap";
 
         /**
-         * Gets IMAP settings.
+         * Gets IMAP settings. For more information, see [Configure POP and IMAP settings with the Gmail
+         * API](https://developers.google.com/workspace/gmail/api/guides/pop_imap_settings).
          *
          * Create a request for the method "settings.getImap".
          *
@@ -5431,7 +5490,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * Gets language settings.
+       * Gets language settings. For more information, see [Manage language
+       * settings](https://developers.google.com/workspace/gmail/api/guides/language-settings).
        *
        * Create a request for the method "settings.getLanguage".
        *
@@ -5453,7 +5513,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "gmail/v1/users/{userId}/settings/language";
 
         /**
-         * Gets language settings.
+         * Gets language settings. For more information, see [Manage language
+         * settings](https://developers.google.com/workspace/gmail/api/guides/language-settings).
          *
          * Create a request for the method "settings.getLanguage".
          *
@@ -5566,7 +5627,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * Gets POP settings.
+       * Gets POP settings. For more information, see [Configure POP and IMAP settings with the Gmail
+       * API](https://developers.google.com/workspace/gmail/api/guides/pop_imap_settings).
        *
        * Create a request for the method "settings.getPop".
        *
@@ -5588,7 +5650,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "gmail/v1/users/{userId}/settings/pop";
 
         /**
-         * Gets POP settings.
+         * Gets POP settings. For more information, see [Configure POP and IMAP settings with the Gmail
+         * API](https://developers.google.com/workspace/gmail/api/guides/pop_imap_settings).
          *
          * Create a request for the method "settings.getPop".
          *
@@ -5700,7 +5763,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * Gets vacation responder settings.
+       * Gets vacation responder settings. For more information, see [Manage vacation settings with the
+       * Gmail API](https://developers.google.com/workspace/gmail/api/guides/vacation_settings).
        *
        * Create a request for the method "settings.getVacation".
        *
@@ -5722,7 +5786,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "gmail/v1/users/{userId}/settings/vacation";
 
         /**
-         * Gets vacation responder settings.
+         * Gets vacation responder settings. For more information, see [Manage vacation settings with the
+         * Gmail API](https://developers.google.com/workspace/gmail/api/guides/vacation_settings).
          *
          * Create a request for the method "settings.getVacation".
          *
@@ -5836,8 +5901,10 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
       }
       /**
        * Updates the auto-forwarding setting for the specified account. A verified forwarding address must
-       * be specified when auto-forwarding is enabled. This method is only available to service account
-       * clients that have been delegated domain-wide authority.
+       * be specified when auto-forwarding is enabled. For more information, see [Manage email
+       * forwarding](https://developers.google.com/workspace/gmail/api/guides/forwarding_settings). This
+       * method is only available to service account clients that have been delegated domain-wide
+       * authority.
        *
        * Create a request for the method "settings.updateAutoForwarding".
        *
@@ -5862,8 +5929,10 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
         /**
          * Updates the auto-forwarding setting for the specified account. A verified forwarding address
-         * must be specified when auto-forwarding is enabled. This method is only available to service
-         * account clients that have been delegated domain-wide authority.
+         * must be specified when auto-forwarding is enabled. For more information, see [Manage email
+         * forwarding](https://developers.google.com/workspace/gmail/api/guides/forwarding_settings). This
+         * method is only available to service account clients that have been delegated domain-wide
+         * authority.
          *
          * Create a request for the method "settings.updateAutoForwarding".
          *
@@ -5967,7 +6036,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * Updates IMAP settings.
+       * Updates IMAP settings. For more information, see [Configure POP and IMAP settings with the Gmail
+       * API](https://developers.google.com/workspace/gmail/api/guides/pop_imap_settings).
        *
        * Create a request for the method "settings.updateImap".
        *
@@ -5990,7 +6060,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "gmail/v1/users/{userId}/settings/imap";
 
         /**
-         * Updates IMAP settings.
+         * Updates IMAP settings. For more information, see [Configure POP and IMAP settings with the
+         * Gmail API](https://developers.google.com/workspace/gmail/api/guides/pop_imap_settings).
          *
          * Create a request for the method "settings.updateImap".
          *
@@ -6094,10 +6165,12 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * Updates language settings. If successful, the return object contains the `displayLanguage` that
-       * was saved for the user, which may differ from the value passed into the request. This is because
-       * the requested `displayLanguage` may not be directly supported by Gmail but have a close variant
-       * that is, and so the variant may be chosen and saved instead.
+       * Updates language settings. For more information, see [Manage language
+       * settings](https://developers.google.com/workspace/gmail/api/guides/language-settings). If
+       * successful, the return object contains the `displayLanguage` that was saved for the user, which
+       * may differ from the value passed into the request. This is because the requested
+       * `displayLanguage` may not be directly supported by Gmail but have a close variant that is, and so
+       * the variant may be chosen and saved instead.
        *
        * Create a request for the method "settings.updateLanguage".
        *
@@ -6120,10 +6193,12 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "gmail/v1/users/{userId}/settings/language";
 
         /**
-         * Updates language settings. If successful, the return object contains the `displayLanguage` that
-         * was saved for the user, which may differ from the value passed into the request. This is
-         * because the requested `displayLanguage` may not be directly supported by Gmail but have a close
-         * variant that is, and so the variant may be chosen and saved instead.
+         * Updates language settings. For more information, see [Manage language
+         * settings](https://developers.google.com/workspace/gmail/api/guides/language-settings). If
+         * successful, the return object contains the `displayLanguage` that was saved for the user, which
+         * may differ from the value passed into the request. This is because the requested
+         * `displayLanguage` may not be directly supported by Gmail but have a close variant that is, and
+         * so the variant may be chosen and saved instead.
          *
          * Create a request for the method "settings.updateLanguage".
          *
@@ -6227,7 +6302,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * Updates POP settings.
+       * Updates POP settings. For more information, see [Configure POP and IMAP settings with the Gmail
+       * API](https://developers.google.com/workspace/gmail/api/guides/pop_imap_settings).
        *
        * Create a request for the method "settings.updatePop".
        *
@@ -6250,7 +6326,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "gmail/v1/users/{userId}/settings/pop";
 
         /**
-         * Updates POP settings.
+         * Updates POP settings. For more information, see [Configure POP and IMAP settings with the Gmail
+         * API](https://developers.google.com/workspace/gmail/api/guides/pop_imap_settings).
          *
          * Create a request for the method "settings.updatePop".
          *
@@ -6354,7 +6431,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * Updates vacation responder settings.
+       * Updates vacation responder settings. For more information, see [Manage vacation settings with the
+       * Gmail API](https://developers.google.com/workspace/gmail/api/guides/vacation_settings).
        *
        * Create a request for the method "settings.updateVacation".
        *
@@ -6377,7 +6455,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "gmail/v1/users/{userId}/settings/vacation";
 
         /**
-         * Updates vacation responder settings.
+         * Updates vacation responder settings. For more information, see [Manage vacation settings with
+         * the Gmail API](https://developers.google.com/workspace/gmail/api/guides/vacation_settings).
          *
          * Create a request for the method "settings.updateVacation".
          *
@@ -8441,13 +8520,14 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         /**
          * Adds a delegate with its verification status set directly to `accepted`, without sending any
          * verification email. The delegate user must be a member of the same Google Workspace organization
-         * as the delegator user. Gmail imposes limitations on the number of delegates and delegators each
-         * user in a Google Workspace organization can have. These limits depend on your organization, but
-         * in general each user can have up to 25 delegates and up to 10 delegators. Note that a delegate
-         * user must be referred to by their primary email address, and not an email alias. Also note that
-         * when a new delegate is created, there may be up to a one minute delay before the new delegate is
-         * available for use. This method is only available to service account clients that have been
-         * delegated domain-wide authority.
+         * as the delegator user. For more information, see [Manage
+         * delegates](https://developers.google.com/workspace/gmail/api/guides/delegate_settings). Gmail
+         * imposes limitations on the number of delegates and delegators each user in a Google Workspace
+         * organization can have. These limits depend on your organization, but in general each user can
+         * have up to 25 delegates and up to 10 delegators. A delegate user must be referred to by their
+         * primary email address, and not an email alias. When a new delegate is created, there may be up to
+         * a one minute delay before the new delegate is available for use. This method is only available to
+         * service account clients that have been delegated domain-wide authority.
          *
          * Create a request for the method "delegates.create".
          *
@@ -8472,13 +8552,14 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           /**
            * Adds a delegate with its verification status set directly to `accepted`, without sending any
            * verification email. The delegate user must be a member of the same Google Workspace
-           * organization as the delegator user. Gmail imposes limitations on the number of delegates and
-           * delegators each user in a Google Workspace organization can have. These limits depend on your
-           * organization, but in general each user can have up to 25 delegates and up to 10 delegators.
-           * Note that a delegate user must be referred to by their primary email address, and not an email
-           * alias. Also note that when a new delegate is created, there may be up to a one minute delay
-           * before the new delegate is available for use. This method is only available to service account
-           * clients that have been delegated domain-wide authority.
+           * organization as the delegator user. For more information, see [Manage
+           * delegates](https://developers.google.com/workspace/gmail/api/guides/delegate_settings). Gmail
+           * imposes limitations on the number of delegates and delegators each user in a Google Workspace
+           * organization can have. These limits depend on your organization, but in general each user can
+           * have up to 25 delegates and up to 10 delegators. A delegate user must be referred to by their
+           * primary email address, and not an email alias. When a new delegate is created, there may be up
+           * to a one minute delay before the new delegate is available for use. This method is only
+           * available to service account clients that have been delegated domain-wide authority.
            *
            * Create a request for the method "delegates.create".
            *
@@ -8582,9 +8663,11 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
         /**
          * Removes the specified delegate (which can be of any verification status), and revokes any
-         * verification that may have been required for using it. Note that a delegate user must be referred
-         * to by their primary email address, and not an email alias. This method is only available to
-         * service account clients that have been delegated domain-wide authority.
+         * verification that may have been required for using it. For more information, see [Manage
+         * delegates](https://developers.google.com/workspace/gmail/api/guides/delegate_settings). A
+         * delegate user must be referred to by their primary email address, and not an email alias. This
+         * method is only available to service account clients that have been delegated domain-wide
+         * authority.
          *
          * Create a request for the method "delegates.delete".
          *
@@ -8608,9 +8691,11 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
           /**
            * Removes the specified delegate (which can be of any verification status), and revokes any
-           * verification that may have been required for using it. Note that a delegate user must be
-           * referred to by their primary email address, and not an email alias. This method is only
-           * available to service account clients that have been delegated domain-wide authority.
+           * verification that may have been required for using it. For more information, see [Manage
+           * delegates](https://developers.google.com/workspace/gmail/api/guides/delegate_settings). A
+           * delegate user must be referred to by their primary email address, and not an email alias. This
+           * method is only available to service account clients that have been delegated domain-wide
+           * authority.
            *
            * Create a request for the method "delegates.delete".
            *
@@ -8730,9 +8815,11 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           }
         }
         /**
-         * Gets the specified delegate. Note that a delegate user must be referred to by their primary email
-         * address, and not an email alias. This method is only available to service account clients that
-         * have been delegated domain-wide authority.
+         * Gets the specified delegate. For more information, see [Manage
+         * delegates](https://developers.google.com/workspace/gmail/api/guides/delegate_settings). A
+         * delegate user must be referred to by their primary email address, and not an email alias. This
+         * method is only available to service account clients that have been delegated domain-wide
+         * authority.
          *
          * Create a request for the method "delegates.get".
          *
@@ -8755,9 +8842,11 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           private static final String REST_PATH = "gmail/v1/users/{userId}/settings/delegates/{delegateEmail}";
 
           /**
-           * Gets the specified delegate. Note that a delegate user must be referred to by their primary
-           * email address, and not an email alias. This method is only available to service account clients
-           * that have been delegated domain-wide authority.
+           * Gets the specified delegate. For more information, see [Manage
+           * delegates](https://developers.google.com/workspace/gmail/api/guides/delegate_settings). A
+           * delegate user must be referred to by their primary email address, and not an email alias. This
+           * method is only available to service account clients that have been delegated domain-wide
+           * authority.
            *
            * Create a request for the method "delegates.get".
            *
@@ -8887,8 +8976,10 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           }
         }
         /**
-         * Lists the delegates for the specified account. This method is only available to service account
-         * clients that have been delegated domain-wide authority.
+         * Lists the delegates for the specified account. For more information, see [Manage
+         * delegates](https://developers.google.com/workspace/gmail/api/guides/delegate_settings). This
+         * method is only available to service account clients that have been delegated domain-wide
+         * authority.
          *
          * Create a request for the method "delegates.list".
          *
@@ -8910,8 +9001,10 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           private static final String REST_PATH = "gmail/v1/users/{userId}/settings/delegates";
 
           /**
-           * Lists the delegates for the specified account. This method is only available to service account
-           * clients that have been delegated domain-wide authority.
+           * Lists the delegates for the specified account. For more information, see [Manage
+           * delegates](https://developers.google.com/workspace/gmail/api/guides/delegate_settings). This
+           * method is only available to service account clients that have been delegated domain-wide
+           * authority.
            *
            * Create a request for the method "delegates.list".
            *
@@ -9045,7 +9138,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
       public class Filters {
 
         /**
-         * Creates a filter. Note: you can only create a maximum of 1,000 filters.
+         * Creates a filter. Note: you can only create a maximum of 1,000 filters. For more information, see
+         * [Manage Gmail filters](https://developers.google.com/workspace/gmail/api/guides/filter_settings).
          *
          * Create a request for the method "filters.create".
          *
@@ -9068,7 +9162,9 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           private static final String REST_PATH = "gmail/v1/users/{userId}/settings/filters";
 
           /**
-           * Creates a filter. Note: you can only create a maximum of 1,000 filters.
+           * Creates a filter. Note: you can only create a maximum of 1,000 filters. For more information,
+           * see [Manage Gmail
+           * filters](https://developers.google.com/workspace/gmail/api/guides/filter_settings).
            *
            * Create a request for the method "filters.create".
            *
@@ -9171,7 +9267,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           }
         }
         /**
-         * Immediately and permanently deletes the specified filter.
+         * Immediately and permanently deletes the specified filter. For more information, see [Manage Gmail
+         * filters](https://developers.google.com/workspace/gmail/api/guides/filter_settings).
          *
          * Create a request for the method "filters.delete".
          *
@@ -9194,7 +9291,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           private static final String REST_PATH = "gmail/v1/users/{userId}/settings/filters/{id}";
 
           /**
-           * Immediately and permanently deletes the specified filter.
+           * Immediately and permanently deletes the specified filter. For more information, see [Manage
+           * Gmail filters](https://developers.google.com/workspace/gmail/api/guides/filter_settings).
            *
            * Create a request for the method "filters.delete".
            *
@@ -9314,7 +9412,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           }
         }
         /**
-         * Gets a filter.
+         * Gets a filter. For more information, see [Manage Gmail
+         * filters](https://developers.google.com/workspace/gmail/api/guides/filter_settings).
          *
          * Create a request for the method "filters.get".
          *
@@ -9337,7 +9436,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           private static final String REST_PATH = "gmail/v1/users/{userId}/settings/filters/{id}";
 
           /**
-           * Gets a filter.
+           * Gets a filter. For more information, see [Manage Gmail
+           * filters](https://developers.google.com/workspace/gmail/api/guides/filter_settings).
            *
            * Create a request for the method "filters.get".
            *
@@ -9467,7 +9567,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           }
         }
         /**
-         * Lists the message filters of a Gmail user.
+         * Lists the message filters of a Gmail user. For more information, see [Manage Gmail
+         * filters](https://developers.google.com/workspace/gmail/api/guides/filter_settings).
          *
          * Create a request for the method "filters.list".
          *
@@ -9489,7 +9590,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           private static final String REST_PATH = "gmail/v1/users/{userId}/settings/filters";
 
           /**
-           * Lists the message filters of a Gmail user.
+           * Lists the message filters of a Gmail user. For more information, see [Manage Gmail
+           * filters](https://developers.google.com/workspace/gmail/api/guides/filter_settings).
            *
            * Create a request for the method "filters.list".
            *
@@ -9625,8 +9727,11 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         /**
          * Creates a forwarding address. If ownership verification is required, a message will be sent to
          * the recipient and the resource's verification status will be set to `pending`; otherwise, the
-         * resource will be created with verification status set to `accepted`. This method is only
-         * available to service account clients that have been delegated domain-wide authority.
+         * resource will be created with verification status set to `accepted`. For more information, see
+         * [Manage email
+         * forwarding](https://developers.google.com/workspace/gmail/api/guides/forwarding_settings). This
+         * method is only available to service account clients that have been delegated domain-wide
+         * authority.
          *
          * Create a request for the method "forwardingAddresses.create".
          *
@@ -9651,8 +9756,11 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           /**
            * Creates a forwarding address. If ownership verification is required, a message will be sent to
            * the recipient and the resource's verification status will be set to `pending`; otherwise, the
-           * resource will be created with verification status set to `accepted`. This method is only
-           * available to service account clients that have been delegated domain-wide authority.
+           * resource will be created with verification status set to `accepted`. For more information, see
+           * [Manage email
+           * forwarding](https://developers.google.com/workspace/gmail/api/guides/forwarding_settings). This
+           * method is only available to service account clients that have been delegated domain-wide
+           * authority.
            *
            * Create a request for the method "forwardingAddresses.create".
            *
@@ -9756,8 +9864,10 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
         /**
          * Deletes the specified forwarding address and revokes any verification that may have been
-         * required. This method is only available to service account clients that have been delegated
-         * domain-wide authority.
+         * required. For more information, see [Manage email
+         * forwarding](https://developers.google.com/workspace/gmail/api/guides/forwarding_settings). This
+         * method is only available to service account clients that have been delegated domain-wide
+         * authority.
          *
          * Create a request for the method "forwardingAddresses.delete".
          *
@@ -9781,8 +9891,10 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
           /**
            * Deletes the specified forwarding address and revokes any verification that may have been
-           * required. This method is only available to service account clients that have been delegated
-           * domain-wide authority.
+           * required. For more information, see [Manage email
+           * forwarding](https://developers.google.com/workspace/gmail/api/guides/forwarding_settings). This
+           * method is only available to service account clients that have been delegated domain-wide
+           * authority.
            *
            * Create a request for the method "forwardingAddresses.delete".
            *
@@ -9902,7 +10014,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           }
         }
         /**
-         * Gets the specified forwarding address.
+         * Gets the specified forwarding address. For more information, see [Manage email
+         * forwarding](https://developers.google.com/workspace/gmail/api/guides/forwarding_settings).
          *
          * Create a request for the method "forwardingAddresses.get".
          *
@@ -9925,7 +10038,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           private static final String REST_PATH = "gmail/v1/users/{userId}/settings/forwardingAddresses/{forwardingEmail}";
 
           /**
-           * Gets the specified forwarding address.
+           * Gets the specified forwarding address. For more information, see [Manage email
+           * forwarding](https://developers.google.com/workspace/gmail/api/guides/forwarding_settings).
            *
            * Create a request for the method "forwardingAddresses.get".
            *
@@ -10055,7 +10169,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           }
         }
         /**
-         * Lists the forwarding addresses for the specified account.
+         * Lists the forwarding addresses for the specified account. For more information, see [Manage email
+         * forwarding](https://developers.google.com/workspace/gmail/api/guides/forwarding_settings).
          *
          * Create a request for the method "forwardingAddresses.list".
          *
@@ -10077,7 +10192,9 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           private static final String REST_PATH = "gmail/v1/users/{userId}/settings/forwardingAddresses";
 
           /**
-           * Lists the forwarding addresses for the specified account.
+           * Lists the forwarding addresses for the specified account. For more information, see [Manage
+           * email
+           * forwarding](https://developers.google.com/workspace/gmail/api/guides/forwarding_settings).
            *
            * Create a request for the method "forwardingAddresses.list".
            *
@@ -10216,8 +10333,11 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
          * verification is required for the alias, a message will be sent to the email address and the
          * resource's verification status will be set to `pending`; otherwise, the resource will be created
          * with verification status set to `accepted`. If a signature is provided, Gmail will sanitize the
-         * HTML before saving it with the alias. This method is only available to service account clients
-         * that have been delegated domain-wide authority.
+         * HTML before saving it with the alias. For more information, see [Manage aliases and signatures
+         * with the Gmail
+         * API](https://developers.google.com/workspace/gmail/api/guides/alias_and_signature_settings). This
+         * method is only available to service account clients that have been delegated domain-wide
+         * authority.
          *
          * Create a request for the method "sendAs.create".
          *
@@ -10245,8 +10365,11 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
            * ownership verification is required for the alias, a message will be sent to the email address
            * and the resource's verification status will be set to `pending`; otherwise, the resource will
            * be created with verification status set to `accepted`. If a signature is provided, Gmail will
-           * sanitize the HTML before saving it with the alias. This method is only available to service
-           * account clients that have been delegated domain-wide authority.
+           * sanitize the HTML before saving it with the alias. For more information, see [Manage aliases
+           * and signatures with the Gmail
+           * API](https://developers.google.com/workspace/gmail/api/guides/alias_and_signature_settings).
+           * This method is only available to service account clients that have been delegated domain-wide
+           * authority.
            *
            * Create a request for the method "sendAs.create".
            *
@@ -10350,8 +10473,10 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
         /**
          * Deletes the specified send-as alias. Revokes any verification that may have been required for
-         * using it. This method is only available to service account clients that have been delegated
-         * domain-wide authority.
+         * using it. For more information, see [Manage aliases and signatures with the Gmail
+         * API](https://developers.google.com/workspace/gmail/api/guides/alias_and_signature_settings). This
+         * method is only available to service account clients that have been delegated domain-wide
+         * authority.
          *
          * Create a request for the method "sendAs.delete".
          *
@@ -10375,8 +10500,10 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
           /**
            * Deletes the specified send-as alias. Revokes any verification that may have been required for
-           * using it. This method is only available to service account clients that have been delegated
-           * domain-wide authority.
+           * using it. For more information, see [Manage aliases and signatures with the Gmail
+           * API](https://developers.google.com/workspace/gmail/api/guides/alias_and_signature_settings).
+           * This method is only available to service account clients that have been delegated domain-wide
+           * authority.
            *
            * Create a request for the method "sendAs.delete".
            *
@@ -10497,7 +10624,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
         /**
          * Gets the specified send-as alias. Fails with an HTTP 404 error if the specified address is not a
-         * member of the collection.
+         * member of the collection. For more information, see [Manage aliases and signatures with the Gmail
+         * API](https://developers.google.com/workspace/gmail/api/guides/alias_and_signature_settings).
          *
          * Create a request for the method "sendAs.get".
          *
@@ -10521,7 +10649,9 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
           /**
            * Gets the specified send-as alias. Fails with an HTTP 404 error if the specified address is not
-           * a member of the collection.
+           * a member of the collection. For more information, see [Manage aliases and signatures with the
+           * Gmail
+           * API](https://developers.google.com/workspace/gmail/api/guides/alias_and_signature_settings).
            *
            * Create a request for the method "sendAs.get".
            *
@@ -10652,7 +10782,9 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
         /**
          * Lists the send-as aliases for the specified account. The result includes the primary send-as
-         * address associated with the account as well as any custom "from" aliases.
+         * address associated with the account as well as any custom "from" aliases. For more information,
+         * see [Manage aliases and signatures with the Gmail
+         * API](https://developers.google.com/workspace/gmail/api/guides/alias_and_signature_settings).
          *
          * Create a request for the method "sendAs.list".
          *
@@ -10675,7 +10807,9 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
           /**
            * Lists the send-as aliases for the specified account. The result includes the primary send-as
-           * address associated with the account as well as any custom "from" aliases.
+           * address associated with the account as well as any custom "from" aliases. For more information,
+           * see [Manage aliases and signatures with the Gmail
+           * API](https://developers.google.com/workspace/gmail/api/guides/alias_and_signature_settings).
            *
            * Create a request for the method "sendAs.list".
            *
@@ -10787,7 +10921,9 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           }
         }
         /**
-         * Patch the specified send-as alias.
+         * Patch the specified send-as alias. For more information, see [Manage aliases and signatures with
+         * the Gmail
+         * API](https://developers.google.com/workspace/gmail/api/guides/alias_and_signature_settings).
          *
          * Create a request for the method "sendAs.patch".
          *
@@ -10811,7 +10947,9 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           private static final String REST_PATH = "gmail/v1/users/{userId}/settings/sendAs/{sendAsEmail}";
 
           /**
-           * Patch the specified send-as alias.
+           * Patch the specified send-as alias. For more information, see [Manage aliases and signatures
+           * with the Gmail
+           * API](https://developers.google.com/workspace/gmail/api/guides/alias_and_signature_settings).
            *
            * Create a request for the method "sendAs.patch".
            *
@@ -10933,8 +11071,10 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
         /**
          * Updates a send-as alias. If a signature is provided, Gmail will sanitize the HTML before saving
-         * it with the alias. Addresses other than the primary address for the account can only be updated
-         * by service account clients that have been delegated domain-wide authority.
+         * it with the alias. For more information, see [Manage aliases and signatures with the Gmail
+         * API](https://developers.google.com/workspace/gmail/api/guides/alias_and_signature_settings).
+         * Addresses other than the primary address for the account can only be updated by service account
+         * clients that have been delegated domain-wide authority.
          *
          * Create a request for the method "sendAs.update".
          *
@@ -10959,8 +11099,10 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
           /**
            * Updates a send-as alias. If a signature is provided, Gmail will sanitize the HTML before saving
-           * it with the alias. Addresses other than the primary address for the account can only be updated
-           * by service account clients that have been delegated domain-wide authority.
+           * it with the alias. For more information, see [Manage aliases and signatures with the Gmail
+           * API](https://developers.google.com/workspace/gmail/api/guides/alias_and_signature_settings).
+           * Addresses other than the primary address for the account can only be updated by service account
+           * clients that have been delegated domain-wide authority.
            *
            * Create a request for the method "sendAs.update".
            *
@@ -11082,8 +11224,10 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
         /**
          * Sends a verification email to the specified send-as alias address. The verification status must
-         * be `pending`. This method is only available to service account clients that have been delegated
-         * domain-wide authority.
+         * be `pending`. For more information, see [Manage aliases and signatures with the Gmail
+         * API](https://developers.google.com/workspace/gmail/api/guides/alias_and_signature_settings). This
+         * method is only available to service account clients that have been delegated domain-wide
+         * authority.
          *
          * Create a request for the method "sendAs.verify".
          *
@@ -11107,8 +11251,10 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
           /**
            * Sends a verification email to the specified send-as alias address. The verification status must
-           * be `pending`. This method is only available to service account clients that have been delegated
-           * domain-wide authority.
+           * be `pending`. For more information, see [Manage aliases and signatures with the Gmail
+           * API](https://developers.google.com/workspace/gmail/api/guides/alias_and_signature_settings).
+           * This method is only available to service account clients that have been delegated domain-wide
+           * authority.
            *
            * Create a request for the method "sendAs.verify".
            *
@@ -11249,7 +11395,9 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         public class SmimeInfo {
 
           /**
-           * Deletes the specified S/MIME config for the specified send-as alias.
+           * Deletes the specified S/MIME config for the specified send-as alias. For more information, see
+           * [Manage S/MIME certificates with the Gmail
+           * API](https://developers.google.com/workspace/gmail/api/guides/smime_certs).
            *
            * Create a request for the method "smimeInfo.delete".
            *
@@ -11273,7 +11421,9 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
             private static final String REST_PATH = "gmail/v1/users/{userId}/settings/sendAs/{sendAsEmail}/smimeInfo/{id}";
 
             /**
-             * Deletes the specified S/MIME config for the specified send-as alias.
+             * Deletes the specified S/MIME config for the specified send-as alias. For more information, see
+             * [Manage S/MIME certificates with the Gmail
+             * API](https://developers.google.com/workspace/gmail/api/guides/smime_certs).
              *
              * Create a request for the method "smimeInfo.delete".
              *
@@ -11415,7 +11565,9 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
             }
           }
           /**
-           * Gets the specified S/MIME config for the specified send-as alias.
+           * Gets the specified S/MIME config for the specified send-as alias. For more information, see
+           * [Manage S/MIME certificates with the Gmail
+           * API](https://developers.google.com/workspace/gmail/api/guides/smime_certs).
            *
            * Create a request for the method "smimeInfo.get".
            *
@@ -11439,7 +11591,9 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
             private static final String REST_PATH = "gmail/v1/users/{userId}/settings/sendAs/{sendAsEmail}/smimeInfo/{id}";
 
             /**
-             * Gets the specified S/MIME config for the specified send-as alias.
+             * Gets the specified S/MIME config for the specified send-as alias. For more information, see
+             * [Manage S/MIME certificates with the Gmail
+             * API](https://developers.google.com/workspace/gmail/api/guides/smime_certs).
              *
              * Create a request for the method "smimeInfo.get".
              *
@@ -11591,8 +11745,9 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
             }
           }
           /**
-           * Insert (upload) the given S/MIME config for the specified send-as alias. Note that pkcs12 format
-           * is required for the key.
+           * Insert (upload) the given S/MIME config for the specified send-as alias. Note that `pkcs12`
+           * format is required for the key. For more information, see [Manage S/MIME certificates with the
+           * Gmail API](https://developers.google.com/workspace/gmail/api/guides/smime_certs).
            *
            * Create a request for the method "smimeInfo.insert".
            *
@@ -11616,8 +11771,9 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
             private static final String REST_PATH = "gmail/v1/users/{userId}/settings/sendAs/{sendAsEmail}/smimeInfo";
 
             /**
-             * Insert (upload) the given S/MIME config for the specified send-as alias. Note that pkcs12
-             * format is required for the key.
+             * Insert (upload) the given S/MIME config for the specified send-as alias. Note that `pkcs12`
+             * format is required for the key. For more information, see [Manage S/MIME certificates with the
+             * Gmail API](https://developers.google.com/workspace/gmail/api/guides/smime_certs).
              *
              * Create a request for the method "smimeInfo.insert".
              *
@@ -11742,7 +11898,9 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
             }
           }
           /**
-           * Lists S/MIME configs for the specified send-as alias.
+           * Lists S/MIME configs for the specified send-as alias. For more information, see [Manage S/MIME
+           * certificates with the Gmail
+           * API](https://developers.google.com/workspace/gmail/api/guides/smime_certs).
            *
            * Create a request for the method "smimeInfo.list".
            *
@@ -11765,7 +11923,9 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
             private static final String REST_PATH = "gmail/v1/users/{userId}/settings/sendAs/{sendAsEmail}/smimeInfo";
 
             /**
-             * Lists S/MIME configs for the specified send-as alias.
+             * Lists S/MIME configs for the specified send-as alias. For more information, see [Manage S/MIME
+             * certificates with the Gmail
+             * API](https://developers.google.com/workspace/gmail/api/guides/smime_certs).
              *
              * Create a request for the method "smimeInfo.list".
              *
@@ -11899,7 +12059,9 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
             }
           }
           /**
-           * Sets the default S/MIME config for the specified send-as alias.
+           * Sets the default S/MIME config for the specified send-as alias. For more information, see [Manage
+           * S/MIME certificates with the Gmail
+           * API](https://developers.google.com/workspace/gmail/api/guides/smime_certs).
            *
            * Create a request for the method "smimeInfo.setDefault".
            *
@@ -11923,7 +12085,9 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
             private static final String REST_PATH = "gmail/v1/users/{userId}/settings/sendAs/{sendAsEmail}/smimeInfo/{id}/setDefault";
 
             /**
-             * Sets the default S/MIME config for the specified send-as alias.
+             * Sets the default S/MIME config for the specified send-as alias. For more information, see
+             * [Manage S/MIME certificates with the Gmail
+             * API](https://developers.google.com/workspace/gmail/api/guides/smime_certs).
              *
              * Create a request for the method "smimeInfo.setDefault".
              *
@@ -12091,7 +12255,9 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Immediately and permanently deletes the specified thread. Any messages that belong to the thread
-       * are also deleted. This operation cannot be undone. Prefer `threads.trash` instead.
+       * are also deleted. This operation cannot be undone. Prefer `threads.trash` instead. For more
+       * information, see [Manage
+       * threads](https://developers.google.com/workspace/gmail/api/guides/threads).
        *
        * Create a request for the method "threads.delete".
        *
@@ -12115,7 +12281,9 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
         /**
          * Immediately and permanently deletes the specified thread. Any messages that belong to the
-         * thread are also deleted. This operation cannot be undone. Prefer `threads.trash` instead.
+         * thread are also deleted. This operation cannot be undone. Prefer `threads.trash` instead. For
+         * more information, see [Manage
+         * threads](https://developers.google.com/workspace/gmail/api/guides/threads).
          *
          * Create a request for the method "threads.delete".
          *
@@ -12235,7 +12403,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * Gets the specified thread.
+       * Gets the specified thread. For more information, see [Manage
+       * threads](https://developers.google.com/workspace/gmail/api/guides/threads).
        *
        * Create a request for the method "threads.get".
        *
@@ -12258,7 +12427,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "gmail/v1/users/{userId}/threads/{id}";
 
         /**
-         * Gets the specified thread.
+         * Gets the specified thread. For more information, see [Manage
+         * threads](https://developers.google.com/workspace/gmail/api/guides/threads).
          *
          * Create a request for the method "threads.get".
          *
@@ -12420,7 +12590,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * Lists the threads in the user's mailbox.
+       * Lists the threads in the user's mailbox. For more information, see [Manage
+       * threads](https://developers.google.com/workspace/gmail/api/guides/threads).
        *
        * Create a request for the method "threads.list".
        *
@@ -12442,7 +12613,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "gmail/v1/users/{userId}/threads";
 
         /**
-         * Lists the threads in the user's mailbox.
+         * Lists the threads in the user's mailbox. For more information, see [Manage
+         * threads](https://developers.google.com/workspace/gmail/api/guides/threads).
          *
          * Create a request for the method "threads.list".
          *
@@ -12678,7 +12850,9 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * Modifies the labels applied to the thread. This applies to all messages in the thread.
+       * Modifies the labels applied to the thread. This applies to all messages in the thread. For more
+       * information, see [Manage
+       * threads](https://developers.google.com/workspace/gmail/api/guides/threads).
        *
        * Create a request for the method "threads.modify".
        *
@@ -12702,7 +12876,9 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "gmail/v1/users/{userId}/threads/{id}/modify";
 
         /**
-         * Modifies the labels applied to the thread. This applies to all messages in the thread.
+         * Modifies the labels applied to the thread. This applies to all messages in the thread. For more
+         * information, see [Manage
+         * threads](https://developers.google.com/workspace/gmail/api/guides/threads).
          *
          * Create a request for the method "threads.modify".
          *
@@ -12824,7 +13000,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
       }
       /**
        * Moves the specified thread to the trash. Any messages that belong to the thread are also moved to
-       * the trash.
+       * the trash. For more information, see [Manage
+       * threads](https://developers.google.com/workspace/gmail/api/guides/threads).
        *
        * Create a request for the method "threads.trash".
        *
@@ -12848,7 +13025,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
         /**
          * Moves the specified thread to the trash. Any messages that belong to the thread are also moved
-         * to the trash.
+         * to the trash. For more information, see [Manage
+         * threads](https://developers.google.com/workspace/gmail/api/guides/threads).
          *
          * Create a request for the method "threads.trash".
          *
@@ -12969,7 +13147,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
       }
       /**
        * Removes the specified thread from the trash. Any messages that belong to the thread are also
-       * removed from the trash.
+       * removed from the trash. For more information, see [Manage
+       * threads](https://developers.google.com/workspace/gmail/api/guides/threads).
        *
        * Create a request for the method "threads.untrash".
        *
@@ -12993,7 +13172,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
         /**
          * Removes the specified thread from the trash. Any messages that belong to the thread are also
-         * removed from the trash.
+         * removed from the trash. For more information, see [Manage
+         * threads](https://developers.google.com/workspace/gmail/api/guides/threads).
          *
          * Create a request for the method "threads.untrash".
          *

@@ -37,7 +37,8 @@ public final class FilterAction extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> addLabelIds;
 
   /**
-   * Email address that the message should be forwarded to.
+   * Email address that the message should be forwarded to. This effectively redirects the message
+   * to the address specified in this field, maintaining the original sender in the "From" field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +69,8 @@ public final class FilterAction extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Email address that the message should be forwarded to.
+   * Email address that the message should be forwarded to. This effectively redirects the message
+   * to the address specified in this field, maintaining the original sender in the "From" field.
    * @return value or {@code null} for none
    */
   public java.lang.String getForward() {
@@ -76,7 +78,8 @@ public final class FilterAction extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Email address that the message should be forwarded to.
+   * Email address that the message should be forwarded to. This effectively redirects the message
+   * to the address specified in this field, maintaining the original sender in the "From" field.
    * @param forward forward or {@code null} for none
    */
   public FilterAction setForward(java.lang.String forward) {
