@@ -17,7 +17,7 @@
 package com.google.api.services.drive.model;
 
 /**
- * Metadata for an approval. An approval is a review/approve process for a Drive item.
+ * Metadata for an approval. An approval is a review or approve process for a Drive item.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Drive API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.drive.model;
 public final class Approval extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Approval ID.
+   * The approval ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,7 @@ public final class Approval extends com.google.api.client.json.GenericJson {
   private String dueTime;
 
   /**
-   * The user that requested the Approval.
+   * The user that requested the approval.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,7 +79,7 @@ public final class Approval extends com.google.api.client.json.GenericJson {
   private String modifyTime;
 
   /**
-   * The responses made on the Approval by reviewers.
+   * The responses made on the approval by reviewers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +100,7 @@ public final class Approval extends com.google.api.client.json.GenericJson {
   private java.lang.String targetFileId;
 
   /**
-   * The Approval ID.
+   * The approval ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getApprovalId() {
@@ -108,7 +108,7 @@ public final class Approval extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Approval ID.
+   * The approval ID.
    * @param approvalId approvalId or {@code null} for none
    */
   public Approval setApprovalId(java.lang.String approvalId) {
@@ -168,7 +168,7 @@ public final class Approval extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user that requested the Approval.
+   * The user that requested the approval.
    * @return value or {@code null} for none
    */
   public User getInitiator() {
@@ -176,7 +176,7 @@ public final class Approval extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The user that requested the Approval.
+   * The user that requested the approval.
    * @param initiator initiator or {@code null} for none
    */
   public Approval setInitiator(User initiator) {
@@ -219,7 +219,7 @@ public final class Approval extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The responses made on the Approval by reviewers.
+   * The responses made on the approval by reviewers.
    * @return value or {@code null} for none
    */
   public java.util.List<ReviewerResponse> getReviewerResponses() {
@@ -227,7 +227,7 @@ public final class Approval extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The responses made on the Approval by reviewers.
+   * The responses made on the approval by reviewers.
    * @param reviewerResponses reviewerResponses or {@code null} for none
    */
   public Approval setReviewerResponses(java.util.List<ReviewerResponse> reviewerResponses) {

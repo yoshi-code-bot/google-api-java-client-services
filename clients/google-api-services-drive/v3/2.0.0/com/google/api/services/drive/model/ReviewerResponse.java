@@ -17,7 +17,7 @@
 package com.google.api.services.drive.model;
 
 /**
- * A response on an Approval made by a specific Reviewer.
+ * A response on an approval made by a specific reviewer.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Drive API. For a detailed explanation see:
@@ -37,14 +37,14 @@ public final class ReviewerResponse extends com.google.api.client.json.GenericJs
   private java.lang.String kind;
 
   /**
-   * A Reviewer’s Response for the Approval.
+   * A reviewer’s response for the approval.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String response;
 
   /**
-   * The user that is responsible for this response.
+   * The user that's responsible for this response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class ReviewerResponse extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * A Reviewer’s Response for the Approval.
+   * A reviewer’s response for the approval.
    * @return value or {@code null} for none
    */
   public java.lang.String getResponse() {
@@ -76,7 +76,7 @@ public final class ReviewerResponse extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * A Reviewer’s Response for the Approval.
+   * A reviewer’s response for the approval.
    * @param response response or {@code null} for none
    */
   public ReviewerResponse setResponse(java.lang.String response) {
@@ -85,7 +85,7 @@ public final class ReviewerResponse extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The user that is responsible for this response.
+   * The user that's responsible for this response.
    * @return value or {@code null} for none
    */
   public User getReviewer() {
@@ -93,7 +93,7 @@ public final class ReviewerResponse extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The user that is responsible for this response.
+   * The user that's responsible for this response.
    * @param reviewer reviewer or {@code null} for none
    */
   public ReviewerResponse setReviewer(User reviewer) {

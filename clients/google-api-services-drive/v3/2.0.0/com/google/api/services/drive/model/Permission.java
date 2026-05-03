@@ -64,14 +64,14 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
-   * The domain to which this permission refers.
+   * Output only. The domain to which this permission refers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String domain;
 
   /**
-   * The email address of the user or group to which this permission refers.
+   * Output only. The email address of the user or group to which this permission refers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -249,7 +249,7 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The domain to which this permission refers.
+   * Output only. The domain to which this permission refers.
    * @return value or {@code null} for none
    */
   public java.lang.String getDomain() {
@@ -257,7 +257,7 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The domain to which this permission refers.
+   * Output only. The domain to which this permission refers.
    * @param domain domain or {@code null} for none
    */
   public Permission setDomain(java.lang.String domain) {
@@ -266,7 +266,7 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The email address of the user or group to which this permission refers.
+   * Output only. The email address of the user or group to which this permission refers.
    * @return value or {@code null} for none
    */
   public java.lang.String getEmailAddress() {
@@ -274,7 +274,7 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The email address of the user or group to which this permission refers.
+   * Output only. The email address of the user or group to which this permission refers.
    * @param emailAddress emailAddress or {@code null} for none
    */
   public Permission setEmailAddress(java.lang.String emailAddress) {
