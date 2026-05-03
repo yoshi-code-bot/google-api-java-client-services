@@ -63,6 +63,15 @@ public final class NewLustreConfig extends com.google.api.client.json.GenericJso
   private java.lang.String lustre;
 
   /**
+   * Optional. Immutable. Throughput of the instance in MB/s/TiB. Valid values are 125, 250, 500,
+   * 1000. See [Performance tiers and maximum storage capacities](https://cloud.google.com/managed-
+   * lustre/docs/create-instance#performance-tiers) for more information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long perUnitStorageThroughput;
+
+  /**
    * Required. Immutable. Storage capacity of the instance in gibibytes (GiB). Allowed values are
    * between 18000 and 7632000.
    * @return value or {@code null} for none
@@ -135,6 +144,27 @@ public final class NewLustreConfig extends com.google.api.client.json.GenericJso
    */
   public NewLustreConfig setLustre(java.lang.String lustre) {
     this.lustre = lustre;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. Throughput of the instance in MB/s/TiB. Valid values are 125, 250, 500,
+   * 1000. See [Performance tiers and maximum storage capacities](https://cloud.google.com/managed-
+   * lustre/docs/create-instance#performance-tiers) for more information.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getPerUnitStorageThroughput() {
+    return perUnitStorageThroughput;
+  }
+
+  /**
+   * Optional. Immutable. Throughput of the instance in MB/s/TiB. Valid values are 125, 250, 500,
+   * 1000. See [Performance tiers and maximum storage capacities](https://cloud.google.com/managed-
+   * lustre/docs/create-instance#performance-tiers) for more information.
+   * @param perUnitStorageThroughput perUnitStorageThroughput or {@code null} for none
+   */
+  public NewLustreConfig setPerUnitStorageThroughput(java.lang.Long perUnitStorageThroughput) {
+    this.perUnitStorageThroughput = perUnitStorageThroughput;
     return this;
   }
 
