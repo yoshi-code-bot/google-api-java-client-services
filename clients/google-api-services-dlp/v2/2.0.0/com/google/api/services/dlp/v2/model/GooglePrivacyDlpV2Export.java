@@ -46,9 +46,10 @@ public final class GooglePrivacyDlpV2Export extends com.google.api.client.json.G
    * Pub/Sub notification is sent before the streaming buffer is guaranteed to be written, so data
    * may not be instantly visible to queries by the time your topic receives the Pub/Sub
    * notification. * The best practice is to use the same table for an entire organization so that
-   * you can take advantage of the [provided Looker reports](https://cloud.google.com/sensitive-
-   * data-protection/docs/analyze-data-profiles#use_a_premade_report). If you use VPC Service
-   * Controls to define security perimeters, then you must use a separate table for each boundary.
+   * you can take advantage of the [provided Data Studio
+   * reports](https://cloud.google.com/sensitive-data-protection/docs/analyze-data-
+   * profiles#use_a_premade_report). If you use VPC Service Controls to define security perimeters,
+   * then you must use a separate table for each boundary.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,9 +80,10 @@ public final class GooglePrivacyDlpV2Export extends com.google.api.client.json.G
    * Pub/Sub notification is sent before the streaming buffer is guaranteed to be written, so data
    * may not be instantly visible to queries by the time your topic receives the Pub/Sub
    * notification. * The best practice is to use the same table for an entire organization so that
-   * you can take advantage of the [provided Looker reports](https://cloud.google.com/sensitive-
-   * data-protection/docs/analyze-data-profiles#use_a_premade_report). If you use VPC Service
-   * Controls to define security perimeters, then you must use a separate table for each boundary.
+   * you can take advantage of the [provided Data Studio
+   * reports](https://cloud.google.com/sensitive-data-protection/docs/analyze-data-
+   * profiles#use_a_premade_report). If you use VPC Service Controls to define security perimeters,
+   * then you must use a separate table for each boundary.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2BigQueryTable getProfileTable() {
@@ -103,9 +105,10 @@ public final class GooglePrivacyDlpV2Export extends com.google.api.client.json.G
    * Pub/Sub notification is sent before the streaming buffer is guaranteed to be written, so data
    * may not be instantly visible to queries by the time your topic receives the Pub/Sub
    * notification. * The best practice is to use the same table for an entire organization so that
-   * you can take advantage of the [provided Looker reports](https://cloud.google.com/sensitive-
-   * data-protection/docs/analyze-data-profiles#use_a_premade_report). If you use VPC Service
-   * Controls to define security perimeters, then you must use a separate table for each boundary.
+   * you can take advantage of the [provided Data Studio
+   * reports](https://cloud.google.com/sensitive-data-protection/docs/analyze-data-
+   * profiles#use_a_premade_report). If you use VPC Service Controls to define security perimeters,
+   * then you must use a separate table for each boundary.
    * @param profileTable profileTable or {@code null} for none
    */
   public GooglePrivacyDlpV2Export setProfileTable(GooglePrivacyDlpV2BigQueryTable profileTable) {
