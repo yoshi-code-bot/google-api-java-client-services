@@ -30,10 +30,10 @@ package com.google.api.services.docs.v1.model;
 public final class UpdateNamedStyleRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The NamedStyle fields that should be updated. At least `named_style_type must be specified. The
-   * root `named_style` is implied and should not be specified. A single `"*"` can be used as short-
-   * hand for listing every field. For example, to update the text style to bold, set `fields` to
-   * include `"text_style"` and `"text_style.bold"`. To update the paragraph style's alignment
+   * The NamedStyle fields that should be updated. At least `named_style_type` must be specified.
+   * The root `named_style` is implied and should not be specified. A single `"*"` can be used as
+   * short-hand for listing every field. For example, to update the text style to bold, set `fields`
+   * to include `"text_style"` and `"text_style.bold"`. To update the paragraph style's alignment
    * property, set `fields` to include `"paragraph_style"` and `"paragraph_style.alignment"`. To
    * reset a property to its default value, include its field name in the field mask but leave the
    * field itself unset. Specifying `"text_style"` or `"paragraph_style"` with an empty TextStyle or
@@ -58,10 +58,10 @@ public final class UpdateNamedStyleRequest extends com.google.api.client.json.Ge
   private java.lang.String tabId;
 
   /**
-   * The NamedStyle fields that should be updated. At least `named_style_type must be specified. The
-   * root `named_style` is implied and should not be specified. A single `"*"` can be used as short-
-   * hand for listing every field. For example, to update the text style to bold, set `fields` to
-   * include `"text_style"` and `"text_style.bold"`. To update the paragraph style's alignment
+   * The NamedStyle fields that should be updated. At least `named_style_type` must be specified.
+   * The root `named_style` is implied and should not be specified. A single `"*"` can be used as
+   * short-hand for listing every field. For example, to update the text style to bold, set `fields`
+   * to include `"text_style"` and `"text_style.bold"`. To update the paragraph style's alignment
    * property, set `fields` to include `"paragraph_style"` and `"paragraph_style.alignment"`. To
    * reset a property to its default value, include its field name in the field mask but leave the
    * field itself unset. Specifying `"text_style"` or `"paragraph_style"` with an empty TextStyle or
@@ -73,10 +73,10 @@ public final class UpdateNamedStyleRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * The NamedStyle fields that should be updated. At least `named_style_type must be specified. The
-   * root `named_style` is implied and should not be specified. A single `"*"` can be used as short-
-   * hand for listing every field. For example, to update the text style to bold, set `fields` to
-   * include `"text_style"` and `"text_style.bold"`. To update the paragraph style's alignment
+   * The NamedStyle fields that should be updated. At least `named_style_type` must be specified.
+   * The root `named_style` is implied and should not be specified. A single `"*"` can be used as
+   * short-hand for listing every field. For example, to update the text style to bold, set `fields`
+   * to include `"text_style"` and `"text_style.bold"`. To update the paragraph style's alignment
    * property, set `fields` to include `"paragraph_style"` and `"paragraph_style.alignment"`. To
    * reset a property to its default value, include its field name in the field mask but leave the
    * field itself unset. Specifying `"text_style"` or `"paragraph_style"` with an empty TextStyle or
