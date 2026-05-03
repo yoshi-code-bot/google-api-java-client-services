@@ -31,9 +31,11 @@ public final class LogErrorGroup extends com.google.api.client.json.GenericJson 
 
   /**
    * The id is a unique identifier for a particular error group; it is the last part of the error
-   * group resource name: /project/[PROJECT_ID]/errors/[ERROR_GROUP_ID]. Example: COShysOX0r_51QE.
-   * The id is derived from key parts of the error-log content and is treated as Service Data. For
-   * information about how Service Data is handled, see Google Cloud Privacy Notice
+   * group resource name: /project/[PROJECT_ID]/errors/[ERROR_GROUP_ID]. Example:
+   * COShysOX0r_51QE.This field can be used to search for log entries belonging to a specific error
+   * group in Logs Explorer (e.g., error_groups.id = "ID") or Observability Analytics.The id is
+   * derived from key parts of the error-log content and is treated as Service Data. For information
+   * about how Service Data is handled, see Google Cloud Privacy Notice
    * (https://cloud.google.com/terms/cloud-privacy-notice).
    * The value may be {@code null}.
    */
@@ -42,9 +44,11 @@ public final class LogErrorGroup extends com.google.api.client.json.GenericJson 
 
   /**
    * The id is a unique identifier for a particular error group; it is the last part of the error
-   * group resource name: /project/[PROJECT_ID]/errors/[ERROR_GROUP_ID]. Example: COShysOX0r_51QE.
-   * The id is derived from key parts of the error-log content and is treated as Service Data. For
-   * information about how Service Data is handled, see Google Cloud Privacy Notice
+   * group resource name: /project/[PROJECT_ID]/errors/[ERROR_GROUP_ID]. Example:
+   * COShysOX0r_51QE.This field can be used to search for log entries belonging to a specific error
+   * group in Logs Explorer (e.g., error_groups.id = "ID") or Observability Analytics.The id is
+   * derived from key parts of the error-log content and is treated as Service Data. For information
+   * about how Service Data is handled, see Google Cloud Privacy Notice
    * (https://cloud.google.com/terms/cloud-privacy-notice).
    * @return value or {@code null} for none
    */
@@ -54,9 +58,11 @@ public final class LogErrorGroup extends com.google.api.client.json.GenericJson 
 
   /**
    * The id is a unique identifier for a particular error group; it is the last part of the error
-   * group resource name: /project/[PROJECT_ID]/errors/[ERROR_GROUP_ID]. Example: COShysOX0r_51QE.
-   * The id is derived from key parts of the error-log content and is treated as Service Data. For
-   * information about how Service Data is handled, see Google Cloud Privacy Notice
+   * group resource name: /project/[PROJECT_ID]/errors/[ERROR_GROUP_ID]. Example:
+   * COShysOX0r_51QE.This field can be used to search for log entries belonging to a specific error
+   * group in Logs Explorer (e.g., error_groups.id = "ID") or Observability Analytics.The id is
+   * derived from key parts of the error-log content and is treated as Service Data. For information
+   * about how Service Data is handled, see Google Cloud Privacy Notice
    * (https://cloud.google.com/terms/cloud-privacy-notice).
    * @param id id or {@code null} for none
    */
