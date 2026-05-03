@@ -58,9 +58,11 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   /**
    * Output only. The Error Reporting (https://cloud.google.com/error-reporting) error groups
    * associated with this LogEntry. Error Reporting sets the values for this field during error
-   * group creation.For more information, see View error details( https://cloud.google.com/error-
-   * reporting/docs/viewing-errors#view_error_details)This field isn't available during log routing
-   * (https://cloud.google.com/logging/docs/routing/overview)
+   * group creation.This field is populated only when log entries are stored in Cloud Logging
+   * storage (Logs Explorer and Observability Analytics). It is not available for use in log sink
+   * filters, log-based metrics, or log-based alerts, and it is excluded from log exports (Cloud
+   * Storage, BigQuery, and Pub/Sub).For more information, see View error details(
+   * https://cloud.google.com/error-reporting/docs/viewing-errors#view_error_details)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -321,9 +323,11 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   /**
    * Output only. The Error Reporting (https://cloud.google.com/error-reporting) error groups
    * associated with this LogEntry. Error Reporting sets the values for this field during error
-   * group creation.For more information, see View error details( https://cloud.google.com/error-
-   * reporting/docs/viewing-errors#view_error_details)This field isn't available during log routing
-   * (https://cloud.google.com/logging/docs/routing/overview)
+   * group creation.This field is populated only when log entries are stored in Cloud Logging
+   * storage (Logs Explorer and Observability Analytics). It is not available for use in log sink
+   * filters, log-based metrics, or log-based alerts, and it is excluded from log exports (Cloud
+   * Storage, BigQuery, and Pub/Sub).For more information, see View error details(
+   * https://cloud.google.com/error-reporting/docs/viewing-errors#view_error_details)
    * @return value or {@code null} for none
    */
   public java.util.List<LogErrorGroup> getErrorGroups() {
@@ -333,9 +337,11 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   /**
    * Output only. The Error Reporting (https://cloud.google.com/error-reporting) error groups
    * associated with this LogEntry. Error Reporting sets the values for this field during error
-   * group creation.For more information, see View error details( https://cloud.google.com/error-
-   * reporting/docs/viewing-errors#view_error_details)This field isn't available during log routing
-   * (https://cloud.google.com/logging/docs/routing/overview)
+   * group creation.This field is populated only when log entries are stored in Cloud Logging
+   * storage (Logs Explorer and Observability Analytics). It is not available for use in log sink
+   * filters, log-based metrics, or log-based alerts, and it is excluded from log exports (Cloud
+   * Storage, BigQuery, and Pub/Sub).For more information, see View error details(
+   * https://cloud.google.com/error-reporting/docs/viewing-errors#view_error_details)
    * @param errorGroups errorGroups or {@code null} for none
    */
   public LogEntry setErrorGroups(java.util.List<LogErrorGroup> errorGroups) {
