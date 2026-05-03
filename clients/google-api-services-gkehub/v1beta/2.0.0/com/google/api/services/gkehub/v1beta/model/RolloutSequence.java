@@ -30,6 +30,14 @@ package com.google.api.services.gkehub.v1beta.model;
 public final class RolloutSequence extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Configuration for automatic upgrades. If this message is `unset`, the system applies
+   * default behavior.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AutoUpgradeConfig autoUpgradeConfig;
+
+  /**
    * Output only. The timestamp at which the Rollout Sequence was created.
    * The value may be {@code null}.
    */
@@ -49,6 +57,13 @@ public final class RolloutSequence extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
+
+  /**
+   * Output only. The resolved auto-upgrade options which are in effect.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AutoUpgradeConfig effectiveAutoUpgradeConfig;
 
   /**
    * Output only. etag of the Rollout Sequence Ex. abc1234
@@ -110,6 +125,25 @@ public final class RolloutSequence extends com.google.api.client.json.GenericJso
   private String updateTime;
 
   /**
+   * Optional. Configuration for automatic upgrades. If this message is `unset`, the system applies
+   * default behavior.
+   * @return value or {@code null} for none
+   */
+  public AutoUpgradeConfig getAutoUpgradeConfig() {
+    return autoUpgradeConfig;
+  }
+
+  /**
+   * Optional. Configuration for automatic upgrades. If this message is `unset`, the system applies
+   * default behavior.
+   * @param autoUpgradeConfig autoUpgradeConfig or {@code null} for none
+   */
+  public RolloutSequence setAutoUpgradeConfig(AutoUpgradeConfig autoUpgradeConfig) {
+    this.autoUpgradeConfig = autoUpgradeConfig;
+    return this;
+  }
+
+  /**
    * Output only. The timestamp at which the Rollout Sequence was created.
    * @return value or {@code null} for none
    */
@@ -157,6 +191,23 @@ public final class RolloutSequence extends com.google.api.client.json.GenericJso
    */
   public RolloutSequence setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Output only. The resolved auto-upgrade options which are in effect.
+   * @return value or {@code null} for none
+   */
+  public AutoUpgradeConfig getEffectiveAutoUpgradeConfig() {
+    return effectiveAutoUpgradeConfig;
+  }
+
+  /**
+   * Output only. The resolved auto-upgrade options which are in effect.
+   * @param effectiveAutoUpgradeConfig effectiveAutoUpgradeConfig or {@code null} for none
+   */
+  public RolloutSequence setEffectiveAutoUpgradeConfig(AutoUpgradeConfig effectiveAutoUpgradeConfig) {
+    this.effectiveAutoUpgradeConfig = effectiveAutoUpgradeConfig;
     return this;
   }
 

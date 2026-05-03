@@ -577,7 +577,7 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
       }
       /**
        * Lists information about the supported locations for this service. This method lists locations
-       * based on the resource scope provided in the [ListLocationsRequest.name] field: * **Global
+       * based on the resource scope provided in the ListLocationsRequest.name field: * **Global
        * locations**: If `name` is empty, the method lists the public locations available to all projects.
        * * **Project-specific locations**: If `name` follows the format `projects/{project}`, the method
        * lists locations visible to that specific project. This includes public, private, or other
@@ -608,7 +608,7 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * Lists information about the supported locations for this service. This method lists locations
-         * based on the resource scope provided in the [ListLocationsRequest.name] field: * **Global
+         * based on the resource scope provided in the ListLocationsRequest.name field: * **Global
          * locations**: If `name` is empty, the method lists the public locations available to all
          * projects. * **Project-specific locations**: If `name` follows the format `projects/{project}`,
          * the method lists locations visible to that specific project. This includes public, private, or
@@ -724,22 +724,22 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Do not use this field unless explicitly documented otherwise. This is primarily
+         * for internal usage.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> extraLocationTypes;
 
-        /** Optional. Do not use this field. It is unsupported and is ignored unless explicitly documented
-       otherwise. This is primarily for internal usage.
+        /** Optional. Do not use this field unless explicitly documented otherwise. This is primarily for
+       internal usage.
          */
         public java.util.List<java.lang.String> getExtraLocationTypes() {
           return extraLocationTypes;
         }
 
         /**
-         * Optional. Do not use this field. It is unsupported and is ignored unless explicitly
-         * documented otherwise. This is primarily for internal usage.
+         * Optional. Do not use this field unless explicitly documented otherwise. This is primarily
+         * for internal usage.
          */
         public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
           this.extraLocationTypes = extraLocationTypes;
@@ -7468,7 +7468,7 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
       public class RolloutSequences {
 
         /**
-         * Create a new rollout sequence resource.
+         * Creates a new rollout sequence resource.
          *
          * Create a request for the method "rolloutSequences.create".
          *
@@ -7494,7 +7494,7 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Create a new rollout sequence resource.
+           * Creates a new rollout sequence resource.
            *
            * Create a request for the method "rolloutSequences.create".
            *
@@ -7633,7 +7633,7 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
           }
         }
         /**
-         * Remove a RolloutSequence.
+         * Removes a RolloutSequence.
          *
          * Create a request for the method "rolloutSequences.delete".
          *
@@ -7658,7 +7658,7 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/rolloutSequences/[^/]+$");
 
           /**
-           * Remove a RolloutSequence.
+           * Removes a RolloutSequence.
            *
            * Create a request for the method "rolloutSequences.delete".
            *
@@ -7917,7 +7917,7 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
           }
         }
         /**
-         * Retrieve the list of all rollout sequences.
+         * Retrieves the list of all rollout sequences.
          *
          * Create a request for the method "rolloutSequences.list".
          *
@@ -7942,7 +7942,7 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Retrieve the list of all rollout sequences.
+           * Retrieves the list of all rollout sequences.
            *
            * Create a request for the method "rolloutSequences.list".
            *
@@ -8139,7 +8139,7 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
           }
         }
         /**
-         * Update a rollout sequence.
+         * Updates a rollout sequence.
          *
          * Create a request for the method "rolloutSequences.patch".
          *
@@ -8165,7 +8165,7 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/rolloutSequences/[^/]+$");
 
           /**
-           * Update a rollout sequence.
+           * Updates a rollout sequence.
            *
            * Create a request for the method "rolloutSequences.patch".
            *
@@ -8316,7 +8316,149 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
       public class Rollouts {
 
         /**
-         * Retrieve a single rollout.
+         * Force-completes a rollout stage. Only the active stage of an active rollout can be force-
+         * completed.
+         *
+         * Create a request for the method "rollouts.forceCompleteStage".
+         *
+         * This request holds the parameters needed by the gkehub server.  After setting any optional
+         * parameters, call the {@link ForceCompleteStage#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the rollout. Format:
+         *        projects/{project}/locations/{location}/rollouts/{rollout}
+         * @param content the {@link com.google.api.services.gkehub.v1beta.model.ForceCompleteRolloutStageRequest}
+         * @return the request
+         */
+        public ForceCompleteStage forceCompleteStage(java.lang.String name, com.google.api.services.gkehub.v1beta.model.ForceCompleteRolloutStageRequest content) throws java.io.IOException {
+          ForceCompleteStage result = new ForceCompleteStage(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ForceCompleteStage extends GKEHubRequest<com.google.api.services.gkehub.v1beta.model.Operation> {
+
+          private static final String REST_PATH = "v1beta/{+name}:forceCompleteStage";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/rollouts/[^/]+$");
+
+          /**
+           * Force-completes a rollout stage. Only the active stage of an active rollout can be force-
+           * completed.
+           *
+           * Create a request for the method "rollouts.forceCompleteStage".
+           *
+           * This request holds the parameters needed by the the gkehub server.  After setting any optional
+           * parameters, call the {@link ForceCompleteStage#execute()} method to invoke the remote
+           * operation. <p> {@link ForceCompleteStage#initialize(com.google.api.client.googleapis.services.A
+           * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name Required. The name of the rollout. Format:
+         *        projects/{project}/locations/{location}/rollouts/{rollout}
+           * @param content the {@link com.google.api.services.gkehub.v1beta.model.ForceCompleteRolloutStageRequest}
+           * @since 1.13
+           */
+          protected ForceCompleteStage(java.lang.String name, com.google.api.services.gkehub.v1beta.model.ForceCompleteRolloutStageRequest content) {
+            super(GKEHub.this, "POST", REST_PATH, content, com.google.api.services.gkehub.v1beta.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/rollouts/[^/]+$");
+            }
+          }
+
+          @Override
+          public ForceCompleteStage set$Xgafv(java.lang.String $Xgafv) {
+            return (ForceCompleteStage) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ForceCompleteStage setAccessToken(java.lang.String accessToken) {
+            return (ForceCompleteStage) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ForceCompleteStage setAlt(java.lang.String alt) {
+            return (ForceCompleteStage) super.setAlt(alt);
+          }
+
+          @Override
+          public ForceCompleteStage setCallback(java.lang.String callback) {
+            return (ForceCompleteStage) super.setCallback(callback);
+          }
+
+          @Override
+          public ForceCompleteStage setFields(java.lang.String fields) {
+            return (ForceCompleteStage) super.setFields(fields);
+          }
+
+          @Override
+          public ForceCompleteStage setKey(java.lang.String key) {
+            return (ForceCompleteStage) super.setKey(key);
+          }
+
+          @Override
+          public ForceCompleteStage setOauthToken(java.lang.String oauthToken) {
+            return (ForceCompleteStage) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ForceCompleteStage setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ForceCompleteStage) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ForceCompleteStage setQuotaUser(java.lang.String quotaUser) {
+            return (ForceCompleteStage) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ForceCompleteStage setUploadType(java.lang.String uploadType) {
+            return (ForceCompleteStage) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ForceCompleteStage setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ForceCompleteStage) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the rollout. Format:
+           * projects/{project}/locations/{location}/rollouts/{rollout}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the rollout. Format:
+         projects/{project}/locations/{location}/rollouts/{rollout}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the rollout. Format:
+           * projects/{project}/locations/{location}/rollouts/{rollout}
+           */
+          public ForceCompleteStage setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/rollouts/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public ForceCompleteStage set(String parameterName, Object value) {
+            return (ForceCompleteStage) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Retrieves a single rollout.
          *
          * Create a request for the method "rollouts.get".
          *
@@ -8341,7 +8483,7 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/rollouts/[^/]+$");
 
           /**
-           * Retrieve a single rollout.
+           * Retrieves a single rollout.
            *
            * Create a request for the method "rollouts.get".
            *
@@ -8463,7 +8605,7 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
           }
         }
         /**
-         * Retrieve the list of all rollouts.
+         * Retrieves the list of all rollouts.
          *
          * Create a request for the method "rollouts.list".
          *
@@ -8488,7 +8630,7 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Retrieve the list of all rollouts.
+           * Retrieves the list of all rollouts.
            *
            * Create a request for the method "rollouts.list".
            *
