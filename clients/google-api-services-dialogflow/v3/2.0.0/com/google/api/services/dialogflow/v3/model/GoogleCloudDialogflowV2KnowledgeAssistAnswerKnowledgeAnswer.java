@@ -39,6 +39,12 @@ public final class GoogleCloudDialogflowV2KnowledgeAssistAnswerKnowledgeAnswer e
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2KnowledgeAssistAnswerKnowledgeAnswerEventSource eventSource;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2KnowledgeAssistAnswerKnowledgeAnswerFaqSource faqSource;
 
   /**
@@ -46,6 +52,12 @@ public final class GoogleCloudDialogflowV2KnowledgeAssistAnswerKnowledgeAnswer e
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2KnowledgeAssistAnswerKnowledgeAnswerGenerativeSource generativeSource;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2KnowledgeAssistAnswerKnowledgeAnswerGenerativeSource playbookSource;
 
   /**
    * @return value or {@code null} for none
@@ -59,6 +71,21 @@ public final class GoogleCloudDialogflowV2KnowledgeAssistAnswerKnowledgeAnswer e
    */
   public GoogleCloudDialogflowV2KnowledgeAssistAnswerKnowledgeAnswer setAnswerText(java.lang.String answerText) {
     this.answerText = answerText;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2KnowledgeAssistAnswerKnowledgeAnswerEventSource getEventSource() {
+    return eventSource;
+  }
+
+  /**
+   * @param eventSource eventSource or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2KnowledgeAssistAnswerKnowledgeAnswer setEventSource(GoogleCloudDialogflowV2KnowledgeAssistAnswerKnowledgeAnswerEventSource eventSource) {
+    this.eventSource = eventSource;
     return this;
   }
 
@@ -89,6 +116,21 @@ public final class GoogleCloudDialogflowV2KnowledgeAssistAnswerKnowledgeAnswer e
    */
   public GoogleCloudDialogflowV2KnowledgeAssistAnswerKnowledgeAnswer setGenerativeSource(GoogleCloudDialogflowV2KnowledgeAssistAnswerKnowledgeAnswerGenerativeSource generativeSource) {
     this.generativeSource = generativeSource;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2KnowledgeAssistAnswerKnowledgeAnswerGenerativeSource getPlaybookSource() {
+    return playbookSource;
+  }
+
+  /**
+   * @param playbookSource playbookSource or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2KnowledgeAssistAnswerKnowledgeAnswer setPlaybookSource(GoogleCloudDialogflowV2KnowledgeAssistAnswerKnowledgeAnswerGenerativeSource playbookSource) {
+    this.playbookSource = playbookSource;
     return this;
   }
 
