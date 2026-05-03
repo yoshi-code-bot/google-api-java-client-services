@@ -59,6 +59,13 @@ public final class ReconciledDataPoint extends com.google.api.client.json.Generi
   private Altitude altitude;
 
   /**
+   * Data for points in the `basal-energy-burned` interval data type collection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BasalEnergyBurned basalEnergyBurned;
+
+  /**
    * Data for points in the `body-fat` sample data type collection.
    * The value may be {@code null}.
    */
@@ -315,6 +322,23 @@ public final class ReconciledDataPoint extends com.google.api.client.json.Generi
    */
   public ReconciledDataPoint setAltitude(Altitude altitude) {
     this.altitude = altitude;
+    return this;
+  }
+
+  /**
+   * Data for points in the `basal-energy-burned` interval data type collection.
+   * @return value or {@code null} for none
+   */
+  public BasalEnergyBurned getBasalEnergyBurned() {
+    return basalEnergyBurned;
+  }
+
+  /**
+   * Data for points in the `basal-energy-burned` interval data type collection.
+   * @param basalEnergyBurned basalEnergyBurned or {@code null} for none
+   */
+  public ReconciledDataPoint setBasalEnergyBurned(BasalEnergyBurned basalEnergyBurned) {
+    this.basalEnergyBurned = basalEnergyBurned;
     return this;
   }
 

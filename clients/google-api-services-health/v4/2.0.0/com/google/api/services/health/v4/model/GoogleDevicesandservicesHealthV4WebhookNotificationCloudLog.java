@@ -28,7 +28,7 @@ package com.google.api.services.health.v4.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class WebhookNotificationCloudLog extends com.google.api.client.json.GenericJson {
+public final class GoogleDevicesandservicesHealthV4WebhookNotificationCloudLog extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Represents the HTTP response. This message includes the status code, reason phrase,
@@ -52,19 +52,19 @@ public final class WebhookNotificationCloudLog extends com.google.api.client.jso
    * headers, and body.
    * @param httpResponse httpResponse or {@code null} for none
    */
-  public WebhookNotificationCloudLog setHttpResponse(HttpResponse httpResponse) {
+  public GoogleDevicesandservicesHealthV4WebhookNotificationCloudLog setHttpResponse(HttpResponse httpResponse) {
     this.httpResponse = httpResponse;
     return this;
   }
 
   @Override
-  public WebhookNotificationCloudLog set(String fieldName, Object value) {
-    return (WebhookNotificationCloudLog) super.set(fieldName, value);
+  public GoogleDevicesandservicesHealthV4WebhookNotificationCloudLog set(String fieldName, Object value) {
+    return (GoogleDevicesandservicesHealthV4WebhookNotificationCloudLog) super.set(fieldName, value);
   }
 
   @Override
-  public WebhookNotificationCloudLog clone() {
-    return (WebhookNotificationCloudLog) super.clone();
+  public GoogleDevicesandservicesHealthV4WebhookNotificationCloudLog clone() {
+    return (GoogleDevicesandservicesHealthV4WebhookNotificationCloudLog) super.clone();
   }
 
 }

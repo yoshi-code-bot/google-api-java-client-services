@@ -59,6 +59,13 @@ public final class DataPoint extends com.google.api.client.json.GenericJson {
   private Altitude altitude;
 
   /**
+   * Optional. Data for points in the `basal-energy-burned` interval data type collection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BasalEnergyBurned basalEnergyBurned;
+
+  /**
    * Optional. Data for points in the `body-fat` sample data type collection.
    * The value may be {@code null}.
    */
@@ -323,6 +330,23 @@ public final class DataPoint extends com.google.api.client.json.GenericJson {
    */
   public DataPoint setAltitude(Altitude altitude) {
     this.altitude = altitude;
+    return this;
+  }
+
+  /**
+   * Optional. Data for points in the `basal-energy-burned` interval data type collection.
+   * @return value or {@code null} for none
+   */
+  public BasalEnergyBurned getBasalEnergyBurned() {
+    return basalEnergyBurned;
+  }
+
+  /**
+   * Optional. Data for points in the `basal-energy-burned` interval data type collection.
+   * @param basalEnergyBurned basalEnergyBurned or {@code null} for none
+   */
+  public DataPoint setBasalEnergyBurned(BasalEnergyBurned basalEnergyBurned) {
+    this.basalEnergyBurned = basalEnergyBurned;
     return this;
   }
 
