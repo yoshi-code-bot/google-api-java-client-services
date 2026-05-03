@@ -5435,6 +5435,201 @@ public class FirebaseAppHosting extends com.google.api.client.googleapis.service
         }
 
       }
+      /**
+       * An accessor for creating requests from the SupportedRuntimes collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code FirebaseAppHosting firebaseapphosting = new FirebaseAppHosting(...);}
+       *   {@code FirebaseAppHosting.SupportedRuntimes.List request = firebaseapphosting.supportedRuntimes().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public SupportedRuntimes supportedRuntimes() {
+        return new SupportedRuntimes();
+      }
+
+      /**
+       * The "supportedRuntimes" collection of methods.
+       */
+      public class SupportedRuntimes {
+
+        /**
+         * Lists the runtimes supported by the backend. The list of runtimes may vary across projects and
+         * locations, for example, during staged rollouts of new runtime support.
+         *
+         * Create a request for the method "supportedRuntimes.list".
+         *
+         * This request holds the parameters needed by the firebaseapphosting server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent, which owns this collection of SupportedRuntime. Format:
+         *        projects/{project}/locations/{location}
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends FirebaseAppHostingRequest<com.google.api.services.firebaseapphosting.v1beta.model.ListSupportedRuntimesResponse> {
+
+          private static final String REST_PATH = "v1beta/{+parent}/supportedRuntimes";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists the runtimes supported by the backend. The list of runtimes may vary across projects and
+           * locations, for example, during staged rollouts of new runtime support.
+           *
+           * Create a request for the method "supportedRuntimes.list".
+           *
+           * This request holds the parameters needed by the the firebaseapphosting server.  After setting
+           * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent, which owns this collection of SupportedRuntime. Format:
+         *        projects/{project}/locations/{location}
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(FirebaseAppHosting.this, "GET", REST_PATH, null, com.google.api.services.firebaseapphosting.v1beta.model.ListSupportedRuntimesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent, which owns this collection of SupportedRuntime. Format:
+           * projects/{project}/locations/{location}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent, which owns this collection of SupportedRuntime. Format:
+         projects/{project}/locations/{location}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent, which owns this collection of SupportedRuntime. Format:
+           * projects/{project}/locations/{location}
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The suggested number of runtimes to return. This field is ignored. We return
+           * all runtimes in a single page regardless of the page size.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The suggested number of runtimes to return. This field is ignored. We return all runtimes
+         in a single page regardless of the page size.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The suggested number of runtimes to return. This field is ignored. We return
+           * all runtimes in a single page regardless of the page size.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
   }
 
