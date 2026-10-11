@@ -79,6 +79,14 @@ public final class GoogleCloudAiplatformV1beta1Agent extends com.google.api.clie
   private java.util.Map<String, java.lang.String> metadata;
 
   /**
+   * Optional. Model configuration for the agent. When set, tasks running under this agent default
+   * to this model configuration if they do not specify their own.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1AgentModelConfig modelConfig;
+
+  /**
    * Identifier. The resource name of the agent. Format:
    * `projects/{project}/locations/{location}/agents/{agent}`.
    * The value may be {@code null}.
@@ -235,6 +243,25 @@ public final class GoogleCloudAiplatformV1beta1Agent extends com.google.api.clie
    */
   public GoogleCloudAiplatformV1beta1Agent setMetadata(java.util.Map<String, java.lang.String> metadata) {
     this.metadata = metadata;
+    return this;
+  }
+
+  /**
+   * Optional. Model configuration for the agent. When set, tasks running under this agent default
+   * to this model configuration if they do not specify their own.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1AgentModelConfig getModelConfig() {
+    return modelConfig;
+  }
+
+  /**
+   * Optional. Model configuration for the agent. When set, tasks running under this agent default
+   * to this model configuration if they do not specify their own.
+   * @param modelConfig modelConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Agent setModelConfig(GoogleCloudAiplatformV1beta1AgentModelConfig modelConfig) {
+    this.modelConfig = modelConfig;
     return this;
   }
 

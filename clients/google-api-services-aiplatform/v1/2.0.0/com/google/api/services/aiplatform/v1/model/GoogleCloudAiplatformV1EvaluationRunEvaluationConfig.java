@@ -30,6 +30,17 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1EvaluationRunEvaluationConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Allows the evaluation run to use cross region models. When this flag is set, the
+   * service may route traffic to other regions if a model is unavailable in the current region
+   * (e.g., to a `global` endpoint). If a fully-qualified model endpoint resource name with a
+   * different region than the run location is provided elsewhere in the run config, this flag must
+   * be set to true or the request will fail.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean allowCrossRegionModel;
+
+  /**
    * Optional. The autorater config for the evaluation run.
    * The value may be {@code null}.
    */
@@ -102,6 +113,31 @@ public final class GoogleCloudAiplatformV1EvaluationRunEvaluationConfig extends 
     // hack to force ProGuard to consider GoogleCloudAiplatformV1EvaluationRubricConfig used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(GoogleCloudAiplatformV1EvaluationRubricConfig.class);
+  }
+
+  /**
+   * Optional. Allows the evaluation run to use cross region models. When this flag is set, the
+   * service may route traffic to other regions if a model is unavailable in the current region
+   * (e.g., to a `global` endpoint). If a fully-qualified model endpoint resource name with a
+   * different region than the run location is provided elsewhere in the run config, this flag must
+   * be set to true or the request will fail.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAllowCrossRegionModel() {
+    return allowCrossRegionModel;
+  }
+
+  /**
+   * Optional. Allows the evaluation run to use cross region models. When this flag is set, the
+   * service may route traffic to other regions if a model is unavailable in the current region
+   * (e.g., to a `global` endpoint). If a fully-qualified model endpoint resource name with a
+   * different region than the run location is provided elsewhere in the run config, this flag must
+   * be set to true or the request will fail.
+   * @param allowCrossRegionModel allowCrossRegionModel or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1EvaluationRunEvaluationConfig setAllowCrossRegionModel(java.lang.Boolean allowCrossRegionModel) {
+    this.allowCrossRegionModel = allowCrossRegionModel;
+    return this;
   }
 
   /**

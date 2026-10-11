@@ -45,6 +45,21 @@ public final class GoogleCloudAiplatformV1beta1PredefinedMetricSpec extends com.
   private java.util.Map<String, java.lang.Object> metricSpecParameters;
 
   /**
+   * Optional. Per-step autorater overrides for this predefined metric. Keys are evaluation stage
+   * names (snake_case). Valid keys: "intent_extraction", "rubric_generation", "rubric_validation".
+   * Unknown keys return INVALID_ARGUMENT.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, GoogleCloudAiplatformV1beta1AutoraterConfig> stepAutoraterConfigs;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudAiplatformV1beta1AutoraterConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudAiplatformV1beta1AutoraterConfig.class);
+  }
+
+  /**
    * Required. The name of a pre-defined metric, such as "instruction_following_v1" or
    * "text_quality_v1".
    * @return value or {@code null} for none
@@ -77,6 +92,27 @@ public final class GoogleCloudAiplatformV1beta1PredefinedMetricSpec extends com.
    */
   public GoogleCloudAiplatformV1beta1PredefinedMetricSpec setMetricSpecParameters(java.util.Map<String, java.lang.Object> metricSpecParameters) {
     this.metricSpecParameters = metricSpecParameters;
+    return this;
+  }
+
+  /**
+   * Optional. Per-step autorater overrides for this predefined metric. Keys are evaluation stage
+   * names (snake_case). Valid keys: "intent_extraction", "rubric_generation", "rubric_validation".
+   * Unknown keys return INVALID_ARGUMENT.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, GoogleCloudAiplatformV1beta1AutoraterConfig> getStepAutoraterConfigs() {
+    return stepAutoraterConfigs;
+  }
+
+  /**
+   * Optional. Per-step autorater overrides for this predefined metric. Keys are evaluation stage
+   * names (snake_case). Valid keys: "intent_extraction", "rubric_generation", "rubric_validation".
+   * Unknown keys return INVALID_ARGUMENT.
+   * @param stepAutoraterConfigs stepAutoraterConfigs or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PredefinedMetricSpec setStepAutoraterConfigs(java.util.Map<String, GoogleCloudAiplatformV1beta1AutoraterConfig> stepAutoraterConfigs) {
+    this.stepAutoraterConfigs = stepAutoraterConfigs;
     return this;
   }
 
