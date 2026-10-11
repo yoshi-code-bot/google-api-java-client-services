@@ -17,7 +17,7 @@
 package com.google.api.services.agentregistry.v1alpha.model;
 
 /**
- * The spec of the endpoint.
+ * Separate message to accommodate custom formats across IRC and Slack.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Registry API. For a detailed explanation see:
@@ -27,64 +27,40 @@ package com.google.api.services.agentregistry.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class EndpointSpec extends com.google.api.client.json.GenericJson {
+public final class Channel extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The content of the endpoint spec. Reserved for future use.
+   * Required. URI of the channel.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.Map<String, java.lang.Object> content;
+  private java.lang.String uri;
 
   /**
-   * Required. Immutable. The type of the endpoint spec content.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String type;
-
-  /**
-   * Optional. The content of the endpoint spec. Reserved for future use.
+   * Required. URI of the channel.
    * @return value or {@code null} for none
    */
-  public java.util.Map<String, java.lang.Object> getContent() {
-    return content;
+  public java.lang.String getUri() {
+    return uri;
   }
 
   /**
-   * Optional. The content of the endpoint spec. Reserved for future use.
-   * @param content content or {@code null} for none
+   * Required. URI of the channel.
+   * @param uri uri or {@code null} for none
    */
-  public EndpointSpec setContent(java.util.Map<String, java.lang.Object> content) {
-    this.content = content;
-    return this;
-  }
-
-  /**
-   * Required. Immutable. The type of the endpoint spec content.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getType() {
-    return type;
-  }
-
-  /**
-   * Required. Immutable. The type of the endpoint spec content.
-   * @param type type or {@code null} for none
-   */
-  public EndpointSpec setType(java.lang.String type) {
-    this.type = type;
+  public Channel setUri(java.lang.String uri) {
+    this.uri = uri;
     return this;
   }
 
   @Override
-  public EndpointSpec set(String fieldName, Object value) {
-    return (EndpointSpec) super.set(fieldName, value);
+  public Channel set(String fieldName, Object value) {
+    return (Channel) super.set(fieldName, value);
   }
 
   @Override
-  public EndpointSpec clone() {
-    return (EndpointSpec) super.clone();
+  public Channel clone() {
+    return (Channel) super.clone();
   }
 
 }
