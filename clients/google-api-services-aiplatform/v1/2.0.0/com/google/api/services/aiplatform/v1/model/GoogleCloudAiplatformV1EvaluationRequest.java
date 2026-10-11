@@ -21,7 +21,11 @@ package com.google.api.services.aiplatform.v1.model;
  * agent execution traces. Valid input modes: 1. Inference Mode: `prompt` is set (containing text or
  * AgentData context). 2. Offline Eval Mode: `prompt` is unset, and `candidate_responses` contains
  * `agent_data` (the completed execution trace). Validation Rule: Either `prompt` must be set, OR at
- * least one of the `candidate_responses` must contain `agent_data`.
+ * least one of the `candidate_responses` must contain `agent_data`. Metrics receive each candidate
+ * as an `EvaluationInstance`, whose fields are the names metrics can reference: `prompt` ->
+ * `prompt`, the candidate -> `response` (or `agent_eval_data` for `agent_data`), `golden_response`
+ * -> `reference`, `rubrics` -> `rubric_groups`, and `prompt.prompt_template_data.values` and
+ * `extra_context` -> `other_data`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:

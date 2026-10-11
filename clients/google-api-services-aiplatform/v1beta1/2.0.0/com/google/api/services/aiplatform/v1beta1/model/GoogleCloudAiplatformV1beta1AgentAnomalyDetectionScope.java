@@ -30,6 +30,15 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1AgentAnomalyDetectionScope extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. When true, agents created in Agent Engine that share log and observability buckets
+   * with this scope are automatically enrolled as MonitoredAgents. When false, agents must be
+   * enrolled explicitly via MonitoredAgent operations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean autoEnroll;
+
+  /**
    * Optional. User-provided display name of the AgentAnomalyDetectionScope.
    * The value may be {@code null}.
    */
@@ -66,6 +75,27 @@ public final class GoogleCloudAiplatformV1beta1AgentAnomalyDetectionScope extend
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * Optional. When true, agents created in Agent Engine that share log and observability buckets
+   * with this scope are automatically enrolled as MonitoredAgents. When false, agents must be
+   * enrolled explicitly via MonitoredAgent operations.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAutoEnroll() {
+    return autoEnroll;
+  }
+
+  /**
+   * Optional. When true, agents created in Agent Engine that share log and observability buckets
+   * with this scope are automatically enrolled as MonitoredAgents. When false, agents must be
+   * enrolled explicitly via MonitoredAgent operations.
+   * @param autoEnroll autoEnroll or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1AgentAnomalyDetectionScope setAutoEnroll(java.lang.Boolean autoEnroll) {
+    this.autoEnroll = autoEnroll;
+    return this;
+  }
 
   /**
    * Optional. User-provided display name of the AgentAnomalyDetectionScope.

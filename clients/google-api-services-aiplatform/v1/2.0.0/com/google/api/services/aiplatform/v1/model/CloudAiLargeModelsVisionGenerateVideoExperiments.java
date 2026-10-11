@@ -104,6 +104,13 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperiments extends com.
   private CloudAiLargeModelsVisionHumanPose humanPose;
 
   /**
+   * Optional. LoRA configuration for Omni editing/stylization models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudAiLargeModelsVisionGenerateVideoExperimentsLoraConfig loraConfig;
+
+  /**
    * Optional. BNS override for model backend. Enabled only for local and autopush environments by
    * the flag `lvm_allow_model_zoo_bns_override`.
    * The value may be {@code null}.
@@ -194,6 +201,13 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperiments extends com.
    */
   @com.google.api.client.util.Key
   private CloudAiLargeModelsVisionGenerateVideoExperimentsSpatialAlignmentConfig spatialAlignment;
+
+  /**
+   * Config for the Pro Super Res upsampling task.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudAiLargeModelsVisionGenerateVideoExperimentsSuperResConfig superResConfig;
 
   /**
    * If true (default), truncate input videos that exceed the model's maximum frame count by
@@ -401,6 +415,23 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperiments extends com.
    */
   public CloudAiLargeModelsVisionGenerateVideoExperiments setHumanPose(CloudAiLargeModelsVisionHumanPose humanPose) {
     this.humanPose = humanPose;
+    return this;
+  }
+
+  /**
+   * Optional. LoRA configuration for Omni editing/stylization models.
+   * @return value or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionGenerateVideoExperimentsLoraConfig getLoraConfig() {
+    return loraConfig;
+  }
+
+  /**
+   * Optional. LoRA configuration for Omni editing/stylization models.
+   * @param loraConfig loraConfig or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionGenerateVideoExperiments setLoraConfig(CloudAiLargeModelsVisionGenerateVideoExperimentsLoraConfig loraConfig) {
+    this.loraConfig = loraConfig;
     return this;
   }
 
@@ -621,6 +652,23 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperiments extends com.
    */
   public CloudAiLargeModelsVisionGenerateVideoExperiments setSpatialAlignment(CloudAiLargeModelsVisionGenerateVideoExperimentsSpatialAlignmentConfig spatialAlignment) {
     this.spatialAlignment = spatialAlignment;
+    return this;
+  }
+
+  /**
+   * Config for the Pro Super Res upsampling task.
+   * @return value or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionGenerateVideoExperimentsSuperResConfig getSuperResConfig() {
+    return superResConfig;
+  }
+
+  /**
+   * Config for the Pro Super Res upsampling task.
+   * @param superResConfig superResConfig or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionGenerateVideoExperiments setSuperResConfig(CloudAiLargeModelsVisionGenerateVideoExperimentsSuperResConfig superResConfig) {
+    this.superResConfig = superResConfig;
     return this;
   }
 

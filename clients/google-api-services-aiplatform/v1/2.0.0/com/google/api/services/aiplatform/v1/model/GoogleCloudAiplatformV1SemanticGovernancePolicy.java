@@ -31,7 +31,8 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1SemanticGovernancePolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The name of the agent in Agent Registry that is affected by this policy.
+   * Required. The name of the agent in Agent Registry that is affected by this policy. Format:
+   * `projects/{project}/locations/{location}/agents/{agent}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,7 +127,8 @@ public final class GoogleCloudAiplatformV1SemanticGovernancePolicy extends com.g
   private String updateTime;
 
   /**
-   * Required. The name of the agent in Agent Registry that is affected by this policy.
+   * Required. The name of the agent in Agent Registry that is affected by this policy. Format:
+   * `projects/{project}/locations/{location}/agents/{agent}`
    * @return value or {@code null} for none
    */
   public java.lang.String getAgent() {
@@ -134,7 +136,8 @@ public final class GoogleCloudAiplatformV1SemanticGovernancePolicy extends com.g
   }
 
   /**
-   * Required. The name of the agent in Agent Registry that is affected by this policy.
+   * Required. The name of the agent in Agent Registry that is affected by this policy. Format:
+   * `projects/{project}/locations/{location}/agents/{agent}`
    * @param agent agent or {@code null} for none
    */
   public GoogleCloudAiplatformV1SemanticGovernancePolicy setAgent(java.lang.String agent) {

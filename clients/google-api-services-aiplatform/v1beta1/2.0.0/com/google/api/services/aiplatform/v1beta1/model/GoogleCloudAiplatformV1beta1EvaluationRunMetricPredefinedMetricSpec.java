@@ -45,6 +45,20 @@ public final class GoogleCloudAiplatformV1beta1EvaluationRunMetricPredefinedMetr
   private java.util.Map<String, java.lang.Object> parameters;
 
   /**
+   * Optional. Per-step autorater overrides for this predefined metric. Keys are evaluation stage
+   * names: "intent_extraction", "rubric_generation", "rubric_validation".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, GoogleCloudAiplatformV1beta1EvaluationRunEvaluationConfigAutoraterConfig> stepAutoraterConfigs;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudAiplatformV1beta1EvaluationRunEvaluationConfigAutoraterConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudAiplatformV1beta1EvaluationRunEvaluationConfigAutoraterConfig.class);
+  }
+
+  /**
    * Required. The name of a pre-defined metric, such as "instruction_following_v1" or
    * "text_quality_v1".
    * @return value or {@code null} for none
@@ -77,6 +91,25 @@ public final class GoogleCloudAiplatformV1beta1EvaluationRunMetricPredefinedMetr
    */
   public GoogleCloudAiplatformV1beta1EvaluationRunMetricPredefinedMetricSpec setParameters(java.util.Map<String, java.lang.Object> parameters) {
     this.parameters = parameters;
+    return this;
+  }
+
+  /**
+   * Optional. Per-step autorater overrides for this predefined metric. Keys are evaluation stage
+   * names: "intent_extraction", "rubric_generation", "rubric_validation".
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, GoogleCloudAiplatformV1beta1EvaluationRunEvaluationConfigAutoraterConfig> getStepAutoraterConfigs() {
+    return stepAutoraterConfigs;
+  }
+
+  /**
+   * Optional. Per-step autorater overrides for this predefined metric. Keys are evaluation stage
+   * names: "intent_extraction", "rubric_generation", "rubric_validation".
+   * @param stepAutoraterConfigs stepAutoraterConfigs or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluationRunMetricPredefinedMetricSpec setStepAutoraterConfigs(java.util.Map<String, GoogleCloudAiplatformV1beta1EvaluationRunEvaluationConfigAutoraterConfig> stepAutoraterConfigs) {
+    this.stepAutoraterConfigs = stepAutoraterConfigs;
     return this;
   }
 

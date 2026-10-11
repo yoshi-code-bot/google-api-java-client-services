@@ -38,8 +38,8 @@ public final class GoogleCloudAiplatformV1SemanticGovernancePolicyMcpTool extend
   private java.lang.String mcpServer;
 
   /**
-   * Optional. The resource names of the McpTools used by the Agent that is affected by this policy.
-   * If not specified, the policy applies to all McpTools in the McpServer.
+   * Required. The resource names of the tools used by the Agent that is affected by this policy.
+   * Currently, exactly one tool must be specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,8 +65,8 @@ public final class GoogleCloudAiplatformV1SemanticGovernancePolicyMcpTool extend
   }
 
   /**
-   * Optional. The resource names of the McpTools used by the Agent that is affected by this policy.
-   * If not specified, the policy applies to all McpTools in the McpServer.
+   * Required. The resource names of the tools used by the Agent that is affected by this policy.
+   * Currently, exactly one tool must be specified.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTools() {
@@ -74,8 +74,8 @@ public final class GoogleCloudAiplatformV1SemanticGovernancePolicyMcpTool extend
   }
 
   /**
-   * Optional. The resource names of the McpTools used by the Agent that is affected by this policy.
-   * If not specified, the policy applies to all McpTools in the McpServer.
+   * Required. The resource names of the tools used by the Agent that is affected by this policy.
+   * Currently, exactly one tool must be specified.
    * @param tools tools or {@code null} for none
    */
   public GoogleCloudAiplatformV1SemanticGovernancePolicyMcpTool setTools(java.util.List<java.lang.String> tools) {

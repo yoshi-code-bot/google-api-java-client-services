@@ -33,12 +33,13 @@ public final class GoogleLearningVertexApiInteractionsV1beta1CreateVoiceRequest 
    * Optional. Whether the created voice is persisted and managed by Google. * When `true`, Google
    * stores the voice and returns `Voice.id` (for example, `voice_abc123def456`), which can be
    * managed via `GetVoice`, `ListVoices`, and `DeleteVoice` and referenced by ID in synthesis
-   * requests. Projects are subject to a maximum active stored voice quota; exceeding the quota
-   * returns `RESOURCE_EXHAUSTED`. * When `false` (default), the voice is not stored by Google and
-   * `Voice.key` (for example, `voicekey_...`) is returned for client-side storage and synthesis.
-   * Optional discovery metadata fields on `voice` are not persisted or returned when `store` is
-   * `false`. * Required to be `true` when `voice.type` is `"prompted"` (otherwise fails with
-   * `INVALID_ARGUMENT`).
+   * requests. Stored voices expire after 1 year of inactivity; using a stored voice in speech
+   * synthesis or as a `base_voice` in `CreateVoice` extends its `expire_time`. Projects are subject
+   * to a maximum active stored voice quota; exceeding the quota returns `RESOURCE_EXHAUSTED`. *
+   * When `false` (default), the voice is not stored by Google and `Voice.key` (for example,
+   * `voicekey_...`) is returned for client-side storage and synthesis. Optional discovery metadata
+   * fields on `voice` are not persisted or returned when `store` is `false`. * Required to be
+   * `true` when `voice.type` is `"prompted"` (otherwise fails with `INVALID_ARGUMENT`).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,12 +58,13 @@ public final class GoogleLearningVertexApiInteractionsV1beta1CreateVoiceRequest 
    * Optional. Whether the created voice is persisted and managed by Google. * When `true`, Google
    * stores the voice and returns `Voice.id` (for example, `voice_abc123def456`), which can be
    * managed via `GetVoice`, `ListVoices`, and `DeleteVoice` and referenced by ID in synthesis
-   * requests. Projects are subject to a maximum active stored voice quota; exceeding the quota
-   * returns `RESOURCE_EXHAUSTED`. * When `false` (default), the voice is not stored by Google and
-   * `Voice.key` (for example, `voicekey_...`) is returned for client-side storage and synthesis.
-   * Optional discovery metadata fields on `voice` are not persisted or returned when `store` is
-   * `false`. * Required to be `true` when `voice.type` is `"prompted"` (otherwise fails with
-   * `INVALID_ARGUMENT`).
+   * requests. Stored voices expire after 1 year of inactivity; using a stored voice in speech
+   * synthesis or as a `base_voice` in `CreateVoice` extends its `expire_time`. Projects are subject
+   * to a maximum active stored voice quota; exceeding the quota returns `RESOURCE_EXHAUSTED`. *
+   * When `false` (default), the voice is not stored by Google and `Voice.key` (for example,
+   * `voicekey_...`) is returned for client-side storage and synthesis. Optional discovery metadata
+   * fields on `voice` are not persisted or returned when `store` is `false`. * Required to be
+   * `true` when `voice.type` is `"prompted"` (otherwise fails with `INVALID_ARGUMENT`).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getStore() {
@@ -73,12 +75,13 @@ public final class GoogleLearningVertexApiInteractionsV1beta1CreateVoiceRequest 
    * Optional. Whether the created voice is persisted and managed by Google. * When `true`, Google
    * stores the voice and returns `Voice.id` (for example, `voice_abc123def456`), which can be
    * managed via `GetVoice`, `ListVoices`, and `DeleteVoice` and referenced by ID in synthesis
-   * requests. Projects are subject to a maximum active stored voice quota; exceeding the quota
-   * returns `RESOURCE_EXHAUSTED`. * When `false` (default), the voice is not stored by Google and
-   * `Voice.key` (for example, `voicekey_...`) is returned for client-side storage and synthesis.
-   * Optional discovery metadata fields on `voice` are not persisted or returned when `store` is
-   * `false`. * Required to be `true` when `voice.type` is `"prompted"` (otherwise fails with
-   * `INVALID_ARGUMENT`).
+   * requests. Stored voices expire after 1 year of inactivity; using a stored voice in speech
+   * synthesis or as a `base_voice` in `CreateVoice` extends its `expire_time`. Projects are subject
+   * to a maximum active stored voice quota; exceeding the quota returns `RESOURCE_EXHAUSTED`. *
+   * When `false` (default), the voice is not stored by Google and `Voice.key` (for example,
+   * `voicekey_...`) is returned for client-side storage and synthesis. Optional discovery metadata
+   * fields on `voice` are not persisted or returned when `store` is `false`. * Required to be
+   * `true` when `voice.type` is `"prompted"` (otherwise fails with `INVALID_ARGUMENT`).
    * @param store store or {@code null} for none
    */
   public GoogleLearningVertexApiInteractionsV1beta1CreateVoiceRequest setStore(java.lang.Boolean store) {
