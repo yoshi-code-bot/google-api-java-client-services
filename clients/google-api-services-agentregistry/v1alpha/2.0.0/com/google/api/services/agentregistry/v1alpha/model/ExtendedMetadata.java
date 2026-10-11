@@ -17,7 +17,7 @@
 package com.google.api.services.agentregistry.v1alpha.model;
 
 /**
- * The spec of the endpoint.
+ * Additional metadata for a Service or Workload.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Registry API. For a detailed explanation see:
@@ -27,64 +27,40 @@ package com.google.api.services.agentregistry.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class EndpointSpec extends com.google.api.client.json.GenericJson {
+public final class ExtendedMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The content of the endpoint spec. Reserved for future use.
+   * Output only. The metadata contents.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.Map<String, java.lang.Object> content;
+  private java.util.Map<String, java.lang.Object> metadataStruct;
 
   /**
-   * Required. Immutable. The type of the endpoint spec content.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String type;
-
-  /**
-   * Optional. The content of the endpoint spec. Reserved for future use.
+   * Output only. The metadata contents.
    * @return value or {@code null} for none
    */
-  public java.util.Map<String, java.lang.Object> getContent() {
-    return content;
+  public java.util.Map<String, java.lang.Object> getMetadataStruct() {
+    return metadataStruct;
   }
 
   /**
-   * Optional. The content of the endpoint spec. Reserved for future use.
-   * @param content content or {@code null} for none
+   * Output only. The metadata contents.
+   * @param metadataStruct metadataStruct or {@code null} for none
    */
-  public EndpointSpec setContent(java.util.Map<String, java.lang.Object> content) {
-    this.content = content;
-    return this;
-  }
-
-  /**
-   * Required. Immutable. The type of the endpoint spec content.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getType() {
-    return type;
-  }
-
-  /**
-   * Required. Immutable. The type of the endpoint spec content.
-   * @param type type or {@code null} for none
-   */
-  public EndpointSpec setType(java.lang.String type) {
-    this.type = type;
+  public ExtendedMetadata setMetadataStruct(java.util.Map<String, java.lang.Object> metadataStruct) {
+    this.metadataStruct = metadataStruct;
     return this;
   }
 
   @Override
-  public EndpointSpec set(String fieldName, Object value) {
-    return (EndpointSpec) super.set(fieldName, value);
+  public ExtendedMetadata set(String fieldName, Object value) {
+    return (ExtendedMetadata) super.set(fieldName, value);
   }
 
   @Override
-  public EndpointSpec clone() {
-    return (EndpointSpec) super.clone();
+  public ExtendedMetadata clone() {
+    return (ExtendedMetadata) super.clone();
   }
 
 }
