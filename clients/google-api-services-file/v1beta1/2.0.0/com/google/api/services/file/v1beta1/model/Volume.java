@@ -45,6 +45,19 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * Optional. User-defined permissions protecting mount points.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<NfsExportOptions> ipAcls;
+
+  static {
+    // hack to force ProGuard to consider NfsExportOptions used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(NfsExportOptions.class);
+  }
+
+  /**
    * Optional. Resource labels to represent user provided metadata.
    * The value may be {@code null}.
    */
@@ -65,6 +78,22 @@ public final class Volume extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Optional. The maximum size of the volume in mebibytes (MiB).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long quotaMib;
+
+  /**
+   * Optional. The state of the volume. This field is caller-settable via `UpdateVolume` to
+   * transition a volume from `HOT` to `COLD` (freezing the volume). In `CreateVolume`, this field
+   * is output-only and initialized to `HOT`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
 
   /**
    * Output only. The time when the volume was created.
@@ -99,6 +128,23 @@ public final class Volume extends com.google.api.client.json.GenericJson {
    */
   public Volume setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Optional. User-defined permissions protecting mount points.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<NfsExportOptions> getIpAcls() {
+    return ipAcls;
+  }
+
+  /**
+   * Optional. User-defined permissions protecting mount points.
+   * @param ipAcls ipAcls or {@code null} for none
+   */
+  public Volume setIpAcls(java.util.List<NfsExportOptions> ipAcls) {
+    this.ipAcls = ipAcls;
     return this;
   }
 
@@ -152,6 +198,44 @@ public final class Volume extends com.google.api.client.json.GenericJson {
    */
   public Volume setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. The maximum size of the volume in mebibytes (MiB).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getQuotaMib() {
+    return quotaMib;
+  }
+
+  /**
+   * Optional. The maximum size of the volume in mebibytes (MiB).
+   * @param quotaMib quotaMib or {@code null} for none
+   */
+  public Volume setQuotaMib(java.lang.Long quotaMib) {
+    this.quotaMib = quotaMib;
+    return this;
+  }
+
+  /**
+   * Optional. The state of the volume. This field is caller-settable via `UpdateVolume` to
+   * transition a volume from `HOT` to `COLD` (freezing the volume). In `CreateVolume`, this field
+   * is output-only and initialized to `HOT`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * Optional. The state of the volume. This field is caller-settable via `UpdateVolume` to
+   * transition a volume from `HOT` to `COLD` (freezing the volume). In `CreateVolume`, this field
+   * is output-only and initialized to `HOT`.
+   * @param state state or {@code null} for none
+   */
+  public Volume setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 

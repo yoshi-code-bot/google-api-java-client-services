@@ -30,6 +30,13 @@ package com.google.api.services.file.v1beta1.model;
 public final class VolumePool extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The number of active volumes. Default: 100.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer activeVolumeCount;
+
+  /**
    * Optional. The number of IOPs provisioned per active volume.
    * The value may be {@code null}.
    */
@@ -44,7 +51,8 @@ public final class VolumePool extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * Optional. The default quota per volume in MiB. Default: 1024 MiB.
+   * Optional. The default quota per volume in MiB. Must be between 100 MiB and 102400 MiB (100
+   * GiB). Default: 1024 MiB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,11 +89,35 @@ public final class VolumePool extends com.google.api.client.json.GenericJson {
   private java.lang.String network;
 
   /**
+   * Output only. The state of the volume pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
+
+  /**
    * Output only. System-assigned unique identifier for the volume pool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uid;
+
+  /**
+   * Optional. The number of active volumes. Default: 100.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getActiveVolumeCount() {
+    return activeVolumeCount;
+  }
+
+  /**
+   * Optional. The number of active volumes. Default: 100.
+   * @param activeVolumeCount activeVolumeCount or {@code null} for none
+   */
+  public VolumePool setActiveVolumeCount(java.lang.Integer activeVolumeCount) {
+    this.activeVolumeCount = activeVolumeCount;
+    return this;
+  }
 
   /**
    * Optional. The number of IOPs provisioned per active volume.
@@ -122,7 +154,8 @@ public final class VolumePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The default quota per volume in MiB. Default: 1024 MiB.
+   * Optional. The default quota per volume in MiB. Must be between 100 MiB and 102400 MiB (100
+   * GiB). Default: 1024 MiB.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDefaultVolumeQuotaMib() {
@@ -130,7 +163,8 @@ public final class VolumePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The default quota per volume in MiB. Default: 1024 MiB.
+   * Optional. The default quota per volume in MiB. Must be between 100 MiB and 102400 MiB (100
+   * GiB). Default: 1024 MiB.
    * @param defaultVolumeQuotaMib defaultVolumeQuotaMib or {@code null} for none
    */
   public VolumePool setDefaultVolumeQuotaMib(java.lang.Integer defaultVolumeQuotaMib) {
@@ -207,6 +241,23 @@ public final class VolumePool extends com.google.api.client.json.GenericJson {
    */
   public VolumePool setNetwork(java.lang.String network) {
     this.network = network;
+    return this;
+  }
+
+  /**
+   * Output only. The state of the volume pool.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * Output only. The state of the volume pool.
+   * @param state state or {@code null} for none
+   */
+  public VolumePool setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 

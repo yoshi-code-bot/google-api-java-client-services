@@ -6741,6 +6741,146 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
             }
           }
           /**
+           * Creates a volume in a volume pool from an existing data source (such as a Filestore backup).
+           *
+           * Create a request for the method "volumes.createFromSource".
+           *
+           * This request holds the parameters needed by the file server.  After setting any optional
+           * parameters, call the {@link CreateFromSource#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent resource where this volume will be created. Format:
+           *        projects/{project}/locations/{location}/volumePools/{volume_pool}
+           * @param content the {@link com.google.api.services.file.v1beta1.model.CreateFromSourceRequest}
+           * @return the request
+           */
+          public CreateFromSource createFromSource(java.lang.String parent, com.google.api.services.file.v1beta1.model.CreateFromSourceRequest content) throws java.io.IOException {
+            CreateFromSource result = new CreateFromSource(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class CreateFromSource extends CloudFilestoreRequest<com.google.api.services.file.v1beta1.model.Operation> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/volumes:createFromSource";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/volumePools/[^/]+$");
+
+            /**
+             * Creates a volume in a volume pool from an existing data source (such as a Filestore backup).
+             *
+             * Create a request for the method "volumes.createFromSource".
+             *
+             * This request holds the parameters needed by the the file server.  After setting any optional
+             * parameters, call the {@link CreateFromSource#execute()} method to invoke the remote operation.
+             * <p> {@link CreateFromSource#initialize(com.google.api.client.googleapis.services.AbstractGoogle
+             * ClientRequest)} must be called to initialize this instance immediately after invoking the
+             * constructor. </p>
+             *
+             * @param parent Required. The parent resource where this volume will be created. Format:
+           *        projects/{project}/locations/{location}/volumePools/{volume_pool}
+             * @param content the {@link com.google.api.services.file.v1beta1.model.CreateFromSourceRequest}
+             * @since 1.13
+             */
+            protected CreateFromSource(java.lang.String parent, com.google.api.services.file.v1beta1.model.CreateFromSourceRequest content) {
+              super(CloudFilestore.this, "POST", REST_PATH, content, com.google.api.services.file.v1beta1.model.Operation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/volumePools/[^/]+$");
+              }
+            }
+
+            @Override
+            public CreateFromSource set$Xgafv(java.lang.String $Xgafv) {
+              return (CreateFromSource) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public CreateFromSource setAccessToken(java.lang.String accessToken) {
+              return (CreateFromSource) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public CreateFromSource setAlt(java.lang.String alt) {
+              return (CreateFromSource) super.setAlt(alt);
+            }
+
+            @Override
+            public CreateFromSource setCallback(java.lang.String callback) {
+              return (CreateFromSource) super.setCallback(callback);
+            }
+
+            @Override
+            public CreateFromSource setFields(java.lang.String fields) {
+              return (CreateFromSource) super.setFields(fields);
+            }
+
+            @Override
+            public CreateFromSource setKey(java.lang.String key) {
+              return (CreateFromSource) super.setKey(key);
+            }
+
+            @Override
+            public CreateFromSource setOauthToken(java.lang.String oauthToken) {
+              return (CreateFromSource) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public CreateFromSource setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (CreateFromSource) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public CreateFromSource setQuotaUser(java.lang.String quotaUser) {
+              return (CreateFromSource) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public CreateFromSource setUploadType(java.lang.String uploadType) {
+              return (CreateFromSource) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public CreateFromSource setUploadProtocol(java.lang.String uploadProtocol) {
+              return (CreateFromSource) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent resource where this volume will be created. Format:
+             * projects/{project}/locations/{location}/volumePools/{volume_pool}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent resource where this volume will be created. Format:
+           projects/{project}/locations/{location}/volumePools/{volume_pool}
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent resource where this volume will be created. Format:
+             * projects/{project}/locations/{location}/volumePools/{volume_pool}
+             */
+            public CreateFromSource setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/volumePools/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public CreateFromSource set(String parameterName, Object value) {
+              return (CreateFromSource) super.set(parameterName, value);
+            }
+          }
+          /**
            * Deletes a volume.
            *
            * Create a request for the method "volumes.delete".
@@ -6875,6 +7015,312 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
             @Override
             public Delete set(String parameterName, Object value) {
               return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Creates a volume directly on the CLH, bypassing CCFE. This is a temporary PoC that will be used
+           * for testing and removed.
+           *
+           * Create a request for the method "volumes.directCreate".
+           *
+           * This request holds the parameters needed by the file server.  After setting any optional
+           * parameters, call the {@link DirectCreate#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent volume pool path, in the format
+           *        `projects/{project}/locations/{location}/volumePools/{volume_pool}`.
+           * @param content the {@link com.google.api.services.file.v1beta1.model.Volume}
+           * @return the request
+           */
+          public DirectCreate directCreate(java.lang.String parent, com.google.api.services.file.v1beta1.model.Volume content) throws java.io.IOException {
+            DirectCreate result = new DirectCreate(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class DirectCreate extends CloudFilestoreRequest<com.google.api.services.file.v1beta1.model.Volume> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/volumes:directCreate";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/volumePools/[^/]+$");
+
+            /**
+             * Creates a volume directly on the CLH, bypassing CCFE. This is a temporary PoC that will be used
+             * for testing and removed.
+             *
+             * Create a request for the method "volumes.directCreate".
+             *
+             * This request holds the parameters needed by the the file server.  After setting any optional
+             * parameters, call the {@link DirectCreate#execute()} method to invoke the remote operation. <p>
+             * {@link
+             * DirectCreate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent volume pool path, in the format
+           *        `projects/{project}/locations/{location}/volumePools/{volume_pool}`.
+             * @param content the {@link com.google.api.services.file.v1beta1.model.Volume}
+             * @since 1.13
+             */
+            protected DirectCreate(java.lang.String parent, com.google.api.services.file.v1beta1.model.Volume content) {
+              super(CloudFilestore.this, "POST", REST_PATH, content, com.google.api.services.file.v1beta1.model.Volume.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/volumePools/[^/]+$");
+              }
+            }
+
+            @Override
+            public DirectCreate set$Xgafv(java.lang.String $Xgafv) {
+              return (DirectCreate) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public DirectCreate setAccessToken(java.lang.String accessToken) {
+              return (DirectCreate) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public DirectCreate setAlt(java.lang.String alt) {
+              return (DirectCreate) super.setAlt(alt);
+            }
+
+            @Override
+            public DirectCreate setCallback(java.lang.String callback) {
+              return (DirectCreate) super.setCallback(callback);
+            }
+
+            @Override
+            public DirectCreate setFields(java.lang.String fields) {
+              return (DirectCreate) super.setFields(fields);
+            }
+
+            @Override
+            public DirectCreate setKey(java.lang.String key) {
+              return (DirectCreate) super.setKey(key);
+            }
+
+            @Override
+            public DirectCreate setOauthToken(java.lang.String oauthToken) {
+              return (DirectCreate) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public DirectCreate setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (DirectCreate) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public DirectCreate setQuotaUser(java.lang.String quotaUser) {
+              return (DirectCreate) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public DirectCreate setUploadType(java.lang.String uploadType) {
+              return (DirectCreate) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public DirectCreate setUploadProtocol(java.lang.String uploadProtocol) {
+              return (DirectCreate) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent volume pool path, in the format
+             * `projects/{project}/locations/{location}/volumePools/{volume_pool}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent volume pool path, in the format
+           `projects/{project}/locations/{location}/volumePools/{volume_pool}`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent volume pool path, in the format
+             * `projects/{project}/locations/{location}/volumePools/{volume_pool}`.
+             */
+            public DirectCreate setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/volumePools/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Required. The ID to use for the volume. The ID must be unique within the specified
+             * volume pool.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String volumeId;
+
+            /** Required. The ID to use for the volume. The ID must be unique within the specified volume pool.
+             */
+            public java.lang.String getVolumeId() {
+              return volumeId;
+            }
+
+            /**
+             * Required. The ID to use for the volume. The ID must be unique within the specified
+             * volume pool.
+             */
+            public DirectCreate setVolumeId(java.lang.String volumeId) {
+              this.volumeId = volumeId;
+              return this;
+            }
+
+            @Override
+            public DirectCreate set(String parameterName, Object value) {
+              return (DirectCreate) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a volume directly on the CLH, bypassing CCFE. This is a temporary PoC that will be used
+           * for testing and removed.
+           *
+           * Create a request for the method "volumes.directDelete".
+           *
+           * This request holds the parameters needed by the file server.  After setting any optional
+           * parameters, call the {@link DirectDelete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The volume resource name, in the format
+           *        `projects/{project}/locations/{location}/volumePools/{volume_pool}/volumes/{volume}`.
+           * @param content the {@link com.google.api.services.file.v1beta1.model.DeleteVolumeRequest}
+           * @return the request
+           */
+          public DirectDelete directDelete(java.lang.String name, com.google.api.services.file.v1beta1.model.DeleteVolumeRequest content) throws java.io.IOException {
+            DirectDelete result = new DirectDelete(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class DirectDelete extends CloudFilestoreRequest<com.google.api.services.file.v1beta1.model.Empty> {
+
+            private static final String REST_PATH = "v1beta1/{+name}:directDelete";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/volumePools/[^/]+/volumes/[^/]+$");
+
+            /**
+             * Deletes a volume directly on the CLH, bypassing CCFE. This is a temporary PoC that will be used
+             * for testing and removed.
+             *
+             * Create a request for the method "volumes.directDelete".
+             *
+             * This request holds the parameters needed by the the file server.  After setting any optional
+             * parameters, call the {@link DirectDelete#execute()} method to invoke the remote operation. <p>
+             * {@link
+             * DirectDelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The volume resource name, in the format
+           *        `projects/{project}/locations/{location}/volumePools/{volume_pool}/volumes/{volume}`.
+             * @param content the {@link com.google.api.services.file.v1beta1.model.DeleteVolumeRequest}
+             * @since 1.13
+             */
+            protected DirectDelete(java.lang.String name, com.google.api.services.file.v1beta1.model.DeleteVolumeRequest content) {
+              super(CloudFilestore.this, "POST", REST_PATH, content, com.google.api.services.file.v1beta1.model.Empty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/volumePools/[^/]+/volumes/[^/]+$");
+              }
+            }
+
+            @Override
+            public DirectDelete set$Xgafv(java.lang.String $Xgafv) {
+              return (DirectDelete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public DirectDelete setAccessToken(java.lang.String accessToken) {
+              return (DirectDelete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public DirectDelete setAlt(java.lang.String alt) {
+              return (DirectDelete) super.setAlt(alt);
+            }
+
+            @Override
+            public DirectDelete setCallback(java.lang.String callback) {
+              return (DirectDelete) super.setCallback(callback);
+            }
+
+            @Override
+            public DirectDelete setFields(java.lang.String fields) {
+              return (DirectDelete) super.setFields(fields);
+            }
+
+            @Override
+            public DirectDelete setKey(java.lang.String key) {
+              return (DirectDelete) super.setKey(key);
+            }
+
+            @Override
+            public DirectDelete setOauthToken(java.lang.String oauthToken) {
+              return (DirectDelete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public DirectDelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (DirectDelete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public DirectDelete setQuotaUser(java.lang.String quotaUser) {
+              return (DirectDelete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public DirectDelete setUploadType(java.lang.String uploadType) {
+              return (DirectDelete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public DirectDelete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (DirectDelete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The volume resource name, in the format
+             * `projects/{project}/locations/{location}/volumePools/{volume_pool}/volumes/{volume}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The volume resource name, in the format
+           `projects/{project}/locations/{location}/volumePools/{volume_pool}/volumes/{volume}`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The volume resource name, in the format
+             * `projects/{project}/locations/{location}/volumePools/{volume_pool}/volumes/{volume}`.
+             */
+            public DirectDelete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/volumePools/[^/]+/volumes/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public DirectDelete set(String parameterName, Object value) {
+              return (DirectDelete) super.set(parameterName, value);
             }
           }
           /**
@@ -7244,6 +7690,305 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
             @Override
             public List set(String parameterName, Object value) {
               return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates the settings of a specific volume.
+           *
+           * Create a request for the method "volumes.patch".
+           *
+           * This request holds the parameters needed by the file server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name Identifier. The resource name of the volume, in the format
+           *        `projects/{project}/locations/{location}/volumePools/{volume_pool}/volumes/{volume}`.
+           * @param content the {@link com.google.api.services.file.v1beta1.model.Volume}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.file.v1beta1.model.Volume content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends CloudFilestoreRequest<com.google.api.services.file.v1beta1.model.Volume> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/volumePools/[^/]+/volumes/[^/]+$");
+
+            /**
+             * Updates the settings of a specific volume.
+             *
+             * Create a request for the method "volumes.patch".
+             *
+             * This request holds the parameters needed by the the file server.  After setting any optional
+             * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Identifier. The resource name of the volume, in the format
+           *        `projects/{project}/locations/{location}/volumePools/{volume_pool}/volumes/{volume}`.
+             * @param content the {@link com.google.api.services.file.v1beta1.model.Volume}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.file.v1beta1.model.Volume content) {
+              super(CloudFilestore.this, "PATCH", REST_PATH, content, com.google.api.services.file.v1beta1.model.Volume.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/volumePools/[^/]+/volumes/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Identifier. The resource name of the volume, in the format
+             * `projects/{project}/locations/{location}/volumePools/{volume_pool}/volumes/{volume}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Identifier. The resource name of the volume, in the format
+           `projects/{project}/locations/{location}/volumePools/{volume_pool}/volumes/{volume}`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Identifier. The resource name of the volume, in the format
+             * `projects/{project}/locations/{location}/volumePools/{volume_pool}/volumes/{volume}`.
+             */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/volumePools/[^/]+/volumes/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Required. Mask of fields to update. At least one path must be supplied in this field.
+             */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Required. Mask of fields to update. At least one path must be supplied in this field.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /**
+             * Required. Mask of fields to update. At least one path must be supplied in this field.
+             */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Unfreezes a volume.
+           *
+           * Create a request for the method "volumes.unfreeze".
+           *
+           * This request holds the parameters needed by the file server.  After setting any optional
+           * parameters, call the {@link Unfreeze#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the volume to unfreeze. Format:
+           *        `projects/{project}/locations/{location}/volumePools/{volume_pool}/volumes/{volume}`.
+           * @param content the {@link com.google.api.services.file.v1beta1.model.UnfreezeVolumeRequest}
+           * @return the request
+           */
+          public Unfreeze unfreeze(java.lang.String name, com.google.api.services.file.v1beta1.model.UnfreezeVolumeRequest content) throws java.io.IOException {
+            Unfreeze result = new Unfreeze(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Unfreeze extends CloudFilestoreRequest<com.google.api.services.file.v1beta1.model.Operation> {
+
+            private static final String REST_PATH = "v1beta1/{+name}:unfreeze";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/volumePools/[^/]+/volumes/[^/]+$");
+
+            /**
+             * Unfreezes a volume.
+             *
+             * Create a request for the method "volumes.unfreeze".
+             *
+             * This request holds the parameters needed by the the file server.  After setting any optional
+             * parameters, call the {@link Unfreeze#execute()} method to invoke the remote operation. <p>
+             * {@link
+             * Unfreeze#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the volume to unfreeze. Format:
+           *        `projects/{project}/locations/{location}/volumePools/{volume_pool}/volumes/{volume}`.
+             * @param content the {@link com.google.api.services.file.v1beta1.model.UnfreezeVolumeRequest}
+             * @since 1.13
+             */
+            protected Unfreeze(java.lang.String name, com.google.api.services.file.v1beta1.model.UnfreezeVolumeRequest content) {
+              super(CloudFilestore.this, "POST", REST_PATH, content, com.google.api.services.file.v1beta1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/volumePools/[^/]+/volumes/[^/]+$");
+              }
+            }
+
+            @Override
+            public Unfreeze set$Xgafv(java.lang.String $Xgafv) {
+              return (Unfreeze) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Unfreeze setAccessToken(java.lang.String accessToken) {
+              return (Unfreeze) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Unfreeze setAlt(java.lang.String alt) {
+              return (Unfreeze) super.setAlt(alt);
+            }
+
+            @Override
+            public Unfreeze setCallback(java.lang.String callback) {
+              return (Unfreeze) super.setCallback(callback);
+            }
+
+            @Override
+            public Unfreeze setFields(java.lang.String fields) {
+              return (Unfreeze) super.setFields(fields);
+            }
+
+            @Override
+            public Unfreeze setKey(java.lang.String key) {
+              return (Unfreeze) super.setKey(key);
+            }
+
+            @Override
+            public Unfreeze setOauthToken(java.lang.String oauthToken) {
+              return (Unfreeze) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Unfreeze setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Unfreeze) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Unfreeze setQuotaUser(java.lang.String quotaUser) {
+              return (Unfreeze) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Unfreeze setUploadType(java.lang.String uploadType) {
+              return (Unfreeze) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Unfreeze setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Unfreeze) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the volume to unfreeze. Format:
+             * `projects/{project}/locations/{location}/volumePools/{volume_pool}/volumes/{volume}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the volume to unfreeze. Format:
+           `projects/{project}/locations/{location}/volumePools/{volume_pool}/volumes/{volume}`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the volume to unfreeze. Format:
+             * `projects/{project}/locations/{location}/volumePools/{volume_pool}/volumes/{volume}`.
+             */
+            public Unfreeze setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/volumePools/[^/]+/volumes/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Unfreeze set(String parameterName, Object value) {
+              return (Unfreeze) super.set(parameterName, value);
             }
           }
 
